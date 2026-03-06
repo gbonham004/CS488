@@ -1,0 +1,78 @@
+[0.000000] (-) TimerEvent: {}
+[0.000290] (lab1_pkg) JobQueued: {'identifier': 'lab1_pkg', 'dependencies': OrderedDict()}
+[0.000401] (lab2_pkg) JobQueued: {'identifier': 'lab2_pkg', 'dependencies': OrderedDict()}
+[0.000495] (lab1_pkg) JobStarted: {'identifier': 'lab1_pkg'}
+[0.026551] (lab2_pkg) JobStarted: {'identifier': 'lab2_pkg'}
+[0.099790] (-) TimerEvent: {}
+[0.200033] (-) TimerEvent: {}
+[0.300250] (-) TimerEvent: {}
+[0.400454] (-) TimerEvent: {}
+[0.500681] (-) TimerEvent: {}
+[0.600870] (-) TimerEvent: {}
+[0.701052] (-) TimerEvent: {}
+[0.801254] (-) TimerEvent: {}
+[0.901433] (-) TimerEvent: {}
+[1.001628] (-) TimerEvent: {}
+[1.101855] (-) TimerEvent: {}
+[1.202067] (-) TimerEvent: {}
+[1.302272] (-) TimerEvent: {}
+[1.402474] (-) TimerEvent: {}
+[1.502703] (-) TimerEvent: {}
+[1.602881] (-) TimerEvent: {}
+[1.703058] (-) TimerEvent: {}
+[1.803263] (-) TimerEvent: {}
+[1.903452] (-) TimerEvent: {}
+[1.980791] (lab1_pkg) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', '-W', 'ignore:easy_install command is deprecated', 'setup.py', 'egg_info', '--egg-base', '../../build/lab1_pkg', 'build', '--build-base', '/home/nhu.nguyen/turtlebot4_ws/build/lab1_pkg/build', 'install', '--record', '/home/nhu.nguyen/turtlebot4_ws/build/lab1_pkg/install.log', '--single-version-externally-managed', 'install_data'], 'cwd': '/home/nhu.nguyen/turtlebot4_ws/src/lab1_pkg', 'env': {'USER': 'nhu.nguyen', 'XDG_SESSION_TYPE': 'wayland', 'CLUTTER_DISABLE_MIPMAPPED_TEXT': '1', 'SHLVL': '1', 'OLDPWD': '/home/nhu.nguyen', 'HOME': '/home/nhu.nguyen', 'DESKTOP_SESSION': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'SYSTEMD_EXEC_PID': '33452', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/481856793/bus', 'GSM_SKIP_SSH_AGENT_WORKAROUND': 'true', 'COLORTERM': 'truecolor', 'CONDA_CHANGEPS1': 'no', 'WAYLAND_DISPLAY': 'wayland-0', 'LOGNAME': 'nhu.nguyen', '_': '/usr/bin/colcon', 'MEMORY_PRESSURE_WATCH': '/sys/fs/cgroup/user.slice/user-481856793.slice/user@481856793.service/session.slice/org.gnome.Shell@wayland.service/memory.pressure', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'nhu.nguyen', 'TERM': 'xterm-256color', 'PROMPT_EOL_MARK': '', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'PATH': '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin', 'SESSION_MANAGER': 'local/csci20141:@/tmp/.ICE-unix/33420,unix/csci20141:/tmp/.ICE-unix/33420', 'GNOME_TERMINAL_SCREEN': '/org/gnome/Terminal/screen/1ce0b151_65f1_4d3e_9df2_4ef09acac05f', 'XDG_MENU_PREFIX': 'gnome-', 'GNOME_SETUP_DISPLAY': ':1', 'XDG_RUNTIME_DIR': '/run/user/481856793', 'DISPLAY': ':0', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'LANG': 'en_US.UTF-8', 'XDG_SESSION_DESKTOP': 'ubuntu', 'GNOME_TERMINAL_SERVICE': ':1.129', 'XMODIFIERS': '@im=ibus', 'XAUTHORITY': '/run/user/481856793/.mutter-Xwaylandauth.JAUML3', 'SSH_AUTH_SOCK': '/run/user/481856793/keyring/ssh', 'KRB5CCNAME': 'FILE:/tmp/krb5cc_481856793_s3GHCZ', 'SHELL': '/bin/zsh', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/nhu.nguyen/turtlebot4_ws/build/lab1_pkg', 'XDG_DATA_DIRS': '/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'VIRTUAL_ENV_DISABLE_PROMPT': '12', 'COLCON': '1', 'VTE_VERSION': '7600', 'MEMORY_PRESSURE_WRITE': 'c29tZSAyMDAwMDAgMjAwMDAwMAA=', 'PYTHONPATH': '/home/nhu.nguyen/turtlebot4_ws/build/lab1_pkg/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/nhu.nguyen/turtlebot4_ws/install/lab1_pkg/lib/python3.12/site-packages:'}, 'shell': False}
+[1.988791] (lab2_pkg) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', '-W', 'ignore:easy_install command is deprecated', 'setup.py', 'egg_info', '--egg-base', '../../build/lab2_pkg', 'build', '--build-base', '/home/nhu.nguyen/turtlebot4_ws/build/lab2_pkg/build', 'install', '--record', '/home/nhu.nguyen/turtlebot4_ws/build/lab2_pkg/install.log', '--single-version-externally-managed', 'install_data'], 'cwd': '/home/nhu.nguyen/turtlebot4_ws/src/lab2_pkg', 'env': {'USER': 'nhu.nguyen', 'XDG_SESSION_TYPE': 'wayland', 'CLUTTER_DISABLE_MIPMAPPED_TEXT': '1', 'SHLVL': '1', 'OLDPWD': '/home/nhu.nguyen', 'HOME': '/home/nhu.nguyen', 'DESKTOP_SESSION': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'SYSTEMD_EXEC_PID': '33452', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/481856793/bus', 'GSM_SKIP_SSH_AGENT_WORKAROUND': 'true', 'COLORTERM': 'truecolor', 'CONDA_CHANGEPS1': 'no', 'WAYLAND_DISPLAY': 'wayland-0', 'LOGNAME': 'nhu.nguyen', '_': '/usr/bin/colcon', 'MEMORY_PRESSURE_WATCH': '/sys/fs/cgroup/user.slice/user-481856793.slice/user@481856793.service/session.slice/org.gnome.Shell@wayland.service/memory.pressure', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'nhu.nguyen', 'TERM': 'xterm-256color', 'PROMPT_EOL_MARK': '', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'PATH': '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin', 'SESSION_MANAGER': 'local/csci20141:@/tmp/.ICE-unix/33420,unix/csci20141:/tmp/.ICE-unix/33420', 'GNOME_TERMINAL_SCREEN': '/org/gnome/Terminal/screen/1ce0b151_65f1_4d3e_9df2_4ef09acac05f', 'XDG_MENU_PREFIX': 'gnome-', 'GNOME_SETUP_DISPLAY': ':1', 'XDG_RUNTIME_DIR': '/run/user/481856793', 'DISPLAY': ':0', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'LANG': 'en_US.UTF-8', 'XDG_SESSION_DESKTOP': 'ubuntu', 'GNOME_TERMINAL_SERVICE': ':1.129', 'XMODIFIERS': '@im=ibus', 'XAUTHORITY': '/run/user/481856793/.mutter-Xwaylandauth.JAUML3', 'SSH_AUTH_SOCK': '/run/user/481856793/keyring/ssh', 'KRB5CCNAME': 'FILE:/tmp/krb5cc_481856793_s3GHCZ', 'SHELL': '/bin/zsh', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/nhu.nguyen/turtlebot4_ws/build/lab2_pkg', 'XDG_DATA_DIRS': '/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'VIRTUAL_ENV_DISABLE_PROMPT': '12', 'COLCON': '1', 'VTE_VERSION': '7600', 'MEMORY_PRESSURE_WRITE': 'c29tZSAyMDAwMDAgMjAwMDAwMAA=', 'PYTHONPATH': '/home/nhu.nguyen/turtlebot4_ws/build/lab2_pkg/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/nhu.nguyen/turtlebot4_ws/install/lab2_pkg/lib/python3.12/site-packages:'}, 'shell': False}
+[2.003527] (-) TimerEvent: {}
+[2.103739] (-) TimerEvent: {}
+[2.189860] (lab1_pkg) StdoutLine: {'line': b'running egg_info\n'}
+[2.192540] (lab2_pkg) StdoutLine: {'line': b'running egg_info\n'}
+[2.203279] (lab1_pkg) StdoutLine: {'line': b'writing ../../build/lab1_pkg/lab1_pkg.egg-info/PKG-INFO\n'}
+[2.203799] (-) TimerEvent: {}
+[2.206242] (lab2_pkg) StdoutLine: {'line': b'writing ../../build/lab2_pkg/lab2_pkg.egg-info/PKG-INFO\n'}
+[2.206796] (lab1_pkg) StdoutLine: {'line': b'writing dependency_links to ../../build/lab1_pkg/lab1_pkg.egg-info/dependency_links.txt\n'}
+[2.207505] (lab1_pkg) StdoutLine: {'line': b'writing entry points to ../../build/lab1_pkg/lab1_pkg.egg-info/entry_points.txt\n'}
+[2.207799] (lab2_pkg) StdoutLine: {'line': b'writing dependency_links to ../../build/lab2_pkg/lab2_pkg.egg-info/dependency_links.txt\n'}
+[2.208421] (lab2_pkg) StdoutLine: {'line': b'writing entry points to ../../build/lab2_pkg/lab2_pkg.egg-info/entry_points.txt\n'}
+[2.208919] (lab1_pkg) StdoutLine: {'line': b'writing requirements to ../../build/lab1_pkg/lab1_pkg.egg-info/requires.txt\n'}
+[2.209775] (lab2_pkg) StdoutLine: {'line': b'writing requirements to ../../build/lab2_pkg/lab2_pkg.egg-info/requires.txt\n'}
+[2.209930] (lab1_pkg) StdoutLine: {'line': b'writing top-level names to ../../build/lab1_pkg/lab1_pkg.egg-info/top_level.txt\n'}
+[2.210756] (lab2_pkg) StdoutLine: {'line': b'writing top-level names to ../../build/lab2_pkg/lab2_pkg.egg-info/top_level.txt\n'}
+[2.237387] (lab1_pkg) StdoutLine: {'line': b"reading manifest file '../../build/lab1_pkg/lab1_pkg.egg-info/SOURCES.txt'\n"}
+[2.237652] (lab2_pkg) StdoutLine: {'line': b"reading manifest file '../../build/lab2_pkg/lab2_pkg.egg-info/SOURCES.txt'\n"}
+[2.239333] (lab1_pkg) StdoutLine: {'line': b"writing manifest file '../../build/lab1_pkg/lab1_pkg.egg-info/SOURCES.txt'\n"}
+[2.239470] (lab1_pkg) StdoutLine: {'line': b'running build\n'}
+[2.239598] (lab1_pkg) StdoutLine: {'line': b'running build_py\n'}
+[2.239744] (lab1_pkg) StdoutLine: {'line': b'running install\n'}
+[2.239886] (lab2_pkg) StdoutLine: {'line': b"writing manifest file '../../build/lab2_pkg/lab2_pkg.egg-info/SOURCES.txt'\n"}
+[2.240033] (lab2_pkg) StdoutLine: {'line': b'running build\n'}
+[2.240140] (lab2_pkg) StdoutLine: {'line': b'running build_py\n'}
+[2.240277] (lab2_pkg) StdoutLine: {'line': b'copying lab2_pkg/speed_cap_obstacle_detect.py -> /home/nhu.nguyen/turtlebot4_ws/build/lab2_pkg/build/lib/lab2_pkg\n'}
+[2.240520] (lab2_pkg) StdoutLine: {'line': b'running install\n'}
+[2.244747] (lab1_pkg) StdoutLine: {'line': b'running install_lib\n'}
+[2.245524] (lab2_pkg) StdoutLine: {'line': b'running install_lib\n'}
+[2.258897] (lab1_pkg) StdoutLine: {'line': b'running install_data\n'}
+[2.259060] (lab1_pkg) StdoutLine: {'line': b'running install_egg_info\n'}
+[2.260129] (lab2_pkg) StdoutLine: {'line': b'copying /home/nhu.nguyen/turtlebot4_ws/build/lab2_pkg/build/lib/lab2_pkg/speed_cap_obstacle_detect.py -> /home/nhu.nguyen/turtlebot4_ws/install/lab2_pkg/lib/python3.12/site-packages/lab2_pkg\n'}
+[2.260662] (lab2_pkg) StdoutLine: {'line': b'byte-compiling /home/nhu.nguyen/turtlebot4_ws/install/lab2_pkg/lib/python3.12/site-packages/lab2_pkg/speed_cap_obstacle_detect.py to speed_cap_obstacle_detect.cpython-312.pyc\n'}
+[2.263759] (lab2_pkg) StdoutLine: {'line': b'running install_data\n'}
+[2.263911] (lab2_pkg) StdoutLine: {'line': b'running install_egg_info\n'}
+[2.274497] (lab1_pkg) StdoutLine: {'line': b"removing '/home/nhu.nguyen/turtlebot4_ws/install/lab1_pkg/lib/python3.12/site-packages/lab1_pkg-0.0.0-py3.12.egg-info' (and everything under it)\n"}
+[2.274669] (lab1_pkg) StdoutLine: {'line': b'Copying ../../build/lab1_pkg/lab1_pkg.egg-info to /home/nhu.nguyen/turtlebot4_ws/install/lab1_pkg/lib/python3.12/site-packages/lab1_pkg-0.0.0-py3.12.egg-info\n'}
+[2.277855] (lab1_pkg) StdoutLine: {'line': b'running install_scripts\n'}
+[2.278753] (lab2_pkg) StdoutLine: {'line': b"removing '/home/nhu.nguyen/turtlebot4_ws/install/lab2_pkg/lib/python3.12/site-packages/lab2_pkg-0.0.0-py3.12.egg-info' (and everything under it)\n"}
+[2.278980] (lab2_pkg) StdoutLine: {'line': b'Copying ../../build/lab2_pkg/lab2_pkg.egg-info to /home/nhu.nguyen/turtlebot4_ws/install/lab2_pkg/lib/python3.12/site-packages/lab2_pkg-0.0.0-py3.12.egg-info\n'}
+[2.280641] (lab2_pkg) StdoutLine: {'line': b'running install_scripts\n'}
+[2.303910] (-) TimerEvent: {}
+[2.376933] (lab2_pkg) StdoutLine: {'line': b'Installing SCOD script to /home/nhu.nguyen/turtlebot4_ws/install/lab2_pkg/lib/lab2_pkg\n'}
+[2.377117] (lab1_pkg) StdoutLine: {'line': b'Installing speed_behavior_node script to /home/nhu.nguyen/turtlebot4_ws/install/lab1_pkg/lib/lab1_pkg\n'}
+[2.380107] (lab2_pkg) StdoutLine: {'line': b"writing list of installed files to '/home/nhu.nguyen/turtlebot4_ws/build/lab2_pkg/install.log'\n"}
+[2.380265] (lab1_pkg) StdoutLine: {'line': b"writing list of installed files to '/home/nhu.nguyen/turtlebot4_ws/build/lab1_pkg/install.log'\n"}
+[2.404081] (lab2_pkg) CommandEnded: {'returncode': 0}
+[2.404438] (-) TimerEvent: {}
+[2.474810] (lab2_pkg) JobEnded: {'identifier': 'lab2_pkg', 'rc': 0}
+[2.475868] (lab1_pkg) CommandEnded: {'returncode': 0}
+[2.504546] (-) TimerEvent: {}
+[2.521909] (lab1_pkg) JobEnded: {'identifier': 'lab1_pkg', 'rc': 0}
+[2.523298] (-) EventReactorShutdown: {}

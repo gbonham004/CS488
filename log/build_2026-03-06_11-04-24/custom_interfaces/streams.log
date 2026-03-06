@@ -1,0 +1,29 @@
+[0.045s] Invoking command in '/home/nhu.nguyen/turtlebot4_ws/build/custom_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/nhu.nguyen/turtlebot4_ws/install/lab2_pkg:/home/nhu.nguyen/turtlebot4_ws/install/lab1_pkg:/opt/ros/jazzy /usr/bin/cmake /home/nhu.nguyen/turtlebot4_ws/src/custom_interfaces -DCMAKE_INSTALL_PREFIX=/home/nhu.nguyen/turtlebot4_ws/install/custom_interfaces
+[0.380s] -- The C compiler identification is GNU 13.3.0
+[0.570s] -- The CXX compiler identification is GNU 13.3.0
+[0.683s] -- Detecting C compiler ABI info
+[0.812s] -- Detecting C compiler ABI info - done
+[0.822s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.826s] -- Detecting C compile features
+[0.827s] -- Detecting C compile features - done
+[0.881s] -- Detecting CXX compiler ABI info
+[0.999s] -- Detecting CXX compiler ABI info - done
+[1.009s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[1.009s] -- Detecting CXX compile features
+[1.009s] -- Detecting CXX compile features - done
+[1.048s] -- Found ament_cmake: 2.5.5 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[1.195s] -- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter 
+[1.322s] -- Found rosidl_default_generators: 1.6.0 (/opt/ros/jazzy/share/rosidl_default_generators/cmake)
+[1.330s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[1.398s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.454s] -- Found rosidl_adapter: 4.6.7 (/opt/ros/jazzy/share/rosidl_adapter/cmake)
+[1.740s] [31mCMake Error at /opt/ros/jazzy/share/rosidl_cmake/cmake/rosidl_generate_interfaces.cmake:223 (message):
+[1.740s]   Packages installing interfaces must include
+[1.740s]   '<member_of_group>rosidl_interface_packages</member_of_group>' in their
+[1.740s]   package.xml
+[1.740s] Call Stack (most recent call first):
+[1.740s]   CMakeLists.txt:13 (rosidl_generate_interfaces)
+[1.741s] 
+[1.741s] [0m
+[1.741s] -- Configuring incomplete, errors occurred!
+[1.746s] Invoked command in '/home/nhu.nguyen/turtlebot4_ws/build/custom_interfaces' returned '1': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/nhu.nguyen/turtlebot4_ws/install/lab2_pkg:/home/nhu.nguyen/turtlebot4_ws/install/lab1_pkg:/opt/ros/jazzy /usr/bin/cmake /home/nhu.nguyen/turtlebot4_ws/src/custom_interfaces -DCMAKE_INSTALL_PREFIX=/home/nhu.nguyen/turtlebot4_ws/install/custom_interfaces

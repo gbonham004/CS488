@@ -1,0 +1,68 @@
+[0.000000] (-) TimerEvent: {}
+[0.000227] (custom_interfaces) JobQueued: {'identifier': 'custom_interfaces', 'dependencies': OrderedDict()}
+[0.000272] (lab1_pkg) JobQueued: {'identifier': 'lab1_pkg', 'dependencies': OrderedDict()}
+[0.000304] (lab2_pkg) JobQueued: {'identifier': 'lab2_pkg', 'dependencies': OrderedDict()}
+[0.000336] (lab3_pkg) JobQueued: {'identifier': 'lab3_pkg', 'dependencies': OrderedDict({'custom_interfaces': '/home/nhu.nguyen/turtlebot4_ws/install/custom_interfaces'})}
+[0.000376] (custom_interfaces) JobStarted: {'identifier': 'custom_interfaces'}
+[0.016225] (lab1_pkg) JobStarted: {'identifier': 'lab1_pkg'}
+[0.034410] (lab2_pkg) JobStarted: {'identifier': 'lab2_pkg'}
+[0.044664] (custom_interfaces) JobProgress: {'identifier': 'custom_interfaces', 'progress': 'cmake'}
+[0.045110] (custom_interfaces) Command: {'cmd': ['/usr/bin/cmake', '/home/nhu.nguyen/turtlebot4_ws/src/custom_interfaces', '-DCMAKE_INSTALL_PREFIX=/home/nhu.nguyen/turtlebot4_ws/install/custom_interfaces'], 'cwd': '/home/nhu.nguyen/turtlebot4_ws/build/custom_interfaces', 'env': OrderedDict({'USER': 'nhu.nguyen@plu.edu', 'GZ_SIM_RESOURCE_PATH': '/opt/ros/jazzy/share', 'GZ_CONFIG_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor/share/gz:/opt/ros/jazzy/opt/sdformat_vendor/share/gz:/opt/ros/jazzy/opt/gz_gui_vendor/share/gz:/opt/ros/jazzy/opt/gz_transport_vendor/share/gz:/opt/ros/jazzy/opt/gz_rendering_vendor/share/gz:/opt/ros/jazzy/opt/gz_plugin_vendor/share/gz:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/share/gz:/opt/ros/jazzy/opt/gz_msgs_vendor/share/gz:/opt/ros/jazzy/opt/gz_common_vendor/share/gz', 'XDG_SESSION_TYPE': 'wayland', 'CLUTTER_DISABLE_MIPMAPPED_TEXT': '1', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor/lib:/opt/ros/jazzy/opt/gz_sensors_vendor/lib:/opt/ros/jazzy/opt/gz_physics_vendor/lib:/opt/ros/jazzy/opt/sdformat_vendor/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_gui_vendor/lib:/opt/ros/jazzy/opt/gz_transport_vendor/lib:/opt/ros/jazzy/opt/gz_rendering_vendor/lib:/opt/ros/jazzy/opt/gz_plugin_vendor/lib:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/lib:/opt/ros/jazzy/opt/gz_msgs_vendor/lib:/opt/ros/jazzy/opt/gz_common_vendor/lib:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_tools_vendor/lib:/opt/ros/jazzy/opt/gz_ogre_next_vendor/lib:/opt/ros/jazzy/opt/gz_dartsim_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'OLDPWD': '/home/nhu.nguyen', 'HOME': '/home/nhu.nguyen', 'DESKTOP_SESSION': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'ROS_PYTHON_VERSION': '3', 'SYSTEMD_EXEC_PID': '15418', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/481856793/bus', 'GSM_SKIP_SSH_AGENT_WORKAROUND': 'true', 'COLORTERM': 'truecolor', 'CONDA_CHANGEPS1': 'no', 'WAYLAND_DISPLAY': 'wayland-0', 'ROS_DISTRO': 'jazzy', 'COLCON_PREFIX_PATH': '/home/nhu.nguyen/turtlebot4_ws/install', 'LOGNAME': 'nhu.nguyen@plu.edu', '_': '/usr/bin/colcon', 'MEMORY_PRESSURE_WATCH': '/sys/fs/cgroup/user.slice/user-481856793.slice/user@481856793.service/session.slice/org.gnome.Shell@wayland.service/memory.pressure', 'XDG_SESSION_CLASS': 'user', 'ROS_VERSION': '2', 'USERNAME': 'nhu.nguyen@plu.edu', 'TERM': 'xterm-256color', 'PROMPT_EOL_MARK': '', 'ROS_SUPER_CLIENT': 'True', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'PATH': '/opt/ros/jazzy/opt/gz_msgs_vendor/bin:/opt/ros/jazzy/opt/gz_tools_vendor/bin:/opt/ros/jazzy/opt/gz_ogre_next_vendor/bin:/opt/ros/jazzy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin', 'SESSION_MANAGER': 'local/csci20141:@/tmp/.ICE-unix/15386,unix/csci20141:/tmp/.ICE-unix/15386', 'GNOME_TERMINAL_SCREEN': '/org/gnome/Terminal/screen/7836cb37_8af0_4eda_9dea_7ade6630ff16', 'XDG_MENU_PREFIX': 'gnome-', 'GNOME_SETUP_DISPLAY': ':1', 'XDG_RUNTIME_DIR': '/run/user/481856793', 'DISPLAY': ':0', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'LANG': 'en_US.UTF-8', 'RMW_IMPLEMENTATION': 'rmw_fastrtps_cpp', 'XDG_SESSION_DESKTOP': 'ubuntu', 'GNOME_TERMINAL_SERVICE': ':1.120', 'XMODIFIERS': '@im=ibus', 'XAUTHORITY': '/run/user/481856793/.mutter-Xwaylandauth.WD8FL3', 'SSH_AUTH_SOCK': '/run/user/481856793/keyring/ssh', 'AMENT_PREFIX_PATH': '/home/nhu.nguyen/turtlebot4_ws/install/lab2_pkg:/home/nhu.nguyen/turtlebot4_ws/install/lab1_pkg:/opt/ros/jazzy', 'ROS_DOMAIN_ID': '0', 'KRB5CCNAME': 'FILE:/tmp/krb5cc_481856793_nMXivC', 'SHELL': '/bin/zsh', 'ROS_DISCOVERY_SERVER': '10.5.113.101:11811', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'QT_IM_MODULE': 'ibus', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'PWD': '/home/nhu.nguyen/turtlebot4_ws/build/custom_interfaces', 'XDG_DATA_DIRS': '/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'VIRTUAL_ENV_DISABLE_PROMPT': '12', 'PYTHONPATH': '/home/nhu.nguyen/turtlebot4_ws/install/lab2_pkg/lib/python3.12/site-packages:/home/nhu.nguyen/turtlebot4_ws/install/lab1_pkg/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'VTE_VERSION': '7600', 'MEMORY_PRESSURE_WRITE': 'c29tZSAyMDAwMDAgMjAwMDAwMAA=', 'CMAKE_PREFIX_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/home/nhu.nguyen/turtlebot4_ws/install/lab2_pkg:/home/nhu.nguyen/turtlebot4_ws/install/lab1_pkg:/opt/ros/jazzy'}), 'shell': False}
+[0.099586] (-) TimerEvent: {}
+[0.199779] (-) TimerEvent: {}
+[0.299996] (-) TimerEvent: {}
+[0.380687] (custom_interfaces) StdoutLine: {'line': b'-- The C compiler identification is GNU 13.3.0\n'}
+[0.400071] (-) TimerEvent: {}
+[0.500256] (-) TimerEvent: {}
+[0.570165] (custom_interfaces) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 13.3.0\n'}
+[0.600339] (-) TimerEvent: {}
+[0.683137] (custom_interfaces) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[0.700422] (-) TimerEvent: {}
+[0.800633] (-) TimerEvent: {}
+[0.812618] (custom_interfaces) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[0.822316] (custom_interfaces) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[0.825825] (custom_interfaces) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[0.827654] (custom_interfaces) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[0.880999] (custom_interfaces) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[0.900772] (-) TimerEvent: {}
+[0.998808] (custom_interfaces) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[1.000829] (-) TimerEvent: {}
+[1.008970] (custom_interfaces) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[1.009258] (custom_interfaces) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[1.009730] (custom_interfaces) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[1.048087] (custom_interfaces) StdoutLine: {'line': b'-- Found ament_cmake: 2.5.5 (/opt/ros/jazzy/share/ament_cmake/cmake)\n'}
+[1.100911] (-) TimerEvent: {}
+[1.194909] (custom_interfaces) StdoutLine: {'line': b'-- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter \n'}
+[1.200990] (-) TimerEvent: {}
+[1.301186] (-) TimerEvent: {}
+[1.322114] (custom_interfaces) StdoutLine: {'line': b'-- Found rosidl_default_generators: 1.6.0 (/opt/ros/jazzy/share/rosidl_default_generators/cmake)\n'}
+[1.330327] (custom_interfaces) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[1.398718] (custom_interfaces) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[1.401243] (-) TimerEvent: {}
+[1.454087] (custom_interfaces) StdoutLine: {'line': b'-- Found rosidl_adapter: 4.6.7 (/opt/ros/jazzy/share/rosidl_adapter/cmake)\n'}
+[1.501325] (-) TimerEvent: {}
+[1.601523] (-) TimerEvent: {}
+[1.701749] (-) TimerEvent: {}
+[1.740151] (custom_interfaces) StderrLine: {'line': b'\x1b[31mCMake Error at /opt/ros/jazzy/share/rosidl_cmake/cmake/rosidl_generate_interfaces.cmake:223 (message):\n'}
+[1.740332] (custom_interfaces) StderrLine: {'line': b'  Packages installing interfaces must include\n'}
+[1.740422] (custom_interfaces) StderrLine: {'line': b"  '<member_of_group>rosidl_interface_packages</member_of_group>' in their\n"}
+[1.740536] (custom_interfaces) StderrLine: {'line': b'  package.xml\n'}
+[1.740640] (custom_interfaces) StderrLine: {'line': b'Call Stack (most recent call first):\n'}
+[1.740741] (custom_interfaces) StderrLine: {'line': b'  CMakeLists.txt:13 (rosidl_generate_interfaces)\n'}
+[1.740841] (custom_interfaces) StderrLine: {'line': b'\n'}
+[1.740941] (custom_interfaces) StderrLine: {'line': b'\x1b[0m\n'}
+[1.741051] (custom_interfaces) StdoutLine: {'line': b'-- Configuring incomplete, errors occurred!\n'}
+[1.746189] (custom_interfaces) CommandEnded: {'returncode': 1}
+[1.787668] (custom_interfaces) JobEnded: {'identifier': 'custom_interfaces', 'rc': 1}
+[1.801867] (-) TimerEvent: {}
+[1.902080] (-) TimerEvent: {}
+[2.002261] (-) TimerEvent: {}
+[2.102444] (-) TimerEvent: {}
+[2.202689] (-) TimerEvent: {}
+[2.302902] (-) TimerEvent: {}
+[2.403084] (-) TimerEvent: {}
+[2.503285] (-) TimerEvent: {}
+[2.551403] (lab2_pkg) JobEnded: {'identifier': 'lab2_pkg', 'rc': 'SIGINT'}
+[2.555016] (lab1_pkg) JobEnded: {'identifier': 'lab1_pkg', 'rc': 'SIGINT'}
+[2.566118] (lab3_pkg) JobSkipped: {'identifier': 'lab3_pkg'}
+[2.566249] (-) EventReactorShutdown: {}

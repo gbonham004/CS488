@@ -1,0 +1,2 @@
+[console_scripts]
+speed_behavior_node = lab1_pkg.speed_behavior:main

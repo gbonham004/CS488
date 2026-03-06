@@ -1,0 +1,6 @@
+{
+  "package_name": "custom_interfaces",
+  "non_idl_tuples": [
+    "/home/nhu.nguyen/turtlebot4_ws/src/custom_interfaces:srv/SetCap.srv"
+  ]
+}

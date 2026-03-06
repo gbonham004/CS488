@@ -1,0 +1,95 @@
+[0.000000] (-) TimerEvent: {}
+[0.000169] (lab1_pkg) JobQueued: {'identifier': 'lab1_pkg', 'dependencies': OrderedDict()}
+[0.000341] (lab2_pkg) JobQueued: {'identifier': 'lab2_pkg', 'dependencies': OrderedDict()}
+[0.000440] (lab1_pkg) JobStarted: {'identifier': 'lab1_pkg'}
+[0.031666] (lab2_pkg) JobStarted: {'identifier': 'lab2_pkg'}
+[0.099910] (-) TimerEvent: {}
+[0.200130] (-) TimerEvent: {}
+[0.300349] (-) TimerEvent: {}
+[0.400587] (-) TimerEvent: {}
+[0.500819] (-) TimerEvent: {}
+[0.601057] (-) TimerEvent: {}
+[0.701235] (-) TimerEvent: {}
+[0.801433] (-) TimerEvent: {}
+[0.901614] (-) TimerEvent: {}
+[1.001923] (-) TimerEvent: {}
+[1.102104] (-) TimerEvent: {}
+[1.202291] (-) TimerEvent: {}
+[1.302514] (-) TimerEvent: {}
+[1.402718] (-) TimerEvent: {}
+[1.502907] (-) TimerEvent: {}
+[1.603124] (-) TimerEvent: {}
+[1.703381] (-) TimerEvent: {}
+[1.803578] (-) TimerEvent: {}
+[1.903776] (-) TimerEvent: {}
+[2.003907] (-) TimerEvent: {}
+[2.104085] (-) TimerEvent: {}
+[2.204318] (-) TimerEvent: {}
+[2.304525] (-) TimerEvent: {}
+[2.404699] (-) TimerEvent: {}
+[2.485418] (lab1_pkg) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', '-W', 'ignore:easy_install command is deprecated', 'setup.py', 'egg_info', '--egg-base', '../../build/lab1_pkg', 'build', '--build-base', '/home/nhu.nguyen/turtlebot4_ws/build/lab1_pkg/build', 'install', '--record', '/home/nhu.nguyen/turtlebot4_ws/build/lab1_pkg/install.log', '--single-version-externally-managed', 'install_data'], 'cwd': '/home/nhu.nguyen/turtlebot4_ws/src/lab1_pkg', 'env': {'USER': 'nhu.nguyen', 'GZ_SIM_RESOURCE_PATH': '/opt/ros/jazzy/share', 'GZ_CONFIG_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor/share/gz:/opt/ros/jazzy/opt/sdformat_vendor/share/gz:/opt/ros/jazzy/opt/gz_gui_vendor/share/gz:/opt/ros/jazzy/opt/gz_transport_vendor/share/gz:/opt/ros/jazzy/opt/gz_rendering_vendor/share/gz:/opt/ros/jazzy/opt/gz_plugin_vendor/share/gz:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/share/gz:/opt/ros/jazzy/opt/gz_msgs_vendor/share/gz:/opt/ros/jazzy/opt/gz_common_vendor/share/gz', 'XDG_SESSION_TYPE': 'wayland', 'CLUTTER_DISABLE_MIPMAPPED_TEXT': '1', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor/lib:/opt/ros/jazzy/opt/gz_sensors_vendor/lib:/opt/ros/jazzy/opt/gz_physics_vendor/lib:/opt/ros/jazzy/opt/sdformat_vendor/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_gui_vendor/lib:/opt/ros/jazzy/opt/gz_transport_vendor/lib:/opt/ros/jazzy/opt/gz_rendering_vendor/lib:/opt/ros/jazzy/opt/gz_plugin_vendor/lib:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/lib:/opt/ros/jazzy/opt/gz_msgs_vendor/lib:/opt/ros/jazzy/opt/gz_common_vendor/lib:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_tools_vendor/lib:/opt/ros/jazzy/opt/gz_ogre_next_vendor/lib:/opt/ros/jazzy/opt/gz_dartsim_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'OLDPWD': '/home/nhu.nguyen/turtlebot4_ws/src', 'HOME': '/home/nhu.nguyen', 'DESKTOP_SESSION': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'ROS_PYTHON_VERSION': '3', 'SYSTEMD_EXEC_PID': '16701', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/481856793/bus', 'GSM_SKIP_SSH_AGENT_WORKAROUND': 'true', 'COLORTERM': 'truecolor', 'CONDA_CHANGEPS1': 'no', 'WAYLAND_DISPLAY': 'wayland-0', 'ROS_DISTRO': 'jazzy', 'COLCON_PREFIX_PATH': '/home/nhu.nguyen/turtlebot4_ws/install', 'LOGNAME': 'nhu.nguyen', '_': '/usr/bin/colcon', 'MEMORY_PRESSURE_WATCH': '/sys/fs/cgroup/user.slice/user-481856793.slice/user@481856793.service/session.slice/org.gnome.Shell@wayland.service/memory.pressure', 'XDG_SESSION_CLASS': 'user', 'ROS_VERSION': '2', 'USERNAME': 'nhu.nguyen', 'TERM': 'xterm-256color', 'PROMPT_EOL_MARK': '', 'ROS_SUPER_CLIENT': 'True', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'PATH': '/opt/ros/jazzy/opt/gz_msgs_vendor/bin:/opt/ros/jazzy/opt/gz_tools_vendor/bin:/opt/ros/jazzy/opt/gz_ogre_next_vendor/bin:/opt/ros/jazzy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin', 'SESSION_MANAGER': 'local/csci20141:@/tmp/.ICE-unix/16669,unix/csci20141:/tmp/.ICE-unix/16669', 'GNOME_TERMINAL_SCREEN': '/org/gnome/Terminal/screen/bcc6b1cf_dfb5_4001_91af_e5a42bc5827e', 'XDG_MENU_PREFIX': 'gnome-', 'GNOME_SETUP_DISPLAY': ':1', 'XDG_RUNTIME_DIR': '/run/user/481856793', 'DISPLAY': ':0', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'LANG': 'en_US.UTF-8', 'RMW_IMPLEMENTATION': 'rmw_fastrtps_cpp', 'XDG_SESSION_DESKTOP': 'ubuntu', 'GNOME_TERMINAL_SERVICE': ':1.120', 'XMODIFIERS': '@im=ibus', 'XAUTHORITY': '/run/user/481856793/.mutter-Xwaylandauth.YGKZK3', 'SSH_AUTH_SOCK': '/run/user/481856793/keyring/ssh', 'AMENT_PREFIX_PATH': '/home/nhu.nguyen/turtlebot4_ws/install/lab1_pkg:/opt/ros/jazzy', 'ROS_DOMAIN_ID': '0', 'KRB5CCNAME': 'FILE:/tmp/krb5cc_481856793_0J5W4z', 'SHELL': '/bin/zsh', 'ROS_DISCOVERY_SERVER': '10.5.113.101:11811', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'QT_IM_MODULE': 'ibus', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'PWD': '/home/nhu.nguyen/turtlebot4_ws/build/lab1_pkg', 'XDG_DATA_DIRS': '/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'VIRTUAL_ENV_DISABLE_PROMPT': '12', 'PYTHONPATH': '/home/nhu.nguyen/turtlebot4_ws/build/lab1_pkg/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/nhu.nguyen/turtlebot4_ws/install/lab1_pkg/lib/python3.12/site-packages:/home/nhu.nguyen/turtlebot4_ws/install/lab1_pkg/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'VTE_VERSION': '7600', 'MEMORY_PRESSURE_WRITE': 'c29tZSAyMDAwMDAgMjAwMDAwMAA=', 'CMAKE_PREFIX_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor'}, 'shell': False}
+[2.490466] (lab2_pkg) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', '-W', 'ignore:easy_install command is deprecated', 'setup.py', 'egg_info', '--egg-base', '../../build/lab2_pkg', 'build', '--build-base', '/home/nhu.nguyen/turtlebot4_ws/build/lab2_pkg/build', 'install', '--record', '/home/nhu.nguyen/turtlebot4_ws/build/lab2_pkg/install.log', '--single-version-externally-managed', 'install_data'], 'cwd': '/home/nhu.nguyen/turtlebot4_ws/src/lab2_pkg', 'env': {'USER': 'nhu.nguyen', 'GZ_SIM_RESOURCE_PATH': '/opt/ros/jazzy/share', 'GZ_CONFIG_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor/share/gz:/opt/ros/jazzy/opt/sdformat_vendor/share/gz:/opt/ros/jazzy/opt/gz_gui_vendor/share/gz:/opt/ros/jazzy/opt/gz_transport_vendor/share/gz:/opt/ros/jazzy/opt/gz_rendering_vendor/share/gz:/opt/ros/jazzy/opt/gz_plugin_vendor/share/gz:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/share/gz:/opt/ros/jazzy/opt/gz_msgs_vendor/share/gz:/opt/ros/jazzy/opt/gz_common_vendor/share/gz', 'XDG_SESSION_TYPE': 'wayland', 'CLUTTER_DISABLE_MIPMAPPED_TEXT': '1', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor/lib:/opt/ros/jazzy/opt/gz_sensors_vendor/lib:/opt/ros/jazzy/opt/gz_physics_vendor/lib:/opt/ros/jazzy/opt/sdformat_vendor/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_gui_vendor/lib:/opt/ros/jazzy/opt/gz_transport_vendor/lib:/opt/ros/jazzy/opt/gz_rendering_vendor/lib:/opt/ros/jazzy/opt/gz_plugin_vendor/lib:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/lib:/opt/ros/jazzy/opt/gz_msgs_vendor/lib:/opt/ros/jazzy/opt/gz_common_vendor/lib:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_tools_vendor/lib:/opt/ros/jazzy/opt/gz_ogre_next_vendor/lib:/opt/ros/jazzy/opt/gz_dartsim_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'OLDPWD': '/home/nhu.nguyen/turtlebot4_ws/src', 'HOME': '/home/nhu.nguyen', 'DESKTOP_SESSION': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'ROS_PYTHON_VERSION': '3', 'SYSTEMD_EXEC_PID': '16701', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/481856793/bus', 'GSM_SKIP_SSH_AGENT_WORKAROUND': 'true', 'COLORTERM': 'truecolor', 'CONDA_CHANGEPS1': 'no', 'WAYLAND_DISPLAY': 'wayland-0', 'ROS_DISTRO': 'jazzy', 'COLCON_PREFIX_PATH': '/home/nhu.nguyen/turtlebot4_ws/install', 'LOGNAME': 'nhu.nguyen', '_': '/usr/bin/colcon', 'MEMORY_PRESSURE_WATCH': '/sys/fs/cgroup/user.slice/user-481856793.slice/user@481856793.service/session.slice/org.gnome.Shell@wayland.service/memory.pressure', 'XDG_SESSION_CLASS': 'user', 'ROS_VERSION': '2', 'USERNAME': 'nhu.nguyen', 'TERM': 'xterm-256color', 'PROMPT_EOL_MARK': '', 'ROS_SUPER_CLIENT': 'True', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'PATH': '/opt/ros/jazzy/opt/gz_msgs_vendor/bin:/opt/ros/jazzy/opt/gz_tools_vendor/bin:/opt/ros/jazzy/opt/gz_ogre_next_vendor/bin:/opt/ros/jazzy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin', 'SESSION_MANAGER': 'local/csci20141:@/tmp/.ICE-unix/16669,unix/csci20141:/tmp/.ICE-unix/16669', 'GNOME_TERMINAL_SCREEN': '/org/gnome/Terminal/screen/bcc6b1cf_dfb5_4001_91af_e5a42bc5827e', 'XDG_MENU_PREFIX': 'gnome-', 'GNOME_SETUP_DISPLAY': ':1', 'XDG_RUNTIME_DIR': '/run/user/481856793', 'DISPLAY': ':0', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'LANG': 'en_US.UTF-8', 'RMW_IMPLEMENTATION': 'rmw_fastrtps_cpp', 'XDG_SESSION_DESKTOP': 'ubuntu', 'GNOME_TERMINAL_SERVICE': ':1.120', 'XMODIFIERS': '@im=ibus', 'XAUTHORITY': '/run/user/481856793/.mutter-Xwaylandauth.YGKZK3', 'SSH_AUTH_SOCK': '/run/user/481856793/keyring/ssh', 'AMENT_PREFIX_PATH': '/home/nhu.nguyen/turtlebot4_ws/install/lab1_pkg:/opt/ros/jazzy', 'ROS_DOMAIN_ID': '0', 'KRB5CCNAME': 'FILE:/tmp/krb5cc_481856793_0J5W4z', 'SHELL': '/bin/zsh', 'ROS_DISCOVERY_SERVER': '10.5.113.101:11811', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'QT_IM_MODULE': 'ibus', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'PWD': '/home/nhu.nguyen/turtlebot4_ws/build/lab2_pkg', 'XDG_DATA_DIRS': '/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'VIRTUAL_ENV_DISABLE_PROMPT': '12', 'PYTHONPATH': '/home/nhu.nguyen/turtlebot4_ws/build/lab2_pkg/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/nhu.nguyen/turtlebot4_ws/install/lab2_pkg/lib/python3.12/site-packages:/home/nhu.nguyen/turtlebot4_ws/install/lab1_pkg/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'VTE_VERSION': '7600', 'MEMORY_PRESSURE_WRITE': 'c29tZSAyMDAwMDAgMjAwMDAwMAA=', 'CMAKE_PREFIX_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor'}, 'shell': False}
+[2.504782] (-) TimerEvent: {}
+[2.605048] (-) TimerEvent: {}
+[2.705234] (-) TimerEvent: {}
+[2.772449] (lab1_pkg) StdoutLine: {'line': b'running egg_info\n'}
+[2.776597] (lab2_pkg) StdoutLine: {'line': b'running egg_info\n'}
+[2.776819] (lab2_pkg) StdoutLine: {'line': b'creating ../../build/lab2_pkg/lab2_pkg.egg-info\n'}
+[2.796008] (lab1_pkg) StdoutLine: {'line': b'writing ../../build/lab1_pkg/lab1_pkg.egg-info/PKG-INFO\n'}
+[2.799045] (lab1_pkg) StdoutLine: {'line': b'writing dependency_links to ../../build/lab1_pkg/lab1_pkg.egg-info/dependency_links.txt\n'}
+[2.799853] (lab1_pkg) StdoutLine: {'line': b'writing entry points to ../../build/lab1_pkg/lab1_pkg.egg-info/entry_points.txt\n'}
+[2.800065] (lab2_pkg) StdoutLine: {'line': b'writing ../../build/lab2_pkg/lab2_pkg.egg-info/PKG-INFO\n'}
+[2.800325] (lab2_pkg) StdoutLine: {'line': b'writing dependency_links to ../../build/lab2_pkg/lab2_pkg.egg-info/dependency_links.txt\n'}
+[2.800525] (lab2_pkg) StdoutLine: {'line': b'writing requirements to ../../build/lab2_pkg/lab2_pkg.egg-info/requires.txt\n'}
+[2.800656] (lab2_pkg) StdoutLine: {'line': b'writing top-level names to ../../build/lab2_pkg/lab2_pkg.egg-info/top_level.txt\n'}
+[2.800863] (lab2_pkg) StdoutLine: {'line': b"writing manifest file '../../build/lab2_pkg/lab2_pkg.egg-info/SOURCES.txt'\n"}
+[2.801221] (lab1_pkg) StdoutLine: {'line': b'writing requirements to ../../build/lab1_pkg/lab1_pkg.egg-info/requires.txt\n'}
+[2.802131] (lab1_pkg) StdoutLine: {'line': b'writing top-level names to ../../build/lab1_pkg/lab1_pkg.egg-info/top_level.txt\n'}
+[2.805294] (-) TimerEvent: {}
+[2.849803] (lab2_pkg) StdoutLine: {'line': b"reading manifest file '../../build/lab2_pkg/lab2_pkg.egg-info/SOURCES.txt'\n"}
+[2.850335] (lab2_pkg) StdoutLine: {'line': b"writing manifest file '../../build/lab2_pkg/lab2_pkg.egg-info/SOURCES.txt'\n"}
+[2.850488] (lab2_pkg) StdoutLine: {'line': b'running build\n'}
+[2.850583] (lab2_pkg) StdoutLine: {'line': b'running build_py\n'}
+[2.850708] (lab2_pkg) StdoutLine: {'line': b'creating /home/nhu.nguyen/turtlebot4_ws/build/lab2_pkg/build\n'}
+[2.850848] (lab2_pkg) StdoutLine: {'line': b'creating /home/nhu.nguyen/turtlebot4_ws/build/lab2_pkg/build/lib\n'}
+[2.850986] (lab2_pkg) StdoutLine: {'line': b'creating /home/nhu.nguyen/turtlebot4_ws/build/lab2_pkg/build/lib/lab2_pkg\n'}
+[2.851081] (lab2_pkg) StdoutLine: {'line': b'copying lab2_pkg/__init__.py -> /home/nhu.nguyen/turtlebot4_ws/build/lab2_pkg/build/lib/lab2_pkg\n'}
+[2.851154] (lab1_pkg) StdoutLine: {'line': b"reading manifest file '../../build/lab1_pkg/lab1_pkg.egg-info/SOURCES.txt'\n"}
+[2.851227] (lab2_pkg) StdoutLine: {'line': b'running install\n'}
+[2.853430] (lab1_pkg) StdoutLine: {'line': b"writing manifest file '../../build/lab1_pkg/lab1_pkg.egg-info/SOURCES.txt'\n"}
+[2.853572] (lab1_pkg) StdoutLine: {'line': b'running build\n'}
+[2.853669] (lab1_pkg) StdoutLine: {'line': b'running build_py\n'}
+[2.853760] (lab1_pkg) StdoutLine: {'line': b'copying lab1_pkg/speed_behavior.py -> /home/nhu.nguyen/turtlebot4_ws/build/lab1_pkg/build/lib/lab1_pkg\n'}
+[2.854067] (lab1_pkg) StdoutLine: {'line': b'running install\n'}
+[2.856763] (lab2_pkg) StdoutLine: {'line': b'running install_lib\n'}
+[2.859056] (lab1_pkg) StdoutLine: {'line': b'running install_lib\n'}
+[2.881060] (lab2_pkg) StdoutLine: {'line': b'creating /home/nhu.nguyen/turtlebot4_ws/install/lab2_pkg/lib/python3.12/site-packages/lab2_pkg\n'}
+[2.881213] (lab2_pkg) StdoutLine: {'line': b'copying /home/nhu.nguyen/turtlebot4_ws/build/lab2_pkg/build/lib/lab2_pkg/__init__.py -> /home/nhu.nguyen/turtlebot4_ws/install/lab2_pkg/lib/python3.12/site-packages/lab2_pkg\n'}
+[2.881628] (lab2_pkg) StdoutLine: {'line': b'byte-compiling /home/nhu.nguyen/turtlebot4_ws/install/lab2_pkg/lib/python3.12/site-packages/lab2_pkg/__init__.py to __init__.cpython-312.pyc\n'}
+[2.881871] (lab2_pkg) StdoutLine: {'line': b'running install_data\n'}
+[2.881972] (lab2_pkg) StdoutLine: {'line': b'creating /home/nhu.nguyen/turtlebot4_ws/install/lab2_pkg/share/ament_index\n'}
+[2.882079] (lab2_pkg) StdoutLine: {'line': b'creating /home/nhu.nguyen/turtlebot4_ws/install/lab2_pkg/share/ament_index/resource_index\n'}
+[2.882167] (lab2_pkg) StdoutLine: {'line': b'creating /home/nhu.nguyen/turtlebot4_ws/install/lab2_pkg/share/ament_index/resource_index/packages\n'}
+[2.882245] (lab2_pkg) StdoutLine: {'line': b'copying resource/lab2_pkg -> /home/nhu.nguyen/turtlebot4_ws/install/lab2_pkg/share/ament_index/resource_index/packages\n'}
+[2.882326] (lab2_pkg) StdoutLine: {'line': b'copying package.xml -> /home/nhu.nguyen/turtlebot4_ws/install/lab2_pkg/share/lab2_pkg\n'}
+[2.882495] (lab2_pkg) StdoutLine: {'line': b'running install_egg_info\n'}
+[2.882984] (lab1_pkg) StdoutLine: {'line': b'copying /home/nhu.nguyen/turtlebot4_ws/build/lab1_pkg/build/lib/lab1_pkg/speed_behavior.py -> /home/nhu.nguyen/turtlebot4_ws/install/lab1_pkg/lib/python3.12/site-packages/lab1_pkg\n'}
+[2.883527] (lab1_pkg) StdoutLine: {'line': b'byte-compiling /home/nhu.nguyen/turtlebot4_ws/install/lab1_pkg/lib/python3.12/site-packages/lab1_pkg/speed_behavior.py to speed_behavior.cpython-312.pyc\n'}
+[2.885507] (lab1_pkg) StdoutLine: {'line': b'running install_data\n'}
+[2.885628] (lab1_pkg) StdoutLine: {'line': b'running install_egg_info\n'}
+[2.905392] (-) TimerEvent: {}
+[2.908307] (lab2_pkg) StdoutLine: {'line': b'Copying ../../build/lab2_pkg/lab2_pkg.egg-info to /home/nhu.nguyen/turtlebot4_ws/install/lab2_pkg/lib/python3.12/site-packages/lab2_pkg-0.0.0-py3.12.egg-info\n'}
+[2.910239] (lab2_pkg) StdoutLine: {'line': b'running install_scripts\n'}
+[2.910999] (lab1_pkg) StdoutLine: {'line': b"removing '/home/nhu.nguyen/turtlebot4_ws/install/lab1_pkg/lib/python3.12/site-packages/lab1_pkg-0.0.0-py3.12.egg-info' (and everything under it)\n"}
+[2.911224] (lab1_pkg) StdoutLine: {'line': b'Copying ../../build/lab1_pkg/lab1_pkg.egg-info to /home/nhu.nguyen/turtlebot4_ws/install/lab1_pkg/lib/python3.12/site-packages/lab1_pkg-0.0.0-py3.12.egg-info\n'}
+[2.912957] (lab1_pkg) StdoutLine: {'line': b'running install_scripts\n'}
+[3.005514] (-) TimerEvent: {}
+[3.061582] (lab2_pkg) StdoutLine: {'line': b"writing list of installed files to '/home/nhu.nguyen/turtlebot4_ws/build/lab2_pkg/install.log'\n"}
+[3.068726] (lab1_pkg) StdoutLine: {'line': b'Installing speed_behavior_node script to /home/nhu.nguyen/turtlebot4_ws/install/lab1_pkg/lib/lab1_pkg\n'}
+[3.070958] (lab1_pkg) StdoutLine: {'line': b"writing list of installed files to '/home/nhu.nguyen/turtlebot4_ws/build/lab1_pkg/install.log'\n"}
+[3.082394] (lab2_pkg) CommandEnded: {'returncode': 0}
+[3.105616] (-) TimerEvent: {}
+[3.118167] (lab2_pkg) JobEnded: {'identifier': 'lab2_pkg', 'rc': 0}
+[3.119491] (lab1_pkg) CommandEnded: {'returncode': 0}
+[3.164463] (lab1_pkg) JobEnded: {'identifier': 'lab1_pkg', 'rc': 0}
+[3.165476] (-) EventReactorShutdown: {}

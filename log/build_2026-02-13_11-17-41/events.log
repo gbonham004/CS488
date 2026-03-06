@@ -1,0 +1,38 @@
+[0.000000] (-) TimerEvent: {}
+[0.000208] (lab1_pkg) JobQueued: {'identifier': 'lab1_pkg', 'dependencies': OrderedDict()}
+[0.000369] (lab1_pkg) JobStarted: {'identifier': 'lab1_pkg'}
+[0.099924] (-) TimerEvent: {}
+[0.200141] (-) TimerEvent: {}
+[0.300366] (-) TimerEvent: {}
+[0.400551] (-) TimerEvent: {}
+[0.500804] (-) TimerEvent: {}
+[0.591794] (lab1_pkg) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', '-W', 'ignore:easy_install command is deprecated', 'setup.py', 'egg_info', '--egg-base', '../../build/lab1_pkg', 'build', '--build-base', '/home/nhu.nguyen/turtlebot4_ws/build/lab1_pkg/build', 'install', '--record', '/home/nhu.nguyen/turtlebot4_ws/build/lab1_pkg/install.log', '--single-version-externally-managed', 'install_data'], 'cwd': '/home/nhu.nguyen/turtlebot4_ws/src/lab1_pkg', 'env': {'USER': 'nhu.nguyen', 'XDG_SESSION_TYPE': 'wayland', 'CLUTTER_DISABLE_MIPMAPPED_TEXT': '1', 'SHLVL': '1', 'OLDPWD': '/home/nhu.nguyen', 'HOME': '/home/nhu.nguyen', 'CHROME_DESKTOP': 'code.desktop', 'DESKTOP_SESSION': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'SYSTEMD_EXEC_PID': '28409', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/481856793/bus', 'GSM_SKIP_SSH_AGENT_WORKAROUND': 'true', 'COLORTERM': 'truecolor', 'CONDA_CHANGEPS1': 'no', 'WAYLAND_DISPLAY': 'wayland-0', 'LOGNAME': 'nhu.nguyen', '_': '/usr/bin/colcon', 'MEMORY_PRESSURE_WATCH': '/sys/fs/cgroup/user.slice/user-481856793.slice/user@481856793.service/session.slice/org.gnome.Shell@wayland.service/memory.pressure', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'nhu.nguyen', 'TERM': 'xterm-256color', 'PROMPT_EOL_MARK': '', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'FC_FONTATIONS': '1', 'PATH': '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin', 'SESSION_MANAGER': 'local/csci20141:@/tmp/.ICE-unix/28384,unix/csci20141:/tmp/.ICE-unix/28384', 'GNOME_TERMINAL_SCREEN': '/org/gnome/Terminal/screen/5320f604_952f_481a_9179_44025588e7fc', 'XDG_MENU_PREFIX': 'gnome-', 'GNOME_SETUP_DISPLAY': ':1', 'GDK_BACKEND': 'wayland', 'XDG_RUNTIME_DIR': '/run/user/481856793', 'DISPLAY': ':0', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'LANG': 'en_US.UTF-8', 'XDG_SESSION_DESKTOP': 'ubuntu', 'GNOME_TERMINAL_SERVICE': ':1.125', 'XMODIFIERS': '@im=ibus', 'XAUTHORITY': '/run/user/481856793/.mutter-Xwaylandauth.Y3YOK3', 'SSH_AUTH_SOCK': '/run/user/481856793/keyring/ssh', 'KRB5CCNAME': 'FILE:/tmp/krb5cc_481856793_afj1rs', 'SHELL': '/bin/zsh', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/nhu.nguyen/turtlebot4_ws/build/lab1_pkg', 'XDG_DATA_DIRS': '/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'VIRTUAL_ENV_DISABLE_PROMPT': '12', 'COLCON': '1', 'VTE_VERSION': '7600', 'MEMORY_PRESSURE_WRITE': 'c29tZSAyMDAwMDAgMjAwMDAwMAA=', 'PYTHONPATH': '/home/nhu.nguyen/turtlebot4_ws/build/lab1_pkg/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/nhu.nguyen/turtlebot4_ws/install/lab1_pkg/lib/python3.12/site-packages:'}, 'shell': False}
+[0.600860] (-) TimerEvent: {}
+[0.701072] (-) TimerEvent: {}
+[0.787941] (lab1_pkg) StdoutLine: {'line': b'running egg_info\n'}
+[0.800977] (lab1_pkg) StdoutLine: {'line': b'writing ../../build/lab1_pkg/lab1_pkg.egg-info/PKG-INFO\n'}
+[0.801099] (-) TimerEvent: {}
+[0.801450] (lab1_pkg) StdoutLine: {'line': b'writing dependency_links to ../../build/lab1_pkg/lab1_pkg.egg-info/dependency_links.txt\n'}
+[0.801575] (lab1_pkg) StdoutLine: {'line': b'writing entry points to ../../build/lab1_pkg/lab1_pkg.egg-info/entry_points.txt\n'}
+[0.801685] (lab1_pkg) StdoutLine: {'line': b'writing requirements to ../../build/lab1_pkg/lab1_pkg.egg-info/requires.txt\n'}
+[0.801831] (lab1_pkg) StdoutLine: {'line': b'writing top-level names to ../../build/lab1_pkg/lab1_pkg.egg-info/top_level.txt\n'}
+[0.828685] (lab1_pkg) StdoutLine: {'line': b"reading manifest file '../../build/lab1_pkg/lab1_pkg.egg-info/SOURCES.txt'\n"}
+[0.829337] (lab1_pkg) StdoutLine: {'line': b"writing manifest file '../../build/lab1_pkg/lab1_pkg.egg-info/SOURCES.txt'\n"}
+[0.829569] (lab1_pkg) StdoutLine: {'line': b'running build\n'}
+[0.829721] (lab1_pkg) StdoutLine: {'line': b'running build_py\n'}
+[0.829905] (lab1_pkg) StdoutLine: {'line': b'copying lab1_pkg/speed_behavior.py -> /home/nhu.nguyen/turtlebot4_ws/build/lab1_pkg/build/lib/lab1_pkg\n'}
+[0.830066] (lab1_pkg) StdoutLine: {'line': b'running install\n'}
+[0.835345] (lab1_pkg) StdoutLine: {'line': b'running install_lib\n'}
+[0.848681] (lab1_pkg) StdoutLine: {'line': b'copying /home/nhu.nguyen/turtlebot4_ws/build/lab1_pkg/build/lib/lab1_pkg/speed_behavior.py -> /home/nhu.nguyen/turtlebot4_ws/install/lab1_pkg/lib/python3.12/site-packages/lab1_pkg\n'}
+[0.849241] (lab1_pkg) StdoutLine: {'line': b'byte-compiling /home/nhu.nguyen/turtlebot4_ws/install/lab1_pkg/lib/python3.12/site-packages/lab1_pkg/speed_behavior.py to speed_behavior.cpython-312.pyc\n'}
+[0.852243] (lab1_pkg) StdoutLine: {'line': b'running install_data\n'}
+[0.852382] (lab1_pkg) StdoutLine: {'line': b'running install_egg_info\n'}
+[0.865997] (lab1_pkg) StdoutLine: {'line': b"removing '/home/nhu.nguyen/turtlebot4_ws/install/lab1_pkg/lib/python3.12/site-packages/lab1_pkg-0.0.0-py3.12.egg-info' (and everything under it)\n"}
+[0.866195] (lab1_pkg) StdoutLine: {'line': b'Copying ../../build/lab1_pkg/lab1_pkg.egg-info to /home/nhu.nguyen/turtlebot4_ws/install/lab1_pkg/lib/python3.12/site-packages/lab1_pkg-0.0.0-py3.12.egg-info\n'}
+[0.867698] (lab1_pkg) StdoutLine: {'line': b'running install_scripts\n'}
+[0.901202] (-) TimerEvent: {}
+[0.963636] (lab1_pkg) StdoutLine: {'line': b'Installing speed_behavior_node script to /home/nhu.nguyen/turtlebot4_ws/install/lab1_pkg/lib/lab1_pkg\n'}
+[0.963931] (lab1_pkg) StdoutLine: {'line': b"writing list of installed files to '/home/nhu.nguyen/turtlebot4_ws/build/lab1_pkg/install.log'\n"}
+[0.981775] (lab1_pkg) CommandEnded: {'returncode': 0}
+[0.991769] (lab1_pkg) JobEnded: {'identifier': 'lab1_pkg', 'rc': 0}
+[0.992504] (-) EventReactorShutdown: {}

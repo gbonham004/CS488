@@ -1,0 +1,25 @@
+[0.894s] Invoking command in '/home/nhu.nguyen/turtlebot4_ws/src/lab3_pkg': PYTHONPATH=/home/nhu.nguyen/turtlebot4_ws/build/lab3_pkg/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/nhu.nguyen/turtlebot4_ws/install/lab3_pkg/lib/python3.12/site-packages:/home/nhu.nguyen/turtlebot4_ws/install/custom_interfaces/lib/python3.12/site-packages:/home/nhu.nguyen/turtlebot4_ws/install/lab3_pkg/lib/python3.12/site-packages:/home/nhu.nguyen/turtlebot4_ws/install/lab2_pkg/lib/python3.12/site-packages:/home/nhu.nguyen/turtlebot4_ws/install/lab1_pkg/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/lab3_pkg build --build-base /home/nhu.nguyen/turtlebot4_ws/build/lab3_pkg/build install --record /home/nhu.nguyen/turtlebot4_ws/build/lab3_pkg/install.log --single-version-externally-managed install_data
+[1.203s] running egg_info
+[1.227s] writing ../../build/lab3_pkg/lab3_pkg.egg-info/PKG-INFO
+[1.227s] writing dependency_links to ../../build/lab3_pkg/lab3_pkg.egg-info/dependency_links.txt
+[1.227s] writing entry points to ../../build/lab3_pkg/lab3_pkg.egg-info/entry_points.txt
+[1.228s] writing requirements to ../../build/lab3_pkg/lab3_pkg.egg-info/requires.txt
+[1.228s] writing top-level names to ../../build/lab3_pkg/lab3_pkg.egg-info/top_level.txt
+[1.277s] reading manifest file '../../build/lab3_pkg/lab3_pkg.egg-info/SOURCES.txt'
+[1.278s] writing manifest file '../../build/lab3_pkg/lab3_pkg.egg-info/SOURCES.txt'
+[1.278s] running build
+[1.278s] running build_py
+[1.278s] copying lab3_pkg/lab3_server.py -> /home/nhu.nguyen/turtlebot4_ws/build/lab3_pkg/build/lib/lab3_pkg
+[1.278s] running install
+[1.283s] running install_lib
+[1.308s] copying /home/nhu.nguyen/turtlebot4_ws/build/lab3_pkg/build/lib/lab3_pkg/lab3_server.py -> /home/nhu.nguyen/turtlebot4_ws/install/lab3_pkg/lib/python3.12/site-packages/lab3_pkg
+[1.309s] byte-compiling /home/nhu.nguyen/turtlebot4_ws/install/lab3_pkg/lib/python3.12/site-packages/lab3_pkg/lab3_server.py to lab3_server.cpython-312.pyc
+[1.313s] running install_data
+[1.313s] running install_egg_info
+[1.338s] removing '/home/nhu.nguyen/turtlebot4_ws/install/lab3_pkg/lib/python3.12/site-packages/lab3_pkg-0.0.0-py3.12.egg-info' (and everything under it)
+[1.339s] Copying ../../build/lab3_pkg/lab3_pkg.egg-info to /home/nhu.nguyen/turtlebot4_ws/install/lab3_pkg/lib/python3.12/site-packages/lab3_pkg-0.0.0-py3.12.egg-info
+[1.341s] running install_scripts
+[1.497s] Installing SCOD_server script to /home/nhu.nguyen/turtlebot4_ws/install/lab3_pkg/lib/lab3_pkg
+[1.497s] Installing set_cap_client_node script to /home/nhu.nguyen/turtlebot4_ws/install/lab3_pkg/lib/lab3_pkg
+[1.497s] writing list of installed files to '/home/nhu.nguyen/turtlebot4_ws/build/lab3_pkg/install.log'
+[1.516s] Invoked command in '/home/nhu.nguyen/turtlebot4_ws/src/lab3_pkg' returned '0': PYTHONPATH=/home/nhu.nguyen/turtlebot4_ws/build/lab3_pkg/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/nhu.nguyen/turtlebot4_ws/install/lab3_pkg/lib/python3.12/site-packages:/home/nhu.nguyen/turtlebot4_ws/install/custom_interfaces/lib/python3.12/site-packages:/home/nhu.nguyen/turtlebot4_ws/install/lab3_pkg/lib/python3.12/site-packages:/home/nhu.nguyen/turtlebot4_ws/install/lab2_pkg/lib/python3.12/site-packages:/home/nhu.nguyen/turtlebot4_ws/install/lab1_pkg/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/lab3_pkg build --build-base /home/nhu.nguyen/turtlebot4_ws/build/lab3_pkg/build install --record /home/nhu.nguyen/turtlebot4_ws/build/lab3_pkg/install.log --single-version-externally-managed install_data
