@@ -1,0 +1,7 @@
+[0.000000] (-) TimerEvent: {}
+[0.000233] (-) JobUnselected: {'identifier': 'custom_interfaces'}
+[0.000262] (-) JobUnselected: {'identifier': 'lab1_pkg'}
+[0.000331] (-) JobUnselected: {'identifier': 'lab2_pkg'}
+[0.000408] (-) JobUnselected: {'identifier': 'lab3_pkg'}
+[0.000456] (-) JobUnselected: {'identifier': 'lab_buildup'}
+[0.000482] (-) EventReactorShutdown: {}

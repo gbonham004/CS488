@@ -1,0 +1,35 @@
+[1.331s] Invoking command in '/home/gbonham/turtlebot4_ws/src/lab5_pkg': PYTHONPATH=/home/gbonham/turtlebot4_ws/build/lab5_pkg/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/gbonham/turtlebot4_ws/install/lab5_pkg/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/lab5_pkg build --build-base /home/gbonham/turtlebot4_ws/build/lab5_pkg/build install --record /home/gbonham/turtlebot4_ws/build/lab5_pkg/install.log --single-version-externally-managed install_data
+[1.624s] running egg_info
+[1.624s] creating ../../build/lab5_pkg/lab5_pkg.egg-info
+[1.648s] writing ../../build/lab5_pkg/lab5_pkg.egg-info/PKG-INFO
+[1.648s] writing dependency_links to ../../build/lab5_pkg/lab5_pkg.egg-info/dependency_links.txt
+[1.648s] writing requirements to ../../build/lab5_pkg/lab5_pkg.egg-info/requires.txt
+[1.648s] writing top-level names to ../../build/lab5_pkg/lab5_pkg.egg-info/top_level.txt
+[1.649s] writing manifest file '../../build/lab5_pkg/lab5_pkg.egg-info/SOURCES.txt'
+[1.715s] reading manifest file '../../build/lab5_pkg/lab5_pkg.egg-info/SOURCES.txt'
+[1.715s] writing manifest file '../../build/lab5_pkg/lab5_pkg.egg-info/SOURCES.txt'
+[1.715s] running build
+[1.715s] running build_py
+[1.715s] creating /home/gbonham/turtlebot4_ws/build/lab5_pkg/build
+[1.716s] creating /home/gbonham/turtlebot4_ws/build/lab5_pkg/build/lib
+[1.716s] creating /home/gbonham/turtlebot4_ws/build/lab5_pkg/build/lib/lab5_pkg
+[1.716s] copying lab5_pkg/__init__.py -> /home/gbonham/turtlebot4_ws/build/lab5_pkg/build/lib/lab5_pkg
+[1.716s] copying lab5_pkg/go_to_goal_server.py -> /home/gbonham/turtlebot4_ws/build/lab5_pkg/build/lib/lab5_pkg
+[1.716s] running install
+[1.722s] running install_lib
+[1.746s] creating /home/gbonham/turtlebot4_ws/install/lab5_pkg/lib/python3.12/site-packages/lab5_pkg
+[1.746s] copying /home/gbonham/turtlebot4_ws/build/lab5_pkg/build/lib/lab5_pkg/__init__.py -> /home/gbonham/turtlebot4_ws/install/lab5_pkg/lib/python3.12/site-packages/lab5_pkg
+[1.747s] copying /home/gbonham/turtlebot4_ws/build/lab5_pkg/build/lib/lab5_pkg/go_to_goal_server.py -> /home/gbonham/turtlebot4_ws/install/lab5_pkg/lib/python3.12/site-packages/lab5_pkg
+[1.747s] byte-compiling /home/gbonham/turtlebot4_ws/install/lab5_pkg/lib/python3.12/site-packages/lab5_pkg/__init__.py to __init__.cpython-312.pyc
+[1.747s] byte-compiling /home/gbonham/turtlebot4_ws/install/lab5_pkg/lib/python3.12/site-packages/lab5_pkg/go_to_goal_server.py to go_to_goal_server.cpython-312.pyc
+[1.751s] running install_data
+[1.752s] creating /home/gbonham/turtlebot4_ws/install/lab5_pkg/share/ament_index
+[1.752s] creating /home/gbonham/turtlebot4_ws/install/lab5_pkg/share/ament_index/resource_index
+[1.752s] creating /home/gbonham/turtlebot4_ws/install/lab5_pkg/share/ament_index/resource_index/packages
+[1.752s] copying resource/lab5_pkg -> /home/gbonham/turtlebot4_ws/install/lab5_pkg/share/ament_index/resource_index/packages
+[1.752s] copying package.xml -> /home/gbonham/turtlebot4_ws/install/lab5_pkg/share/lab5_pkg
+[1.752s] running install_egg_info
+[1.781s] Copying ../../build/lab5_pkg/lab5_pkg.egg-info to /home/gbonham/turtlebot4_ws/install/lab5_pkg/lib/python3.12/site-packages/lab5_pkg-0.0.0-py3.12.egg-info
+[1.783s] running install_scripts
+[1.941s] writing list of installed files to '/home/gbonham/turtlebot4_ws/build/lab5_pkg/install.log'
+[1.976s] Invoked command in '/home/gbonham/turtlebot4_ws/src/lab5_pkg' returned '0': PYTHONPATH=/home/gbonham/turtlebot4_ws/build/lab5_pkg/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/gbonham/turtlebot4_ws/install/lab5_pkg/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/lab5_pkg build --build-base /home/gbonham/turtlebot4_ws/build/lab5_pkg/build install --record /home/gbonham/turtlebot4_ws/build/lab5_pkg/install.log --single-version-externally-managed install_data

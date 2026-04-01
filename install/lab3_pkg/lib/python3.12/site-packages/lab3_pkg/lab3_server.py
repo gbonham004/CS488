@@ -39,7 +39,6 @@ class Lab3Server(Node):
         self.obstacle_detected = False
         for point in msg.ranges[200:340]:
             
-
             if point < min_range_val or point > max_range_val:
                 continue
 

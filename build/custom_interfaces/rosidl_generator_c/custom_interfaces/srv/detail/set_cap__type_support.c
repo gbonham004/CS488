@@ -4,9 +4,9 @@
 
 #include <string.h>
 
+#include "custom_interfaces/srv/detail/set_cap__type_support.h"
 #include "rosidl_typesupport_interface/macros.h"
 #include "custom_interfaces/srv/detail/set_cap__functions.h"
-#include "custom_interfaces/srv/detail/set_cap__type_support.h"
 #include "custom_interfaces/srv/detail/set_cap__struct.h"
 
 #ifdef __cplusplus

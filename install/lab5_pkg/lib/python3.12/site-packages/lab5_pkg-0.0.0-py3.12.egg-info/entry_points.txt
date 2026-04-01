@@ -1,0 +1,2 @@
+[console_scripts]
+go_to_goal_server = lab5_pkg.go_to_goal_server:main

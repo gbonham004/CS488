@@ -1,2 +1,4 @@
+action/RobotGoal.action
+action/RobotGoal.idl
 srv/SetCap.idl
 srv/SetCap.srv
