@@ -24,7 +24,8 @@ setup(
     },
     entry_points={
         'console_scripts': [
-            'go_to_goal_server = lab5_pkg.go_to_goal_server:main'
+            'go_to_goal_server = lab5_pkg.go_to_goal_server:main',
+            'go_to_goal_client = lab5_pkg.go_to_goal_client:main'
         ],
     },
 )

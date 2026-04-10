@@ -65,11 +65,17 @@ class GoToGoalNode(Node):
         self.goal_action = ActionServer(self, RobotGoal, "go_to_goal", goal_callback=self.goal_callback, execute_callback=self.execute_callback)
 
     def goal_callback(self, goal_request):
-        self.get_logger.info("Recieved Goal Request")
-        if (goal_request.goal_x > self.max_x or goal_request.goal_y > self.max_y):
-            self.get_logger.info("Rejected Request")
+        self.get_logger().info("Recieved Goal Request")
+
+        if ((goal_request.goal_x > self.max_x or goal_request.goal_y > self.max_y)):
+            self.get_logger().info("Rejected Request, OOB")
             return GoalResponse.REJECT
-        self.get_logger.info("Accepted Request!")
+        for point in self.obstacle_space:
+            dist = math.sqrt((goal_request.goal_y - point[1]) ** 2 + (goal_request.goal_x - point[0])** 2)
+            if dist < 2 * self.robot_radius:
+                self.get_logger().info("Rejected")
+                return GoalResponse.REJECT
+        self.get_logger().info("Accepted Request!")
         return GoalResponse.ACCEPT
     
     def execute_callback(self, goal_handle):
@@ -157,7 +163,8 @@ class GoToGoalNode(Node):
                 real_x,real_y = self.index_to_real(col,row)
                 point = occupancy_grid[col + (row*self.width)]
 
-                # DO STUFF HERE (lab 5 part 2)
+                if (point > 25):
+                    self.obstacle_space.append((real_x, real_y))
 
                 col += 1
             row += 1
