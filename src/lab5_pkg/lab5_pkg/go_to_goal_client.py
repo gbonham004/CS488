@@ -61,8 +61,8 @@ def main(args=None):
     node.send_goal((goal_x, goal_y, goal_theta))
 
     rclpy.spin(node)
-    node.destroy_node()
-    rclpy.shutdown()
+#     node.destroy_node()
+#     rclpy.shutdown()
 
 if __name__ == '__main__':
     main()

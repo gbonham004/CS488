@@ -52,22 +52,22 @@ class GoToGoalNode(Node):
         self.total_err_ang = 0.0
 
         # Subscribe to the robot position
-        self.pos_subscriber = self.create_subscription(PoseWithCovarianceStamped, '/robotN/pose', self.callback_pos, 10)
+        self.pos_subscriber = self.create_subscription(PoseWithCovarianceStamped, '/robot1/pose', self.callback_pos, 10)
         self.pos_subscriber
 
         # Subscribe to the occupancy grid
-        self.map_subscriber = self.create_subscription(OccupancyGrid, '/robotN/map', self.callback_map, 10)
+        self.map_subscriber = self.create_subscription(OccupancyGrid, '/robot1/map', self.callback_map, 10)
         self.map_subscriber
 
         # Publisher for velocity
-        self.velocity_pub = self.create_publisher(Twist, '/robotN/cmd_vel_unfiltered', 10)
+        self.velocity_pub = self.create_publisher(Twist, '/robot1/cmd_vel_unfiltered', 10)
 
         self.goal_action = ActionServer(self, RobotGoal, "go_to_goal", goal_callback=self.goal_callback, execute_callback=self.execute_callback)
 
     def goal_callback(self, goal_request):
         self.get_logger().info("Recieved Goal Request")
 
-        if ((goal_request.goal_x > self.max_x or goal_request.goal_y > self.max_y)):
+        if goal_request.goal_x > self.max_x or goal_request.goal_y > self.max_y:
             self.get_logger().info("Rejected Request, OOB")
             return GoalResponse.REJECT
         for point in self.obstacle_space:
@@ -75,6 +75,7 @@ class GoToGoalNode(Node):
             if dist < 2 * self.robot_radius:
                 self.get_logger().info("Rejected")
                 return GoalResponse.REJECT
+
         self.get_logger().info("Accepted Request!")
         return GoalResponse.ACCEPT
     
@@ -93,6 +94,7 @@ class GoToGoalNode(Node):
         ki_a = 0.05
         close_enough = 0.2
 
+        # while not at the goal...
         while not((self.x >= goal_x - close_enough or self.x <= goal_x + close_enough) and (self.y >= goal_y - close_enough or self.y <= goal_y + close_enough)):
             err_pos = math.sqrt((goal_x - self.x) ** 2 + (goal_y - self.y) ** 2)
             d_err_pos = err_pos - self.last_err_pos
@@ -110,6 +112,7 @@ class GoToGoalNode(Node):
             result_twist.linear.x = vel_linear
             result_twist.angular.z = vel_angular
             self.velocity_pub.publish(result_twist)
+            self.get_logger().info("I'm rotating!")
 
             feedback.curr_x = self.x
             feedback.curr_y = self.y

@@ -1,8 +1,8 @@
-# Install script for directory: /home/gbonham/turtlebot4_ws/src/lab_bringup
+# Install script for directory: /home/buenr/CS488/src/lab_bringup
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/gbonham/turtlebot4_ws/install/lab_bringup")
+  set(CMAKE_INSTALL_PREFIX "/home/buenr/CS488/install/lab_bringup")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -43,15 +43,15 @@ if(NOT DEFINED CMAKE_OBJDUMP)
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/lab_bringup/" TYPE DIRECTORY FILES "/home/gbonham/turtlebot4_ws/src/lab_bringup/launch")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/lab_bringup/" TYPE DIRECTORY FILES "/home/buenr/CS488/src/lab_bringup/launch")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ament_index/resource_index/package_run_dependencies" TYPE FILE FILES "/home/gbonham/turtlebot4_ws/build/lab_bringup/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/lab_bringup")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ament_index/resource_index/package_run_dependencies" TYPE FILE FILES "/home/buenr/CS488/build/lab_bringup/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/lab_bringup")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ament_index/resource_index/parent_prefix_path" TYPE FILE FILES "/home/gbonham/turtlebot4_ws/build/lab_bringup/ament_cmake_index/share/ament_index/resource_index/parent_prefix_path/lab_bringup")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ament_index/resource_index/parent_prefix_path" TYPE FILE FILES "/home/buenr/CS488/build/lab_bringup/ament_cmake_index/share/ament_index/resource_index/parent_prefix_path/lab_bringup")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
@@ -59,7 +59,7 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/lab_bringup/environment" TYPE FILE FILES "/home/gbonham/turtlebot4_ws/build/lab_bringup/ament_cmake_environment_hooks/ament_prefix_path.dsv")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/lab_bringup/environment" TYPE FILE FILES "/home/buenr/CS488/build/lab_bringup/ament_cmake_environment_hooks/ament_prefix_path.dsv")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
@@ -67,42 +67,42 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/lab_bringup/environment" TYPE FILE FILES "/home/gbonham/turtlebot4_ws/build/lab_bringup/ament_cmake_environment_hooks/path.dsv")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/lab_bringup/environment" TYPE FILE FILES "/home/buenr/CS488/build/lab_bringup/ament_cmake_environment_hooks/path.dsv")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/lab_bringup" TYPE FILE FILES "/home/gbonham/turtlebot4_ws/build/lab_bringup/ament_cmake_environment_hooks/local_setup.bash")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/lab_bringup" TYPE FILE FILES "/home/buenr/CS488/build/lab_bringup/ament_cmake_environment_hooks/local_setup.bash")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/lab_bringup" TYPE FILE FILES "/home/gbonham/turtlebot4_ws/build/lab_bringup/ament_cmake_environment_hooks/local_setup.sh")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/lab_bringup" TYPE FILE FILES "/home/buenr/CS488/build/lab_bringup/ament_cmake_environment_hooks/local_setup.sh")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/lab_bringup" TYPE FILE FILES "/home/gbonham/turtlebot4_ws/build/lab_bringup/ament_cmake_environment_hooks/local_setup.zsh")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/lab_bringup" TYPE FILE FILES "/home/buenr/CS488/build/lab_bringup/ament_cmake_environment_hooks/local_setup.zsh")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/lab_bringup" TYPE FILE FILES "/home/gbonham/turtlebot4_ws/build/lab_bringup/ament_cmake_environment_hooks/local_setup.dsv")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/lab_bringup" TYPE FILE FILES "/home/buenr/CS488/build/lab_bringup/ament_cmake_environment_hooks/local_setup.dsv")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/lab_bringup" TYPE FILE FILES "/home/gbonham/turtlebot4_ws/build/lab_bringup/ament_cmake_environment_hooks/package.dsv")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/lab_bringup" TYPE FILE FILES "/home/buenr/CS488/build/lab_bringup/ament_cmake_environment_hooks/package.dsv")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ament_index/resource_index/packages" TYPE FILE FILES "/home/gbonham/turtlebot4_ws/build/lab_bringup/ament_cmake_index/share/ament_index/resource_index/packages/lab_bringup")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ament_index/resource_index/packages" TYPE FILE FILES "/home/buenr/CS488/build/lab_bringup/ament_cmake_index/share/ament_index/resource_index/packages/lab_bringup")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/lab_bringup/cmake" TYPE FILE FILES
-    "/home/gbonham/turtlebot4_ws/build/lab_bringup/ament_cmake_core/lab_bringupConfig.cmake"
-    "/home/gbonham/turtlebot4_ws/build/lab_bringup/ament_cmake_core/lab_bringupConfig-version.cmake"
+    "/home/buenr/CS488/build/lab_bringup/ament_cmake_core/lab_bringupConfig.cmake"
+    "/home/buenr/CS488/build/lab_bringup/ament_cmake_core/lab_bringupConfig-version.cmake"
     )
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/lab_bringup" TYPE FILE FILES "/home/gbonham/turtlebot4_ws/src/lab_bringup/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/lab_bringup" TYPE FILE FILES "/home/buenr/CS488/src/lab_bringup/package.xml")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT)
@@ -113,5 +113,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/gbonham/turtlebot4_ws/build/lab_bringup/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/buenr/CS488/build/lab_bringup/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

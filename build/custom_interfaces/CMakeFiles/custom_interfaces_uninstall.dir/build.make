@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/gbonham/turtlebot4_ws/src/custom_interfaces
+CMAKE_SOURCE_DIR = /home/buenr/CS488/src/custom_interfaces
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/gbonham/turtlebot4_ws/build/custom_interfaces
+CMAKE_BINARY_DIR = /home/buenr/CS488/build/custom_interfaces
 
 # Utility rule file for custom_interfaces_uninstall.
 
@@ -67,7 +67,7 @@ include CMakeFiles/custom_interfaces_uninstall.dir/compiler_depend.make
 include CMakeFiles/custom_interfaces_uninstall.dir/progress.make
 
 CMakeFiles/custom_interfaces_uninstall:
-	/usr/bin/cmake -P /home/gbonham/turtlebot4_ws/build/custom_interfaces/ament_cmake_uninstall_target/ament_cmake_uninstall_target.cmake
+	/usr/bin/cmake -P /home/buenr/CS488/build/custom_interfaces/ament_cmake_uninstall_target/ament_cmake_uninstall_target.cmake
 
 custom_interfaces_uninstall: CMakeFiles/custom_interfaces_uninstall
 custom_interfaces_uninstall: CMakeFiles/custom_interfaces_uninstall.dir/build.make
@@ -82,6 +82,6 @@ CMakeFiles/custom_interfaces_uninstall.dir/clean:
 .PHONY : CMakeFiles/custom_interfaces_uninstall.dir/clean
 
 CMakeFiles/custom_interfaces_uninstall.dir/depend:
-	cd /home/gbonham/turtlebot4_ws/build/custom_interfaces && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/gbonham/turtlebot4_ws/src/custom_interfaces /home/gbonham/turtlebot4_ws/src/custom_interfaces /home/gbonham/turtlebot4_ws/build/custom_interfaces /home/gbonham/turtlebot4_ws/build/custom_interfaces /home/gbonham/turtlebot4_ws/build/custom_interfaces/CMakeFiles/custom_interfaces_uninstall.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /home/buenr/CS488/build/custom_interfaces && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/buenr/CS488/src/custom_interfaces /home/buenr/CS488/src/custom_interfaces /home/buenr/CS488/build/custom_interfaces /home/buenr/CS488/build/custom_interfaces /home/buenr/CS488/build/custom_interfaces/CMakeFiles/custom_interfaces_uninstall.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : CMakeFiles/custom_interfaces_uninstall.dir/depend
 

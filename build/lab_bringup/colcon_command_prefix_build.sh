@@ -1,3 +1,3 @@
 # generated from colcon_core/shell/template/command_prefix.sh.em
-. "/home/gbonham/turtlebot4_ws/install/custom_interfaces/share/custom_interfaces/package.sh"
-. "/home/gbonham/turtlebot4_ws/install/lab3_pkg/share/lab3_pkg/package.sh"
+. "/home/buenr/CS488/install/custom_interfaces/share/custom_interfaces/package.sh"
+. "/home/buenr/CS488/install/lab3_pkg/share/lab3_pkg/package.sh"
