@@ -49,6 +49,8 @@ class GoToGoalClient(Node):
         else:
             self.get_logger().info("Action aborted or cancelled")
 
+        rclpy.shutdown()
+
 def main(args=None):
     rclpy.init(args=args)
 

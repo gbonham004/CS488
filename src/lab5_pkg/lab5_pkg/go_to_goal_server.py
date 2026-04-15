@@ -9,6 +9,7 @@ from rclpy.action.server import ServerGoalHandle
 from custom_interfaces.action import RobotGoal
 
 # For multithreading
+from tf_transformations import euler_from_quaternion
 from rclpy.executors import MultiThreadedExecutor
 from rclpy.executors import ExternalShutdownException
 from rclpy.callback_groups import ReentrantCallbackGroup
@@ -65,6 +66,8 @@ class GoToGoalNode(Node):
         self.goal_action = ActionServer(self, RobotGoal, "go_to_goal", goal_callback=self.goal_callback, execute_callback=self.execute_callback)
 
     def goal_callback(self, goal_request):
+        self.get_logger().info(f"{goal_request.goal_x}, {self.max_x}")
+        self.get_logger().info(f"{goal_request.goal_y}, {self.max_y}")
         self.get_logger().info("Recieved Goal Request")
 
         if goal_request.goal_x > self.max_x or goal_request.goal_y > self.max_y:
@@ -94,8 +97,12 @@ class GoToGoalNode(Node):
         ki_a = 0.05
         close_enough = 0.2
 
+        self.get_logger().info("Before the while loop, im almost ready...")
+
         # while not at the goal...
-        while not((self.x >= goal_x - close_enough or self.x <= goal_x + close_enough) and (self.y >= goal_y - close_enough or self.y <= goal_y + close_enough)):
+        while ((self.x <= goal_x - close_enough or self.x >= goal_x + close_enough) or (self.y <= goal_y - close_enough or self.y >= goal_y + close_enough)):
+            self.get_logger().info("By all accounts, while...")
+            
             err_pos = math.sqrt((goal_x - self.x) ** 2 + (goal_y - self.y) ** 2)
             d_err_pos = err_pos - self.last_err_pos
             self.total_err_pos += err_pos
@@ -103,22 +110,29 @@ class GoToGoalNode(Node):
             d_err_ang = err_ang - self.last_err_ang
             self.total_err_ang += err_ang
         
-            vel_linear = kp_l*err_pos + kd_l*d_err_pos + ki_l * self.total_err_pos
+            vel_linear = kp_l * err_pos + kd_l * d_err_pos + ki_l * self.total_err_pos
             self.last_err_pos = err_pos
-            vel_angular = kp_a*err_pos + kd_a*d_err_ang + ki_a * self.total_err_ang
+            vel_angular = kp_a * err_ang + kd_a * d_err_ang + ki_a * self.total_err_ang
             self.last_err_ang = err_ang
 
             result_twist = Twist()
-            result_twist.linear.x = vel_linear
-            result_twist.angular.z = vel_angular
+            if (vel_angular <= 0.1):
+                result_twist.angular.z = 0.0
+                result_twist.linear.x = vel_linear
+            else:
+                result_twist.angular.z = vel_angular
+                result_twist.linear.x = 0.0
+            
             self.velocity_pub.publish(result_twist)
             self.get_logger().info("I'm rotating!")
 
-            feedback.curr_x = self.x
-            feedback.curr_y = self.y
-            feedback.curr_theta = self.theta
-            feedback.distance_from_goal = err_pos
+            feedback.current_x = float(self.x)
+            feedback.current_y = float(self.y)
+            feedback.current_theta = float(self.ang)
+            feedback.distance_from_goal = float(err_pos)
             goal_handle.publish_feedback(feedback)
+
+        self.get_logger().info("End")
 
         result.success = True
         goal_handle.succeed()
