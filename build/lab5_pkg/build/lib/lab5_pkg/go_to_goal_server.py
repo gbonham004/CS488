@@ -32,6 +32,7 @@ class GoToGoalNode(Node):
         # Set by pose from pose topic
         self.x = 0
         self.y = 0
+        self.max_x
         self.ang = 0
 
         # Robot radius
