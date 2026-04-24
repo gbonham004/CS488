@@ -1,0 +1,26 @@
+[0.029s] Invoking command in '/home/gbonham/turtlebot4_ws/build/custom_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/gbonham/turtlebot4_ws/install/lab5_pkg:/home/gbonham/turtlebot4_ws/install/lab3_pkg:/home/gbonham/turtlebot4_ws/install/lab2_pkg:/home/gbonham/turtlebot4_ws/install/lab1_pkg:/opt/ros/jazzy /usr/bin/cmake --build /home/gbonham/turtlebot4_ws/build/custom_interfaces -- -j16 -l16
+[0.274s] [  2%] Built target custom_interfaces__rosidl_generator_type_description
+[0.274s] [  4%] Built target custom_interfaces__rs
+[0.274s] [  4%] Built target ament_cmake_python_copy_custom_interfaces
+[0.275s] [  6%] Built target custom_interfaces__cpp
+[0.275s] [ 24%] Built target custom_interfaces__rosidl_generator_c
+[0.275s] [ 55%] Built target custom_interfaces__rosidl_typesupport_c
+[0.275s] [ 57%] Built target custom_interfaces__rosidl_typesupport_cpp
+[0.275s] [ 62%] Built target custom_interfaces__rosidl_typesupport_introspection_cpp
+[0.275s] [ 62%] Built target custom_interfaces__rosidl_typesupport_fastrtps_c
+[0.275s] [ 71%] Built target custom_interfaces__rosidl_typesupport_introspection_c
+[0.275s] [ 77%] Built target custom_interfaces__rosidl_typesupport_fastrtps_cpp
+[0.275s] [ 77%] Built target custom_interfaces
+[0.275s] [ 80%] Built target custom_interfaces__py
+[0.276s] [ 86%] Built target custom_interfaces__rosidl_generator_py
+[0.276s] [ 97%] Built target custom_interfaces_s__rosidl_typesupport_introspection_c
+[0.276s] [100%] Built target custom_interfaces_s__rosidl_typesupport_fastrtps_c
+[0.276s] [100%] Built target custom_interfaces_s__rosidl_typesupport_c
+[0.368s] running egg_info
+[0.394s] writing custom_interfaces.egg-info/PKG-INFO
+[0.394s] writing dependency_links to custom_interfaces.egg-info/dependency_links.txt
+[0.394s] writing top-level names to custom_interfaces.egg-info/top_level.txt
+[0.454s] interrupted
+[0.479s] gmake[2]: *** [CMakeFiles/ament_cmake_python_build_custom_interfaces_egg.dir/build.make:70: CMakeFiles/ament_cmake_python_build_custom_interfaces_egg] Interrupt
+[0.479s] gmake[1]: *** [CMakeFiles/Makefile2:497: CMakeFiles/ament_cmake_python_build_custom_interfaces_egg.dir/all] Interrupt
+[0.479s] gmake: *** [Makefile:146: all] Interrupt

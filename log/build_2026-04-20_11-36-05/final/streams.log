@@ -1,0 +1,35 @@
+[2.895s] Invoking command in '/home/gbonham/turtlebot4_ws/src/final': PYTHONPATH=/home/gbonham/turtlebot4_ws/build/final/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/gbonham/turtlebot4_ws/install/final/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/final build --build-base /home/gbonham/turtlebot4_ws/build/final/build install --record /home/gbonham/turtlebot4_ws/build/final/install.log --single-version-externally-managed install_data
+[3.222s] running egg_info
+[3.223s] creating ../../build/final/final.egg-info
+[3.258s] writing ../../build/final/final.egg-info/PKG-INFO
+[3.258s] writing dependency_links to ../../build/final/final.egg-info/dependency_links.txt
+[3.258s] writing requirements to ../../build/final/final.egg-info/requires.txt
+[3.259s] writing top-level names to ../../build/final/final.egg-info/top_level.txt
+[3.259s] writing manifest file '../../build/final/final.egg-info/SOURCES.txt'
+[3.312s] reading manifest file '../../build/final/final.egg-info/SOURCES.txt'
+[3.312s] writing manifest file '../../build/final/final.egg-info/SOURCES.txt'
+[3.313s] running build
+[3.313s] running build_py
+[3.313s] creating /home/gbonham/turtlebot4_ws/build/final/build
+[3.313s] creating /home/gbonham/turtlebot4_ws/build/final/build/lib
+[3.313s] creating /home/gbonham/turtlebot4_ws/build/final/build/lib/final
+[3.313s] copying final/__init__.py -> /home/gbonham/turtlebot4_ws/build/final/build/lib/final
+[3.313s] copying final/test.py -> /home/gbonham/turtlebot4_ws/build/final/build/lib/final
+[3.313s] running install
+[3.319s] running install_lib
+[3.347s] creating /home/gbonham/turtlebot4_ws/install/final/lib/python3.12/site-packages/final
+[3.347s] copying /home/gbonham/turtlebot4_ws/build/final/build/lib/final/__init__.py -> /home/gbonham/turtlebot4_ws/install/final/lib/python3.12/site-packages/final
+[3.347s] copying /home/gbonham/turtlebot4_ws/build/final/build/lib/final/test.py -> /home/gbonham/turtlebot4_ws/install/final/lib/python3.12/site-packages/final
+[3.348s] byte-compiling /home/gbonham/turtlebot4_ws/install/final/lib/python3.12/site-packages/final/__init__.py to __init__.cpython-312.pyc
+[3.348s] byte-compiling /home/gbonham/turtlebot4_ws/install/final/lib/python3.12/site-packages/final/test.py to test.cpython-312.pyc
+[3.350s] running install_data
+[3.350s] creating /home/gbonham/turtlebot4_ws/install/final/share/ament_index
+[3.350s] creating /home/gbonham/turtlebot4_ws/install/final/share/ament_index/resource_index
+[3.350s] creating /home/gbonham/turtlebot4_ws/install/final/share/ament_index/resource_index/packages
+[3.350s] copying resource/final -> /home/gbonham/turtlebot4_ws/install/final/share/ament_index/resource_index/packages
+[3.351s] copying package.xml -> /home/gbonham/turtlebot4_ws/install/final/share/final
+[3.351s] running install_egg_info
+[3.379s] Copying ../../build/final/final.egg-info to /home/gbonham/turtlebot4_ws/install/final/lib/python3.12/site-packages/final-0.0.0-py3.12.egg-info
+[3.380s] running install_scripts
+[3.557s] writing list of installed files to '/home/gbonham/turtlebot4_ws/build/final/install.log'
+[3.711s] Invoked command in '/home/gbonham/turtlebot4_ws/src/final' returned '0': PYTHONPATH=/home/gbonham/turtlebot4_ws/build/final/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/gbonham/turtlebot4_ws/install/final/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/final build --build-base /home/gbonham/turtlebot4_ws/build/final/build install --record /home/gbonham/turtlebot4_ws/build/final/install.log --single-version-externally-managed install_data

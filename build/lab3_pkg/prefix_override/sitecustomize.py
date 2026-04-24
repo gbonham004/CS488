@@ -1,4 +1,4 @@
 import sys
 if sys.prefix == '/usr':
     sys.real_prefix = sys.prefix
-    sys.prefix = sys.exec_prefix = '/home/buenr/CS488/install/lab3_pkg'
+    sys.prefix = sys.exec_prefix = '/home/gbonham/turtlebot4_ws/install/lab3_pkg'

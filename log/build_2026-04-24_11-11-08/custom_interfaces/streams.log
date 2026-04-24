@@ -1,0 +1,328 @@
+[0.031s] Invoking command in '/home/gbonham/turtlebot4_ws/build/custom_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/gbonham/turtlebot4_ws/install/lab5_pkg:/home/gbonham/turtlebot4_ws/install/lab3_pkg:/home/gbonham/turtlebot4_ws/install/lab2_pkg:/home/gbonham/turtlebot4_ws/install/lab1_pkg:/home/gbonham/turtlebot4_ws/install/final:/opt/ros/jazzy /usr/bin/cmake --build /home/gbonham/turtlebot4_ws/build/custom_interfaces -- -j16 -l16
+[0.478s] -- Found ament_cmake: 2.5.6 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[0.478s] -- Found rosidl_default_generators: 1.6.0 (/opt/ros/jazzy/share/rosidl_default_generators/cmake)
+[0.479s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.479s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.479s] -- Found rosidl_adapter: 4.6.7 (/opt/ros/jazzy/share/rosidl_adapter/cmake)
+[0.914s] -- Found ament_cmake_ros: 0.12.0 (/opt/ros/jazzy/share/ament_cmake_ros/cmake)
+[1.277s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[1.779s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.780s] -- Found python_cmake_module: 0.11.1 (/opt/ros/jazzy/share/python_cmake_module/cmake)
+[2.126s] -- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter Development NumPy Development.Module Development.Embed 
+[2.330s] -- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter 
+[2.455s] -- Configuring done (2.4s)
+[2.817s] -- Generating done (0.3s)
+[2.884s] -- Build files have been written to: /home/gbonham/turtlebot4_ws/build/custom_interfaces
+[2.933s] [  3%] [34m[1mGenerating type hashes for ROS interfaces[0m
+[2.933s] [  3%] [34m[1mGenerating Rust code for ROS interfaces[0m
+[2.938s] [  3%] Built target ament_cmake_python_copy_custom_interfaces
+[3.154s] [  3%] Built target custom_interfaces__rosidl_generator_type_description
+[3.171s] [  5%] [34m[1mGenerating C code for ROS interfaces[0m
+[3.185s] running egg_info
+[3.187s] [  7%] [34m[1mGenerating C++ code for ROS interfaces[0m
+[3.194s] [  7%] Built target custom_interfaces__rs
+[3.227s] writing custom_interfaces.egg-info/PKG-INFO
+[3.228s] writing dependency_links to custom_interfaces.egg-info/dependency_links.txt
+[3.228s] writing top-level names to custom_interfaces.egg-info/top_level.txt
+[3.335s] reading manifest file 'custom_interfaces.egg-info/SOURCES.txt'
+[3.335s] writing manifest file 'custom_interfaces.egg-info/SOURCES.txt'
+[3.358s] [  7%] Built target ament_cmake_python_build_custom_interfaces_egg
+[3.659s] [  7%] Built target custom_interfaces__cpp
+[3.773s] [ 10%] [32mBuilding C object CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/srv/detail/set_cap__description.c.o[0m
+[3.773s] [ 10%] [32mBuilding C object CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/msg/detail/obs_list__type_support.c.o[0m
+[3.774s] [ 14%] [32mBuilding C object CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/msg/detail/obs_list__description.c.o[0m
+[3.774s] [ 14%] [32mBuilding C object CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/msg/detail/obs_list__functions.c.o[0m
+[3.774s] [ 16%] [32mBuilding C object CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/action/detail/robot_goal__type_support.c.o[0m
+[3.774s] [ 18%] [32mBuilding C object CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/srv/detail/set_cap__type_support.c.o[0m
+[3.775s] [ 21%] [32mBuilding C object CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/action/detail/robot_goal__description.c.o[0m
+[3.775s] [ 21%] [32mBuilding C object CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/srv/detail/set_cap__functions.c.o[0m
+[3.775s] [ 23%] [32mBuilding C object CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/action/detail/robot_goal__functions.c.o[0m
+[3.998s] [ 25%] [32m[1mLinking C shared library libcustom_interfaces__rosidl_generator_c.so[0m
+[4.070s] [ 25%] Built target custom_interfaces__rosidl_generator_c
+[4.089s] [ 27%] [34m[1mGenerating C introspection for ROS interfaces[0m
+[4.090s] [ 29%] [34m[1mGenerating C++ type support dispatch for ROS interfaces[0m
+[4.090s] [ 32%] [34m[1mGenerating C++ type support for eProsima Fast-RTPS[0m
+[4.091s] [ 32%] [34m[1mGenerating C type support for eProsima Fast-RTPS[0m
+[4.091s] [ 36%] [34m[1mGenerating C++ introspection for ROS interfaces[0m
+[4.091s] [ 36%] [34m[1mGenerating C type support dispatch for ROS interfaces[0m
+[4.389s] [ 40%] [32mBuilding CXX object CMakeFiles/custom_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/custom_interfaces/msg/obs_list__type_support.cpp.o[0m
+[4.389s] [ 40%] [32mBuilding CXX object CMakeFiles/custom_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/custom_interfaces/srv/set_cap__type_support.cpp.o[0m
+[4.391s] [ 41%] [32mBuilding CXX object CMakeFiles/custom_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/custom_interfaces/action/robot_goal__type_support.cpp.o[0m
+[4.486s] [ 43%] [32mBuilding CXX object CMakeFiles/custom_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/custom_interfaces/srv/detail/set_cap__type_support.cpp.o[0m
+[4.488s] [ 45%] [32mBuilding CXX object CMakeFiles/custom_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/custom_interfaces/msg/detail/obs_list__type_support.cpp.o[0m
+[4.489s] [ 47%] [32mBuilding CXX object CMakeFiles/custom_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/custom_interfaces/action/detail/robot_goal__type_support.cpp.o[0m
+[4.489s] [ 49%] [32mBuilding CXX object CMakeFiles/custom_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/custom_interfaces/msg/obs_list__type_support.cpp.o[0m
+[4.492s] [ 50%] [32mBuilding CXX object CMakeFiles/custom_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/custom_interfaces/srv/set_cap__type_support.cpp.o[0m
+[4.492s] [ 52%] [32mBuilding CXX object CMakeFiles/custom_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/custom_interfaces/action/robot_goal__type_support.cpp.o[0m
+[4.530s] [ 54%] [32m[1mLinking CXX shared library libcustom_interfaces__rosidl_typesupport_c.so[0m
+[4.554s] [ 56%] [32mBuilding C object CMakeFiles/custom_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/custom_interfaces/msg/detail/obs_list__type_support.c.o[0m
+[4.555s] [ 58%] [32mBuilding C object CMakeFiles/custom_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/custom_interfaces/action/detail/robot_goal__type_support.c.o[0m
+[4.555s] [ 60%] [32mBuilding C object CMakeFiles/custom_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/custom_interfaces/srv/detail/set_cap__type_support.c.o[0m
+[4.594s] [ 60%] Built target custom_interfaces__rosidl_typesupport_c
+[4.631s] [ 61%] [32m[1mLinking C shared library libcustom_interfaces__rosidl_typesupport_introspection_c.so[0m
+[4.678s] [ 61%] Built target custom_interfaces__rosidl_typesupport_introspection_c
+[4.714s] [ 63%] [32mBuilding CXX object CMakeFiles/custom_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/custom_interfaces/msg/detail/dds_fastrtps/obs_list__type_support.cpp.o[0m
+[4.714s] [ 67%] [32mBuilding CXX object CMakeFiles/custom_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/custom_interfaces/action/detail/dds_fastrtps/robot_goal__type_support.cpp.o[0m
+[4.714s] [ 67%] [32mBuilding CXX object CMakeFiles/custom_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/custom_interfaces/srv/detail/dds_fastrtps/set_cap__type_support.cpp.o[0m
+[4.821s] [ 72%] [32mBuilding CXX object CMakeFiles/custom_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/custom_interfaces/action/detail/robot_goal__type_support_c.cpp.o[0m
+[4.821s] [ 72%] [32mBuilding CXX object CMakeFiles/custom_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/custom_interfaces/msg/detail/obs_list__type_support_c.cpp.o[0m
+[4.822s] [ 72%] [32mBuilding CXX object CMakeFiles/custom_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/custom_interfaces/srv/detail/set_cap__type_support_c.cpp.o[0m
+[5.419s] [ 74%] [32m[1mLinking CXX shared library libcustom_interfaces__rosidl_typesupport_fastrtps_c.so[0m
+[5.494s] [ 76%] [32m[1mLinking CXX shared library libcustom_interfaces__rosidl_typesupport_cpp.so[0m
+[5.498s] [ 76%] Built target custom_interfaces__rosidl_typesupport_fastrtps_c
+[5.554s] [ 78%] [32m[1mLinking CXX shared library libcustom_interfaces__rosidl_typesupport_introspection_cpp.so[0m
+[5.574s] [ 78%] Built target custom_interfaces__rosidl_typesupport_cpp
+[5.627s] [ 78%] Built target custom_interfaces__rosidl_typesupport_introspection_cpp
+[5.806s] [ 80%] [32m[1mLinking CXX shared library libcustom_interfaces__rosidl_typesupport_fastrtps_cpp.so[0m
+[5.872s] [ 80%] Built target custom_interfaces__rosidl_typesupport_fastrtps_cpp
+[5.895s] [ 80%] Built target custom_interfaces
+[5.924s] [ 81%] [34m[1mGenerating Python code for ROS interfaces[0m
+[6.648s] [ 81%] Built target custom_interfaces__py
+[6.683s] [ 83%] [32mBuilding C object CMakeFiles/custom_interfaces__rosidl_generator_py.dir/rosidl_generator_py/custom_interfaces/msg/_obs_list_s.c.o[0m
+[6.683s] [ 87%] [32mBuilding C object CMakeFiles/custom_interfaces__rosidl_generator_py.dir/rosidl_generator_py/custom_interfaces/srv/_set_cap_s.c.o[0m
+[6.683s] [ 87%] [32mBuilding C object CMakeFiles/custom_interfaces__rosidl_generator_py.dir/rosidl_generator_py/custom_interfaces/action/_robot_goal_s.c.o[0m
+[7.127s] [ 89%] [32m[1mLinking C shared library libcustom_interfaces__rosidl_generator_py.so[0m
+[7.171s] [ 89%] Built target custom_interfaces__rosidl_generator_py
+[7.201s] [ 94%] [32mBuilding C object CMakeFiles/custom_interfaces_s__rosidl_typesupport_fastrtps_c.dir/rosidl_generator_py/custom_interfaces/_custom_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c.o[0m
+[7.201s] [ 94%] [32mBuilding C object CMakeFiles/custom_interfaces_s__rosidl_typesupport_c.dir/rosidl_generator_py/custom_interfaces/_custom_interfaces_s.ep.rosidl_typesupport_c.c.o[0m
+[7.201s] [ 94%] [32mBuilding C object CMakeFiles/custom_interfaces_s__rosidl_typesupport_introspection_c.dir/rosidl_generator_py/custom_interfaces/_custom_interfaces_s.ep.rosidl_typesupport_introspection_c.c.o[0m
+[7.329s] [ 96%] [32m[1mLinking C shared module rosidl_generator_py/custom_interfaces/custom_interfaces_s__rosidl_typesupport_introspection_c.so[0m
+[7.332s] [ 98%] [32m[1mLinking C shared module rosidl_generator_py/custom_interfaces/custom_interfaces_s__rosidl_typesupport_fastrtps_c.so[0m
+[7.333s] [100%] [32m[1mLinking C shared module rosidl_generator_py/custom_interfaces/custom_interfaces_s__rosidl_typesupport_c.so[0m
+[7.364s] [100%] Built target custom_interfaces_s__rosidl_typesupport_c
+[7.364s] [100%] Built target custom_interfaces_s__rosidl_typesupport_introspection_c
+[7.364s] [100%] Built target custom_interfaces_s__rosidl_typesupport_fastrtps_c
+[7.375s] Invoked command in '/home/gbonham/turtlebot4_ws/build/custom_interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/gbonham/turtlebot4_ws/install/lab5_pkg:/home/gbonham/turtlebot4_ws/install/lab3_pkg:/home/gbonham/turtlebot4_ws/install/lab2_pkg:/home/gbonham/turtlebot4_ws/install/lab1_pkg:/home/gbonham/turtlebot4_ws/install/final:/opt/ros/jazzy /usr/bin/cmake --build /home/gbonham/turtlebot4_ws/build/custom_interfaces -- -j16 -l16
+[7.386s] Invoking command in '/home/gbonham/turtlebot4_ws/build/custom_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/gbonham/turtlebot4_ws/install/lab5_pkg:/home/gbonham/turtlebot4_ws/install/lab3_pkg:/home/gbonham/turtlebot4_ws/install/lab2_pkg:/home/gbonham/turtlebot4_ws/install/lab1_pkg:/home/gbonham/turtlebot4_ws/install/final:/opt/ros/jazzy /usr/bin/cmake --install /home/gbonham/turtlebot4_ws/build/custom_interfaces
+[7.394s] -- Install configuration: ""
+[7.394s] -- Installing: /home/gbonham/turtlebot4_ws/install/custom_interfaces/share/ament_index/resource_index/rosidl_interfaces/custom_interfaces
+[7.396s] -- Installing: /home/gbonham/turtlebot4_ws/install/custom_interfaces/share/custom_interfaces/msg/ObsList.json
+[7.396s] -- Installing: /home/gbonham/turtlebot4_ws/install/custom_interfaces/share/custom_interfaces/srv/SetCap.json
+[7.396s] -- Installing: /home/gbonham/turtlebot4_ws/install/custom_interfaces/share/custom_interfaces/action/RobotGoal.json
+[7.397s] -- Up-to-date: /home/gbonham/turtlebot4_ws/install/custom_interfaces/include/custom_interfaces/custom_interfaces
+[7.397s] -- Up-to-date: /home/gbonham/turtlebot4_ws/install/custom_interfaces/include/custom_interfaces/custom_interfaces/action
+[7.397s] -- Up-to-date: /home/gbonham/turtlebot4_ws/install/custom_interfaces/include/custom_interfaces/custom_interfaces/action/detail
+[7.397s] -- Installing: /home/gbonham/turtlebot4_ws/install/custom_interfaces/include/custom_interfaces/custom_interfaces/action/detail/robot_goal__struct.h
+[7.397s] -- Installing: /home/gbonham/turtlebot4_ws/install/custom_interfaces/include/custom_interfaces/custom_interfaces/action/detail/robot_goal__type_support.c
+[7.397s] -- Installing: /home/gbonham/turtlebot4_ws/install/custom_interfaces/include/custom_interfaces/custom_interfaces/action/detail/robot_goal__functions.h
+[7.398s] -- Installing: /home/gbonham/turtlebot4_ws/install/custom_interfaces/include/custom_interfaces/custom_interfaces/action/detail/robot_goal__functions.c
+[7.398s] -- Installing: /home/gbonham/turtlebot4_ws/install/custom_interfaces/include/custom_interfaces/custom_interfaces/action/detail/robot_goal__description.c
+[7.399s] -- Installing: /home/gbonham/turtlebot4_ws/install/custom_interfaces/include/custom_interfaces/custom_interfaces/action/detail/robot_goal__type_support.h
+[7.399s] -- Installing: /home/gbonham/turtlebot4_ws/install/custom_interfaces/include/custom_interfaces/custom_interfaces/action/robot_goal.h
+[7.399s] -- Up-to-date: /home/gbonham/turtlebot4_ws/install/custom_interfaces/include/custom_interfaces/custom_interfaces/msg
+[7.399s] -- Installing: /home/gbonham/turtlebot4_ws/install/custom_interfaces/include/custom_interfaces/custom_interfaces/msg/detail
+[7.400s] -- Installing: /home/gbonham/turtlebot4_ws/install/custom_interfaces/include/custom_interfaces/custom_interfaces/msg/detail/obs_list__functions.c
+[7.400s] -- Installing: /home/gbonham/turtlebot4_ws/install/custom_interfaces/include/custom_interfaces/custom_interfaces/msg/detail/obs_list__struct.h
+[7.400s] -- Installing: /home/gbonham/turtlebot4_ws/install/custom_interfaces/include/custom_interfaces/custom_interfaces/msg/detail/obs_list__description.c
+[7.400s] -- Installing: /home/gbonham/turtlebot4_ws/install/custom_interfaces/include/custom_interfaces/custom_interfaces/msg/detail/obs_list__type_support.h
+[7.400s] -- Installing: /home/gbonham/turtlebot4_ws/install/custom_interfaces/include/custom_interfaces/custom_interfaces/msg/detail/obs_list__type_support.c
+[7.401s] -- Installing: /home/gbonham/turtlebot4_ws/install/custom_interfaces/include/custom_interfaces/custom_interfaces/msg/detail/obs_list__functions.h
+[7.401s] -- Installing: /home/gbonham/turtlebot4_ws/install/custom_interfaces/include/custom_interfaces/custom_interfaces/msg/obs_list.h
+[7.401s] -- Up-to-date: /home/gbonham/turtlebot4_ws/install/custom_interfaces/include/custom_interfaces/custom_interfaces/msg/rosidl_generator_c__visibility_control.h
+[7.401s] -- Up-to-date: /home/gbonham/turtlebot4_ws/install/custom_interfaces/include/custom_interfaces/custom_interfaces/srv
+[7.402s] -- Up-to-date: /home/gbonham/turtlebot4_ws/install/custom_interfaces/include/custom_interfaces/custom_interfaces/srv/detail
+[7.402s] -- Installing: /home/gbonham/turtlebot4_ws/install/custom_interfaces/include/custom_interfaces/custom_interfaces/srv/detail/set_cap__functions.c
+[7.402s] -- Installing: /home/gbonham/turtlebot4_ws/install/custom_interfaces/include/custom_interfaces/custom_interfaces/srv/detail/set_cap__description.c
+[7.402s] -- Installing: /home/gbonham/turtlebot4_ws/install/custom_interfaces/include/custom_interfaces/custom_interfaces/srv/detail/set_cap__type_support.h
+[7.402s] -- Installing: /home/gbonham/turtlebot4_ws/install/custom_interfaces/include/custom_interfaces/custom_interfaces/srv/detail/set_cap__struct.h
+[7.402s] -- Installing: /home/gbonham/turtlebot4_ws/install/custom_interfaces/include/custom_interfaces/custom_interfaces/srv/detail/set_cap__functions.h
+[7.403s] -- Installing: /home/gbonham/turtlebot4_ws/install/custom_interfaces/include/custom_interfaces/custom_interfaces/srv/detail/set_cap__type_support.c
+[7.403s] -- Installing: /home/gbonham/turtlebot4_ws/install/custom_interfaces/include/custom_interfaces/custom_interfaces/srv/set_cap.h
+[7.403s] -- Up-to-date: /home/gbonham/turtlebot4_ws/install/custom_interfaces/share/custom_interfaces/environment/library_path.sh
+[7.404s] -- Up-to-date: /home/gbonham/turtlebot4_ws/install/custom_interfaces/share/custom_interfaces/environment/library_path.dsv
+[7.404s] -- Installing: /home/gbonham/turtlebot4_ws/install/custom_interfaces/lib/libcustom_interfaces__rosidl_generator_c.so
+[7.407s] -- Set non-toolchain portion of runtime path of "/home/gbonham/turtlebot4_ws/install/custom_interfaces/lib/libcustom_interfaces__rosidl_generator_c.so" to ""
+[7.407s] -- Up-to-date: /home/gbonham/turtlebot4_ws/install/custom_interfaces/include/custom_interfaces/custom_interfaces
+[7.408s] -- Up-to-date: /home/gbonham/turtlebot4_ws/install/custom_interfaces/include/custom_interfaces/custom_interfaces/action
+[7.408s] -- Up-to-date: /home/gbonham/turtlebot4_ws/install/custom_interfaces/include/custom_interfaces/custom_interfaces/action/detail
+[7.408s] -- Installing: /home/gbonham/turtlebot4_ws/install/custom_interfaces/include/custom_interfaces/custom_interfaces/action/detail/robot_goal__rosidl_typesupport_fastrtps_c.h
+[7.408s] -- Up-to-date: /home/gbonham/turtlebot4_ws/install/custom_interfaces/include/custom_interfaces/custom_interfaces/msg
+[7.408s] -- Up-to-date: /home/gbonham/turtlebot4_ws/install/custom_interfaces/include/custom_interfaces/custom_interfaces/msg/detail
+[7.408s] -- Installing: /home/gbonham/turtlebot4_ws/install/custom_interfaces/include/custom_interfaces/custom_interfaces/msg/detail/obs_list__rosidl_typesupport_fastrtps_c.h
+[7.408s] -- Up-to-date: /home/gbonham/turtlebot4_ws/install/custom_interfaces/include/custom_interfaces/custom_interfaces/msg/rosidl_typesupport_fastrtps_c__visibility_control.h
+[7.408s] -- Up-to-date: /home/gbonham/turtlebot4_ws/install/custom_interfaces/include/custom_interfaces/custom_interfaces/srv
+[7.408s] -- Up-to-date: /home/gbonham/turtlebot4_ws/install/custom_interfaces/include/custom_interfaces/custom_interfaces/srv/detail
+[7.408s] -- Installing: /home/gbonham/turtlebot4_ws/install/custom_interfaces/include/custom_interfaces/custom_interfaces/srv/detail/set_cap__rosidl_typesupport_fastrtps_c.h
+[7.409s] -- Installing: /home/gbonham/turtlebot4_ws/install/custom_interfaces/lib/libcustom_interfaces__rosidl_typesupport_fastrtps_c.so
+[7.412s] -- Set non-toolchain portion of runtime path of "/home/gbonham/turtlebot4_ws/install/custom_interfaces/lib/libcustom_interfaces__rosidl_typesupport_fastrtps_c.so" to ""
+[7.412s] -- Up-to-date: /home/gbonham/turtlebot4_ws/install/custom_interfaces/include/custom_interfaces/custom_interfaces
+[7.412s] -- Up-to-date: /home/gbonham/turtlebot4_ws/install/custom_interfaces/include/custom_interfaces/custom_interfaces/action
+[7.412s] -- Up-to-date: /home/gbonham/turtlebot4_ws/install/custom_interfaces/include/custom_interfaces/custom_interfaces/action/detail
+[7.412s] -- Installing: /home/gbonham/turtlebot4_ws/install/custom_interfaces/include/custom_interfaces/custom_interfaces/action/detail/robot_goal__type_support.c
+[7.413s] -- Installing: /home/gbonham/turtlebot4_ws/install/custom_interfaces/include/custom_interfaces/custom_interfaces/action/detail/robot_goal__rosidl_typesupport_introspection_c.h
+[7.413s] -- Up-to-date: /home/gbonham/turtlebot4_ws/install/custom_interfaces/include/custom_interfaces/custom_interfaces/msg
+[7.413s] -- Up-to-date: /home/gbonham/turtlebot4_ws/install/custom_interfaces/include/custom_interfaces/custom_interfaces/msg/rosidl_typesupport_introspection_c__visibility_control.h
+[7.413s] -- Up-to-date: /home/gbonham/turtlebot4_ws/install/custom_interfaces/include/custom_interfaces/custom_interfaces/msg/detail
+[7.413s] -- Installing: /home/gbonham/turtlebot4_ws/install/custom_interfaces/include/custom_interfaces/custom_interfaces/msg/detail/obs_list__type_support.c
+[7.413s] -- Installing: /home/gbonham/turtlebot4_ws/install/custom_interfaces/include/custom_interfaces/custom_interfaces/msg/detail/obs_list__rosidl_typesupport_introspection_c.h
+[7.414s] -- Up-to-date: /home/gbonham/turtlebot4_ws/install/custom_interfaces/include/custom_interfaces/custom_interfaces/srv
+[7.414s] -- Up-to-date: /home/gbonham/turtlebot4_ws/install/custom_interfaces/include/custom_interfaces/custom_interfaces/srv/detail
+[7.414s] -- Installing: /home/gbonham/turtlebot4_ws/install/custom_interfaces/include/custom_interfaces/custom_interfaces/srv/detail/set_cap__rosidl_typesupport_introspection_c.h
+[7.414s] -- Installing: /home/gbonham/turtlebot4_ws/install/custom_interfaces/include/custom_interfaces/custom_interfaces/srv/detail/set_cap__type_support.c
+[7.415s] -- Installing: /home/gbonham/turtlebot4_ws/install/custom_interfaces/lib/libcustom_interfaces__rosidl_typesupport_introspection_c.so
+[7.419s] -- Set non-toolchain portion of runtime path of "/home/gbonham/turtlebot4_ws/install/custom_interfaces/lib/libcustom_interfaces__rosidl_typesupport_introspection_c.so" to ""
+[7.419s] -- Installing: /home/gbonham/turtlebot4_ws/install/custom_interfaces/lib/libcustom_interfaces__rosidl_typesupport_c.so
+[7.422s] -- Set non-toolchain portion of runtime path of "/home/gbonham/turtlebot4_ws/install/custom_interfaces/lib/libcustom_interfaces__rosidl_typesupport_c.so" to ""
+[7.422s] -- Up-to-date: /home/gbonham/turtlebot4_ws/install/custom_interfaces/include/custom_interfaces/custom_interfaces
+[7.422s] -- Up-to-date: /home/gbonham/turtlebot4_ws/install/custom_interfaces/include/custom_interfaces/custom_interfaces/action
+[7.422s] -- Up-to-date: /home/gbonham/turtlebot4_ws/install/custom_interfaces/include/custom_interfaces/custom_interfaces/action/detail
+[7.422s] -- Installing: /home/gbonham/turtlebot4_ws/install/custom_interfaces/include/custom_interfaces/custom_interfaces/action/detail/robot_goal__builder.hpp
+[7.422s] -- Installing: /home/gbonham/turtlebot4_ws/install/custom_interfaces/include/custom_interfaces/custom_interfaces/action/detail/robot_goal__traits.hpp
+[7.422s] -- Installing: /home/gbonham/turtlebot4_ws/install/custom_interfaces/include/custom_interfaces/custom_interfaces/action/detail/robot_goal__struct.hpp
+[7.423s] -- Installing: /home/gbonham/turtlebot4_ws/install/custom_interfaces/include/custom_interfaces/custom_interfaces/action/detail/robot_goal__type_support.hpp
+[7.423s] -- Installing: /home/gbonham/turtlebot4_ws/install/custom_interfaces/include/custom_interfaces/custom_interfaces/action/robot_goal.hpp
+[7.423s] -- Up-to-date: /home/gbonham/turtlebot4_ws/install/custom_interfaces/include/custom_interfaces/custom_interfaces/msg
+[7.423s] -- Installing: /home/gbonham/turtlebot4_ws/install/custom_interfaces/include/custom_interfaces/custom_interfaces/msg/rosidl_generator_cpp__visibility_control.hpp
+[7.424s] -- Up-to-date: /home/gbonham/turtlebot4_ws/install/custom_interfaces/include/custom_interfaces/custom_interfaces/msg/detail
+[7.424s] -- Installing: /home/gbonham/turtlebot4_ws/install/custom_interfaces/include/custom_interfaces/custom_interfaces/msg/detail/obs_list__type_support.hpp
+[7.424s] -- Installing: /home/gbonham/turtlebot4_ws/install/custom_interfaces/include/custom_interfaces/custom_interfaces/msg/detail/obs_list__traits.hpp
+[7.424s] -- Installing: /home/gbonham/turtlebot4_ws/install/custom_interfaces/include/custom_interfaces/custom_interfaces/msg/detail/obs_list__struct.hpp
+[7.424s] -- Installing: /home/gbonham/turtlebot4_ws/install/custom_interfaces/include/custom_interfaces/custom_interfaces/msg/detail/obs_list__builder.hpp
+[7.425s] -- Installing: /home/gbonham/turtlebot4_ws/install/custom_interfaces/include/custom_interfaces/custom_interfaces/msg/obs_list.hpp
+[7.425s] -- Up-to-date: /home/gbonham/turtlebot4_ws/install/custom_interfaces/include/custom_interfaces/custom_interfaces/srv
+[7.425s] -- Up-to-date: /home/gbonham/turtlebot4_ws/install/custom_interfaces/include/custom_interfaces/custom_interfaces/srv/detail
+[7.425s] -- Installing: /home/gbonham/turtlebot4_ws/install/custom_interfaces/include/custom_interfaces/custom_interfaces/srv/detail/set_cap__type_support.hpp
+[7.425s] -- Installing: /home/gbonham/turtlebot4_ws/install/custom_interfaces/include/custom_interfaces/custom_interfaces/srv/detail/set_cap__builder.hpp
+[7.426s] -- Installing: /home/gbonham/turtlebot4_ws/install/custom_interfaces/include/custom_interfaces/custom_interfaces/srv/detail/set_cap__traits.hpp
+[7.426s] -- Installing: /home/gbonham/turtlebot4_ws/install/custom_interfaces/include/custom_interfaces/custom_interfaces/srv/detail/set_cap__struct.hpp
+[7.426s] -- Installing: /home/gbonham/turtlebot4_ws/install/custom_interfaces/include/custom_interfaces/custom_interfaces/srv/set_cap.hpp
+[7.427s] -- Up-to-date: /home/gbonham/turtlebot4_ws/install/custom_interfaces/include/custom_interfaces/custom_interfaces
+[7.427s] -- Up-to-date: /home/gbonham/turtlebot4_ws/install/custom_interfaces/include/custom_interfaces/custom_interfaces/action
+[7.427s] -- Up-to-date: /home/gbonham/turtlebot4_ws/install/custom_interfaces/include/custom_interfaces/custom_interfaces/action/detail
+[7.427s] -- Installing: /home/gbonham/turtlebot4_ws/install/custom_interfaces/include/custom_interfaces/custom_interfaces/action/detail/robot_goal__rosidl_typesupport_fastrtps_cpp.hpp
+[7.427s] -- Up-to-date: /home/gbonham/turtlebot4_ws/install/custom_interfaces/include/custom_interfaces/custom_interfaces/action/detail/dds_fastrtps
+[7.427s] -- Up-to-date: /home/gbonham/turtlebot4_ws/install/custom_interfaces/include/custom_interfaces/custom_interfaces/msg
+[7.427s] -- Up-to-date: /home/gbonham/turtlebot4_ws/install/custom_interfaces/include/custom_interfaces/custom_interfaces/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h
+[7.427s] -- Up-to-date: /home/gbonham/turtlebot4_ws/install/custom_interfaces/include/custom_interfaces/custom_interfaces/msg/detail
+[7.427s] -- Installing: /home/gbonham/turtlebot4_ws/install/custom_interfaces/include/custom_interfaces/custom_interfaces/msg/detail/dds_fastrtps
+[7.427s] -- Installing: /home/gbonham/turtlebot4_ws/install/custom_interfaces/include/custom_interfaces/custom_interfaces/msg/detail/obs_list__rosidl_typesupport_fastrtps_cpp.hpp
+[7.428s] -- Up-to-date: /home/gbonham/turtlebot4_ws/install/custom_interfaces/include/custom_interfaces/custom_interfaces/srv
+[7.428s] -- Up-to-date: /home/gbonham/turtlebot4_ws/install/custom_interfaces/include/custom_interfaces/custom_interfaces/srv/detail
+[7.428s] -- Installing: /home/gbonham/turtlebot4_ws/install/custom_interfaces/include/custom_interfaces/custom_interfaces/srv/detail/set_cap__rosidl_typesupport_fastrtps_cpp.hpp
+[7.428s] -- Up-to-date: /home/gbonham/turtlebot4_ws/install/custom_interfaces/include/custom_interfaces/custom_interfaces/srv/detail/dds_fastrtps
+[7.428s] -- Installing: /home/gbonham/turtlebot4_ws/install/custom_interfaces/lib/libcustom_interfaces__rosidl_typesupport_fastrtps_cpp.so
+[7.433s] -- Set non-toolchain portion of runtime path of "/home/gbonham/turtlebot4_ws/install/custom_interfaces/lib/libcustom_interfaces__rosidl_typesupport_fastrtps_cpp.so" to ""
+[7.433s] -- Up-to-date: /home/gbonham/turtlebot4_ws/install/custom_interfaces/include/custom_interfaces/custom_interfaces
+[7.433s] -- Up-to-date: /home/gbonham/turtlebot4_ws/install/custom_interfaces/include/custom_interfaces/custom_interfaces/action
+[7.433s] -- Up-to-date: /home/gbonham/turtlebot4_ws/install/custom_interfaces/include/custom_interfaces/custom_interfaces/action/detail
+[7.433s] -- Installing: /home/gbonham/turtlebot4_ws/install/custom_interfaces/include/custom_interfaces/custom_interfaces/action/detail/robot_goal__rosidl_typesupport_introspection_cpp.hpp
+[7.433s] -- Installing: /home/gbonham/turtlebot4_ws/install/custom_interfaces/include/custom_interfaces/custom_interfaces/action/detail/robot_goal__type_support.cpp
+[7.434s] -- Up-to-date: /home/gbonham/turtlebot4_ws/install/custom_interfaces/include/custom_interfaces/custom_interfaces/msg
+[7.434s] -- Up-to-date: /home/gbonham/turtlebot4_ws/install/custom_interfaces/include/custom_interfaces/custom_interfaces/msg/detail
+[7.434s] -- Installing: /home/gbonham/turtlebot4_ws/install/custom_interfaces/include/custom_interfaces/custom_interfaces/msg/detail/obs_list__type_support.cpp
+[7.434s] -- Installing: /home/gbonham/turtlebot4_ws/install/custom_interfaces/include/custom_interfaces/custom_interfaces/msg/detail/obs_list__rosidl_typesupport_introspection_cpp.hpp
+[7.434s] -- Up-to-date: /home/gbonham/turtlebot4_ws/install/custom_interfaces/include/custom_interfaces/custom_interfaces/srv
+[7.434s] -- Up-to-date: /home/gbonham/turtlebot4_ws/install/custom_interfaces/include/custom_interfaces/custom_interfaces/srv/detail
+[7.434s] -- Installing: /home/gbonham/turtlebot4_ws/install/custom_interfaces/include/custom_interfaces/custom_interfaces/srv/detail/set_cap__type_support.cpp
+[7.435s] -- Installing: /home/gbonham/turtlebot4_ws/install/custom_interfaces/include/custom_interfaces/custom_interfaces/srv/detail/set_cap__rosidl_typesupport_introspection_cpp.hpp
+[7.435s] -- Installing: /home/gbonham/turtlebot4_ws/install/custom_interfaces/lib/libcustom_interfaces__rosidl_typesupport_introspection_cpp.so
+[7.439s] -- Set non-toolchain portion of runtime path of "/home/gbonham/turtlebot4_ws/install/custom_interfaces/lib/libcustom_interfaces__rosidl_typesupport_introspection_cpp.so" to ""
+[7.440s] -- Installing: /home/gbonham/turtlebot4_ws/install/custom_interfaces/lib/libcustom_interfaces__rosidl_typesupport_cpp.so
+[7.444s] -- Set non-toolchain portion of runtime path of "/home/gbonham/turtlebot4_ws/install/custom_interfaces/lib/libcustom_interfaces__rosidl_typesupport_cpp.so" to ""
+[7.444s] -- Up-to-date: /home/gbonham/turtlebot4_ws/install/custom_interfaces/share/custom_interfaces/environment/pythonpath.sh
+[7.444s] -- Up-to-date: /home/gbonham/turtlebot4_ws/install/custom_interfaces/share/custom_interfaces/environment/pythonpath.dsv
+[7.444s] -- Up-to-date: /home/gbonham/turtlebot4_ws/install/custom_interfaces/lib/python3.12/site-packages/custom_interfaces-0.0.0-py3.12.egg-info
+[7.444s] -- Installing: /home/gbonham/turtlebot4_ws/install/custom_interfaces/lib/python3.12/site-packages/custom_interfaces-0.0.0-py3.12.egg-info/SOURCES.txt
+[7.445s] -- Installing: /home/gbonham/turtlebot4_ws/install/custom_interfaces/lib/python3.12/site-packages/custom_interfaces-0.0.0-py3.12.egg-info/dependency_links.txt
+[7.446s] -- Installing: /home/gbonham/turtlebot4_ws/install/custom_interfaces/lib/python3.12/site-packages/custom_interfaces-0.0.0-py3.12.egg-info/top_level.txt
+[7.446s] -- Installing: /home/gbonham/turtlebot4_ws/install/custom_interfaces/lib/python3.12/site-packages/custom_interfaces-0.0.0-py3.12.egg-info/PKG-INFO
+[7.446s] -- Up-to-date: /home/gbonham/turtlebot4_ws/install/custom_interfaces/lib/python3.12/site-packages/custom_interfaces
+[7.446s] -- Installing: /home/gbonham/turtlebot4_ws/install/custom_interfaces/lib/python3.12/site-packages/custom_interfaces/_custom_interfaces_s.ep.rosidl_typesupport_introspection_c.c
+[7.447s] -- Installing: /home/gbonham/turtlebot4_ws/install/custom_interfaces/lib/python3.12/site-packages/custom_interfaces/custom_interfaces_s__rosidl_typesupport_c.so
+[7.447s] -- Up-to-date: /home/gbonham/turtlebot4_ws/install/custom_interfaces/lib/python3.12/site-packages/custom_interfaces/action
+[7.447s] -- Installing: /home/gbonham/turtlebot4_ws/install/custom_interfaces/lib/python3.12/site-packages/custom_interfaces/action/_robot_goal_s.c
+[7.447s] -- Installing: /home/gbonham/turtlebot4_ws/install/custom_interfaces/lib/python3.12/site-packages/custom_interfaces/action/__init__.py
+[7.448s] -- Installing: /home/gbonham/turtlebot4_ws/install/custom_interfaces/lib/python3.12/site-packages/custom_interfaces/action/_robot_goal.py
+[7.448s] -- Installing: /home/gbonham/turtlebot4_ws/install/custom_interfaces/lib/python3.12/site-packages/custom_interfaces/custom_interfaces_s__rosidl_typesupport_introspection_c.so
+[7.448s] -- Installing: /home/gbonham/turtlebot4_ws/install/custom_interfaces/lib/python3.12/site-packages/custom_interfaces/_custom_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
+[7.449s] -- Installing: /home/gbonham/turtlebot4_ws/install/custom_interfaces/lib/python3.12/site-packages/custom_interfaces/custom_interfaces_s__rosidl_typesupport_fastrtps_c.so
+[7.449s] -- Installing: /home/gbonham/turtlebot4_ws/install/custom_interfaces/lib/python3.12/site-packages/custom_interfaces/msg
+[7.449s] -- Installing: /home/gbonham/turtlebot4_ws/install/custom_interfaces/lib/python3.12/site-packages/custom_interfaces/msg/_obs_list_s.c
+[7.449s] -- Installing: /home/gbonham/turtlebot4_ws/install/custom_interfaces/lib/python3.12/site-packages/custom_interfaces/msg/_obs_list.py
+[7.450s] -- Installing: /home/gbonham/turtlebot4_ws/install/custom_interfaces/lib/python3.12/site-packages/custom_interfaces/msg/__init__.py
+[7.450s] -- Up-to-date: /home/gbonham/turtlebot4_ws/install/custom_interfaces/lib/python3.12/site-packages/custom_interfaces/srv
+[7.450s] -- Installing: /home/gbonham/turtlebot4_ws/install/custom_interfaces/lib/python3.12/site-packages/custom_interfaces/srv/_set_cap.py
+[7.451s] -- Installing: /home/gbonham/turtlebot4_ws/install/custom_interfaces/lib/python3.12/site-packages/custom_interfaces/srv/_set_cap_s.c
+[7.451s] -- Installing: /home/gbonham/turtlebot4_ws/install/custom_interfaces/lib/python3.12/site-packages/custom_interfaces/srv/__init__.py
+[7.451s] -- Installing: /home/gbonham/turtlebot4_ws/install/custom_interfaces/lib/python3.12/site-packages/custom_interfaces/__init__.py
+[7.451s] -- Installing: /home/gbonham/turtlebot4_ws/install/custom_interfaces/lib/python3.12/site-packages/custom_interfaces/_custom_interfaces_s.ep.rosidl_typesupport_c.c
+[7.498s] Listing '/home/gbonham/turtlebot4_ws/install/custom_interfaces/lib/python3.12/site-packages/custom_interfaces'...
+[7.498s] Compiling '/home/gbonham/turtlebot4_ws/install/custom_interfaces/lib/python3.12/site-packages/custom_interfaces/__init__.py'...
+[7.498s] Listing '/home/gbonham/turtlebot4_ws/install/custom_interfaces/lib/python3.12/site-packages/custom_interfaces/action'...
+[7.498s] Compiling '/home/gbonham/turtlebot4_ws/install/custom_interfaces/lib/python3.12/site-packages/custom_interfaces/action/__init__.py'...
+[7.498s] Compiling '/home/gbonham/turtlebot4_ws/install/custom_interfaces/lib/python3.12/site-packages/custom_interfaces/action/_robot_goal.py'...
+[7.498s] Listing '/home/gbonham/turtlebot4_ws/install/custom_interfaces/lib/python3.12/site-packages/custom_interfaces/msg'...
+[7.498s] Compiling '/home/gbonham/turtlebot4_ws/install/custom_interfaces/lib/python3.12/site-packages/custom_interfaces/msg/__init__.py'...
+[7.498s] Compiling '/home/gbonham/turtlebot4_ws/install/custom_interfaces/lib/python3.12/site-packages/custom_interfaces/msg/_obs_list.py'...
+[7.498s] Listing '/home/gbonham/turtlebot4_ws/install/custom_interfaces/lib/python3.12/site-packages/custom_interfaces/srv'...
+[7.498s] Compiling '/home/gbonham/turtlebot4_ws/install/custom_interfaces/lib/python3.12/site-packages/custom_interfaces/srv/__init__.py'...
+[7.499s] Compiling '/home/gbonham/turtlebot4_ws/install/custom_interfaces/lib/python3.12/site-packages/custom_interfaces/srv/_set_cap.py'...
+[7.503s] -- Installing: /home/gbonham/turtlebot4_ws/install/custom_interfaces/lib/python3.12/site-packages/custom_interfaces/custom_interfaces_s__rosidl_typesupport_fastrtps_c.so
+[7.506s] -- Set non-toolchain portion of runtime path of "/home/gbonham/turtlebot4_ws/install/custom_interfaces/lib/python3.12/site-packages/custom_interfaces/custom_interfaces_s__rosidl_typesupport_fastrtps_c.so" to ""
+[7.506s] -- Installing: /home/gbonham/turtlebot4_ws/install/custom_interfaces/lib/python3.12/site-packages/custom_interfaces/custom_interfaces_s__rosidl_typesupport_introspection_c.so
+[7.509s] -- Set non-toolchain portion of runtime path of "/home/gbonham/turtlebot4_ws/install/custom_interfaces/lib/python3.12/site-packages/custom_interfaces/custom_interfaces_s__rosidl_typesupport_introspection_c.so" to ""
+[7.509s] -- Installing: /home/gbonham/turtlebot4_ws/install/custom_interfaces/lib/python3.12/site-packages/custom_interfaces/custom_interfaces_s__rosidl_typesupport_c.so
+[7.512s] -- Set non-toolchain portion of runtime path of "/home/gbonham/turtlebot4_ws/install/custom_interfaces/lib/python3.12/site-packages/custom_interfaces/custom_interfaces_s__rosidl_typesupport_c.so" to ""
+[7.512s] -- Installing: /home/gbonham/turtlebot4_ws/install/custom_interfaces/lib/libcustom_interfaces__rosidl_generator_py.so
+[7.517s] -- Set non-toolchain portion of runtime path of "/home/gbonham/turtlebot4_ws/install/custom_interfaces/lib/libcustom_interfaces__rosidl_generator_py.so" to ""
+[7.517s] -- Up-to-date: /home/gbonham/turtlebot4_ws/install/custom_interfaces/share/ament_index/resource_index/rust_packages/custom_interfaces
+[7.517s] -- Up-to-date: /home/gbonham/turtlebot4_ws/install/custom_interfaces/share/custom_interfaces/rust
+[7.517s] -- Up-to-date: /home/gbonham/turtlebot4_ws/install/custom_interfaces/share/custom_interfaces/rust/src
+[7.517s] -- Installing: /home/gbonham/turtlebot4_ws/install/custom_interfaces/share/custom_interfaces/rust/src/srv.rs
+[7.517s] -- Up-to-date: /home/gbonham/turtlebot4_ws/install/custom_interfaces/share/custom_interfaces/rust/src/action
+[7.517s] -- Installing: /home/gbonham/turtlebot4_ws/install/custom_interfaces/share/custom_interfaces/rust/src/action/rmw.rs
+[7.517s] -- Installing: /home/gbonham/turtlebot4_ws/install/custom_interfaces/share/custom_interfaces/rust/src/msg
+[7.517s] -- Installing: /home/gbonham/turtlebot4_ws/install/custom_interfaces/share/custom_interfaces/rust/src/msg/rmw.rs
+[7.518s] -- Up-to-date: /home/gbonham/turtlebot4_ws/install/custom_interfaces/share/custom_interfaces/rust/src/srv
+[7.518s] -- Installing: /home/gbonham/turtlebot4_ws/install/custom_interfaces/share/custom_interfaces/rust/src/srv/rmw.rs
+[7.518s] -- Installing: /home/gbonham/turtlebot4_ws/install/custom_interfaces/share/custom_interfaces/rust/src/action.rs
+[7.518s] -- Installing: /home/gbonham/turtlebot4_ws/install/custom_interfaces/share/custom_interfaces/rust/src/msg.rs
+[7.519s] -- Installing: /home/gbonham/turtlebot4_ws/install/custom_interfaces/share/custom_interfaces/rust/src/lib.rs
+[7.519s] -- Installing: /home/gbonham/turtlebot4_ws/install/custom_interfaces/share/custom_interfaces/rust/build.rs
+[7.519s] -- Installing: /home/gbonham/turtlebot4_ws/install/custom_interfaces/share/custom_interfaces/rust/Cargo.toml
+[7.520s] -- Installing: /home/gbonham/turtlebot4_ws/install/custom_interfaces/share/custom_interfaces/msg/ObsList.idl
+[7.520s] -- Up-to-date: /home/gbonham/turtlebot4_ws/install/custom_interfaces/share/custom_interfaces/srv/SetCap.idl
+[7.520s] -- Up-to-date: /home/gbonham/turtlebot4_ws/install/custom_interfaces/share/custom_interfaces/action/RobotGoal.idl
+[7.520s] -- Installing: /home/gbonham/turtlebot4_ws/install/custom_interfaces/share/custom_interfaces/msg/ObsList.msg
+[7.520s] -- Up-to-date: /home/gbonham/turtlebot4_ws/install/custom_interfaces/share/custom_interfaces/srv/SetCap.srv
+[7.520s] -- Up-to-date: /home/gbonham/turtlebot4_ws/install/custom_interfaces/share/custom_interfaces/action/RobotGoal.action
+[7.520s] -- Up-to-date: /home/gbonham/turtlebot4_ws/install/custom_interfaces/share/ament_index/resource_index/package_run_dependencies/custom_interfaces
+[7.521s] -- Installing: /home/gbonham/turtlebot4_ws/install/custom_interfaces/share/ament_index/resource_index/parent_prefix_path/custom_interfaces
+[7.522s] -- Up-to-date: /home/gbonham/turtlebot4_ws/install/custom_interfaces/share/custom_interfaces/environment/ament_prefix_path.sh
+[7.522s] -- Up-to-date: /home/gbonham/turtlebot4_ws/install/custom_interfaces/share/custom_interfaces/environment/ament_prefix_path.dsv
+[7.522s] -- Up-to-date: /home/gbonham/turtlebot4_ws/install/custom_interfaces/share/custom_interfaces/environment/path.sh
+[7.522s] -- Up-to-date: /home/gbonham/turtlebot4_ws/install/custom_interfaces/share/custom_interfaces/environment/path.dsv
+[7.522s] -- Up-to-date: /home/gbonham/turtlebot4_ws/install/custom_interfaces/share/custom_interfaces/local_setup.bash
+[7.522s] -- Up-to-date: /home/gbonham/turtlebot4_ws/install/custom_interfaces/share/custom_interfaces/local_setup.sh
+[7.522s] -- Up-to-date: /home/gbonham/turtlebot4_ws/install/custom_interfaces/share/custom_interfaces/local_setup.zsh
+[7.522s] -- Up-to-date: /home/gbonham/turtlebot4_ws/install/custom_interfaces/share/custom_interfaces/local_setup.dsv
+[7.522s] -- Installing: /home/gbonham/turtlebot4_ws/install/custom_interfaces/share/custom_interfaces/package.dsv
+[7.522s] -- Up-to-date: /home/gbonham/turtlebot4_ws/install/custom_interfaces/share/ament_index/resource_index/packages/custom_interfaces
+[7.523s] -- Up-to-date: /home/gbonham/turtlebot4_ws/install/custom_interfaces/share/custom_interfaces/cmake/export_custom_interfaces__rosidl_generator_cExport.cmake
+[7.523s] -- Up-to-date: /home/gbonham/turtlebot4_ws/install/custom_interfaces/share/custom_interfaces/cmake/export_custom_interfaces__rosidl_generator_cExport-noconfig.cmake
+[7.523s] -- Up-to-date: /home/gbonham/turtlebot4_ws/install/custom_interfaces/share/custom_interfaces/cmake/export_custom_interfaces__rosidl_typesupport_fastrtps_cExport.cmake
+[7.523s] -- Up-to-date: /home/gbonham/turtlebot4_ws/install/custom_interfaces/share/custom_interfaces/cmake/export_custom_interfaces__rosidl_typesupport_fastrtps_cExport-noconfig.cmake
+[7.523s] -- Up-to-date: /home/gbonham/turtlebot4_ws/install/custom_interfaces/share/custom_interfaces/cmake/custom_interfaces__rosidl_typesupport_introspection_cExport.cmake
+[7.523s] -- Up-to-date: /home/gbonham/turtlebot4_ws/install/custom_interfaces/share/custom_interfaces/cmake/custom_interfaces__rosidl_typesupport_introspection_cExport-noconfig.cmake
+[7.523s] -- Up-to-date: /home/gbonham/turtlebot4_ws/install/custom_interfaces/share/custom_interfaces/cmake/custom_interfaces__rosidl_typesupport_cExport.cmake
+[7.523s] -- Up-to-date: /home/gbonham/turtlebot4_ws/install/custom_interfaces/share/custom_interfaces/cmake/custom_interfaces__rosidl_typesupport_cExport-noconfig.cmake
+[7.523s] -- Up-to-date: /home/gbonham/turtlebot4_ws/install/custom_interfaces/share/custom_interfaces/cmake/export_custom_interfaces__rosidl_generator_cppExport.cmake
+[7.524s] -- Up-to-date: /home/gbonham/turtlebot4_ws/install/custom_interfaces/share/custom_interfaces/cmake/export_custom_interfaces__rosidl_typesupport_fastrtps_cppExport.cmake
+[7.524s] -- Up-to-date: /home/gbonham/turtlebot4_ws/install/custom_interfaces/share/custom_interfaces/cmake/export_custom_interfaces__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake
+[7.524s] -- Up-to-date: /home/gbonham/turtlebot4_ws/install/custom_interfaces/share/custom_interfaces/cmake/custom_interfaces__rosidl_typesupport_introspection_cppExport.cmake
+[7.524s] -- Up-to-date: /home/gbonham/turtlebot4_ws/install/custom_interfaces/share/custom_interfaces/cmake/custom_interfaces__rosidl_typesupport_introspection_cppExport-noconfig.cmake
+[7.524s] -- Up-to-date: /home/gbonham/turtlebot4_ws/install/custom_interfaces/share/custom_interfaces/cmake/custom_interfaces__rosidl_typesupport_cppExport.cmake
+[7.524s] -- Up-to-date: /home/gbonham/turtlebot4_ws/install/custom_interfaces/share/custom_interfaces/cmake/custom_interfaces__rosidl_typesupport_cppExport-noconfig.cmake
+[7.524s] -- Up-to-date: /home/gbonham/turtlebot4_ws/install/custom_interfaces/share/custom_interfaces/cmake/export_custom_interfaces__rosidl_generator_pyExport.cmake
+[7.524s] -- Up-to-date: /home/gbonham/turtlebot4_ws/install/custom_interfaces/share/custom_interfaces/cmake/export_custom_interfaces__rosidl_generator_pyExport-noconfig.cmake
+[7.524s] -- Installing: /home/gbonham/turtlebot4_ws/install/custom_interfaces/share/custom_interfaces/cmake/rosidl_cmake-extras.cmake
+[7.525s] -- Up-to-date: /home/gbonham/turtlebot4_ws/install/custom_interfaces/share/custom_interfaces/cmake/ament_cmake_export_dependencies-extras.cmake
+[7.525s] -- Up-to-date: /home/gbonham/turtlebot4_ws/install/custom_interfaces/share/custom_interfaces/cmake/ament_cmake_export_include_directories-extras.cmake
+[7.525s] -- Up-to-date: /home/gbonham/turtlebot4_ws/install/custom_interfaces/share/custom_interfaces/cmake/ament_cmake_export_libraries-extras.cmake
+[7.525s] -- Up-to-date: /home/gbonham/turtlebot4_ws/install/custom_interfaces/share/custom_interfaces/cmake/ament_cmake_export_targets-extras.cmake
+[7.525s] -- Up-to-date: /home/gbonham/turtlebot4_ws/install/custom_interfaces/share/custom_interfaces/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake
+[7.525s] -- Up-to-date: /home/gbonham/turtlebot4_ws/install/custom_interfaces/share/custom_interfaces/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake
+[7.525s] -- Up-to-date: /home/gbonham/turtlebot4_ws/install/custom_interfaces/share/custom_interfaces/cmake/custom_interfacesConfig.cmake
+[7.525s] -- Up-to-date: /home/gbonham/turtlebot4_ws/install/custom_interfaces/share/custom_interfaces/cmake/custom_interfacesConfig-version.cmake
+[7.525s] -- Up-to-date: /home/gbonham/turtlebot4_ws/install/custom_interfaces/share/custom_interfaces/package.xml
+[7.527s] Invoked command in '/home/gbonham/turtlebot4_ws/build/custom_interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/gbonham/turtlebot4_ws/install/lab5_pkg:/home/gbonham/turtlebot4_ws/install/lab3_pkg:/home/gbonham/turtlebot4_ws/install/lab2_pkg:/home/gbonham/turtlebot4_ws/install/lab1_pkg:/home/gbonham/turtlebot4_ws/install/final:/opt/ros/jazzy /usr/bin/cmake --install /home/gbonham/turtlebot4_ws/build/custom_interfaces

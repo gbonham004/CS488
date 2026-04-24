@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/buenr/CS488/src/custom_interfaces
+CMAKE_SOURCE_DIR = /home/gbonham/turtlebot4_ws/src/custom_interfaces
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/buenr/CS488/build/custom_interfaces
+CMAKE_BINARY_DIR = /home/gbonham/turtlebot4_ws/build/custom_interfaces
 
 # Utility rule file for custom_interfaces__rosidl_generator_type_description.
 
@@ -66,21 +66,27 @@ include CMakeFiles/custom_interfaces__rosidl_generator_type_description.dir/comp
 # Include the progress variables for this target.
 include CMakeFiles/custom_interfaces__rosidl_generator_type_description.dir/progress.make
 
+CMakeFiles/custom_interfaces__rosidl_generator_type_description: rosidl_generator_type_description/custom_interfaces/msg/ObsList.json
 CMakeFiles/custom_interfaces__rosidl_generator_type_description: rosidl_generator_type_description/custom_interfaces/srv/SetCap.json
 CMakeFiles/custom_interfaces__rosidl_generator_type_description: rosidl_generator_type_description/custom_interfaces/action/RobotGoal.json
 
-rosidl_generator_type_description/custom_interfaces/srv/SetCap.json: /opt/ros/jazzy/lib/rosidl_generator_type_description/rosidl_generator_type_description
-rosidl_generator_type_description/custom_interfaces/srv/SetCap.json: /opt/ros/jazzy/lib/python3.12/site-packages/rosidl_generator_type_description/__init__.py
-rosidl_generator_type_description/custom_interfaces/srv/SetCap.json: rosidl_adapter/custom_interfaces/srv/SetCap.idl
-rosidl_generator_type_description/custom_interfaces/srv/SetCap.json: rosidl_adapter/custom_interfaces/action/RobotGoal.idl
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/buenr/CS488/build/custom_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating type hashes for ROS interfaces"
-	/usr/bin/python3 /opt/ros/jazzy/lib/rosidl_generator_type_description/rosidl_generator_type_description --generator-arguments-file /home/buenr/CS488/build/custom_interfaces/rosidl_generator_type_description__arguments.json
+rosidl_generator_type_description/custom_interfaces/msg/ObsList.json: /opt/ros/jazzy/lib/rosidl_generator_type_description/rosidl_generator_type_description
+rosidl_generator_type_description/custom_interfaces/msg/ObsList.json: /opt/ros/jazzy/lib/python3.12/site-packages/rosidl_generator_type_description/__init__.py
+rosidl_generator_type_description/custom_interfaces/msg/ObsList.json: rosidl_adapter/custom_interfaces/msg/ObsList.idl
+rosidl_generator_type_description/custom_interfaces/msg/ObsList.json: rosidl_adapter/custom_interfaces/srv/SetCap.idl
+rosidl_generator_type_description/custom_interfaces/msg/ObsList.json: rosidl_adapter/custom_interfaces/action/RobotGoal.idl
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/gbonham/turtlebot4_ws/build/custom_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating type hashes for ROS interfaces"
+	/usr/bin/python3 /opt/ros/jazzy/lib/rosidl_generator_type_description/rosidl_generator_type_description --generator-arguments-file /home/gbonham/turtlebot4_ws/build/custom_interfaces/rosidl_generator_type_description__arguments.json
 
-rosidl_generator_type_description/custom_interfaces/action/RobotGoal.json: rosidl_generator_type_description/custom_interfaces/srv/SetCap.json
+rosidl_generator_type_description/custom_interfaces/srv/SetCap.json: rosidl_generator_type_description/custom_interfaces/msg/ObsList.json
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_type_description/custom_interfaces/srv/SetCap.json
+
+rosidl_generator_type_description/custom_interfaces/action/RobotGoal.json: rosidl_generator_type_description/custom_interfaces/msg/ObsList.json
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_type_description/custom_interfaces/action/RobotGoal.json
 
 custom_interfaces__rosidl_generator_type_description: CMakeFiles/custom_interfaces__rosidl_generator_type_description
 custom_interfaces__rosidl_generator_type_description: rosidl_generator_type_description/custom_interfaces/action/RobotGoal.json
+custom_interfaces__rosidl_generator_type_description: rosidl_generator_type_description/custom_interfaces/msg/ObsList.json
 custom_interfaces__rosidl_generator_type_description: rosidl_generator_type_description/custom_interfaces/srv/SetCap.json
 custom_interfaces__rosidl_generator_type_description: CMakeFiles/custom_interfaces__rosidl_generator_type_description.dir/build.make
 .PHONY : custom_interfaces__rosidl_generator_type_description
@@ -94,6 +100,6 @@ CMakeFiles/custom_interfaces__rosidl_generator_type_description.dir/clean:
 .PHONY : CMakeFiles/custom_interfaces__rosidl_generator_type_description.dir/clean
 
 CMakeFiles/custom_interfaces__rosidl_generator_type_description.dir/depend:
-	cd /home/buenr/CS488/build/custom_interfaces && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/buenr/CS488/src/custom_interfaces /home/buenr/CS488/src/custom_interfaces /home/buenr/CS488/build/custom_interfaces /home/buenr/CS488/build/custom_interfaces /home/buenr/CS488/build/custom_interfaces/CMakeFiles/custom_interfaces__rosidl_generator_type_description.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /home/gbonham/turtlebot4_ws/build/custom_interfaces && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/gbonham/turtlebot4_ws/src/custom_interfaces /home/gbonham/turtlebot4_ws/src/custom_interfaces /home/gbonham/turtlebot4_ws/build/custom_interfaces /home/gbonham/turtlebot4_ws/build/custom_interfaces /home/gbonham/turtlebot4_ws/build/custom_interfaces/CMakeFiles/custom_interfaces__rosidl_generator_type_description.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : CMakeFiles/custom_interfaces__rosidl_generator_type_description.dir/depend
 

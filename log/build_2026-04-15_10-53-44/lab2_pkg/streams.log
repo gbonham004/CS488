@@ -1,0 +1,25 @@
+[2.555s] Invoking command in '/home/gbonham/turtlebot4_ws/src/lab2_pkg': PYTHONPATH=/home/gbonham/turtlebot4_ws/build/lab2_pkg/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/gbonham/turtlebot4_ws/install/lab2_pkg/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/lab2_pkg build --build-base /home/gbonham/turtlebot4_ws/build/lab2_pkg/build install --record /home/gbonham/turtlebot4_ws/build/lab2_pkg/install.log --single-version-externally-managed install_data
+[2.879s] running egg_info
+[2.879s] creating ../../build/lab2_pkg/lab2_pkg.egg-info
+[2.905s] writing ../../build/lab2_pkg/lab2_pkg.egg-info/PKG-INFO
+[2.905s] writing dependency_links to ../../build/lab2_pkg/lab2_pkg.egg-info/dependency_links.txt
+[2.905s] writing entry points to ../../build/lab2_pkg/lab2_pkg.egg-info/entry_points.txt
+[2.905s] writing requirements to ../../build/lab2_pkg/lab2_pkg.egg-info/requires.txt
+[2.905s] writing top-level names to ../../build/lab2_pkg/lab2_pkg.egg-info/top_level.txt
+[2.905s] writing manifest file '../../build/lab2_pkg/lab2_pkg.egg-info/SOURCES.txt'
+[2.931s] reading manifest file '../../build/lab2_pkg/lab2_pkg.egg-info/SOURCES.txt'
+[2.931s] writing manifest file '../../build/lab2_pkg/lab2_pkg.egg-info/SOURCES.txt'
+[2.931s] running build
+[2.932s] running install
+[2.938s] running install_data
+[2.938s] creating /home/gbonham/turtlebot4_ws/install/lab2_pkg/share/ament_index
+[2.938s] creating /home/gbonham/turtlebot4_ws/install/lab2_pkg/share/ament_index/resource_index
+[2.938s] creating /home/gbonham/turtlebot4_ws/install/lab2_pkg/share/ament_index/resource_index/packages
+[2.938s] copying resource/lab2_pkg -> /home/gbonham/turtlebot4_ws/install/lab2_pkg/share/ament_index/resource_index/packages
+[2.938s] copying package.xml -> /home/gbonham/turtlebot4_ws/install/lab2_pkg/share/lab2_pkg
+[2.939s] running install_egg_info
+[2.990s] Copying ../../build/lab2_pkg/lab2_pkg.egg-info to /home/gbonham/turtlebot4_ws/install/lab2_pkg/lib/python3.12/site-packages/lab2_pkg-0.0.0-py3.12.egg-info
+[2.991s] running install_scripts
+[3.172s] Installing SCOD script to /home/gbonham/turtlebot4_ws/install/lab2_pkg/lib/lab2_pkg
+[3.172s] writing list of installed files to '/home/gbonham/turtlebot4_ws/build/lab2_pkg/install.log'
+[3.202s] Invoked command in '/home/gbonham/turtlebot4_ws/src/lab2_pkg' returned '0': PYTHONPATH=/home/gbonham/turtlebot4_ws/build/lab2_pkg/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/gbonham/turtlebot4_ws/install/lab2_pkg/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/lab2_pkg build --build-base /home/gbonham/turtlebot4_ws/build/lab2_pkg/build install --record /home/gbonham/turtlebot4_ws/build/lab2_pkg/install.log --single-version-externally-managed install_data

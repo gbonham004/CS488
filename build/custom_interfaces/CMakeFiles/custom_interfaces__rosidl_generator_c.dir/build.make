@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/buenr/CS488/src/custom_interfaces
+CMAKE_SOURCE_DIR = /home/gbonham/turtlebot4_ws/src/custom_interfaces
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/buenr/CS488/build/custom_interfaces
+CMAKE_BINARY_DIR = /home/gbonham/turtlebot4_ws/build/custom_interfaces
 
 # Include any dependencies generated for this target.
 include CMakeFiles/custom_interfaces__rosidl_generator_c.dir/depend.make
@@ -69,163 +69,230 @@ include CMakeFiles/custom_interfaces__rosidl_generator_c.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/custom_interfaces__rosidl_generator_c.dir/flags.make
 
-rosidl_generator_c/custom_interfaces/srv/set_cap.h: /opt/ros/jazzy/lib/rosidl_generator_c/rosidl_generator_c
-rosidl_generator_c/custom_interfaces/srv/set_cap.h: /opt/ros/jazzy/lib/python3.12/site-packages/rosidl_generator_c/__init__.py
-rosidl_generator_c/custom_interfaces/srv/set_cap.h: /opt/ros/jazzy/share/rosidl_generator_c/resource/action__type_support.h.em
-rosidl_generator_c/custom_interfaces/srv/set_cap.h: /opt/ros/jazzy/share/rosidl_generator_c/resource/action__type_support.c.em
-rosidl_generator_c/custom_interfaces/srv/set_cap.h: /opt/ros/jazzy/share/rosidl_generator_c/resource/empty__description.c.em
-rosidl_generator_c/custom_interfaces/srv/set_cap.h: /opt/ros/jazzy/share/rosidl_generator_c/resource/full__description.c.em
-rosidl_generator_c/custom_interfaces/srv/set_cap.h: /opt/ros/jazzy/share/rosidl_generator_c/resource/idl.h.em
-rosidl_generator_c/custom_interfaces/srv/set_cap.h: /opt/ros/jazzy/share/rosidl_generator_c/resource/idl__description.c.em
-rosidl_generator_c/custom_interfaces/srv/set_cap.h: /opt/ros/jazzy/share/rosidl_generator_c/resource/idl__functions.c.em
-rosidl_generator_c/custom_interfaces/srv/set_cap.h: /opt/ros/jazzy/share/rosidl_generator_c/resource/idl__functions.h.em
-rosidl_generator_c/custom_interfaces/srv/set_cap.h: /opt/ros/jazzy/share/rosidl_generator_c/resource/idl__struct.h.em
-rosidl_generator_c/custom_interfaces/srv/set_cap.h: /opt/ros/jazzy/share/rosidl_generator_c/resource/idl__type_support.c.em
-rosidl_generator_c/custom_interfaces/srv/set_cap.h: /opt/ros/jazzy/share/rosidl_generator_c/resource/idl__type_support.h.em
-rosidl_generator_c/custom_interfaces/srv/set_cap.h: /opt/ros/jazzy/share/rosidl_generator_c/resource/msg__functions.c.em
-rosidl_generator_c/custom_interfaces/srv/set_cap.h: /opt/ros/jazzy/share/rosidl_generator_c/resource/msg__functions.h.em
-rosidl_generator_c/custom_interfaces/srv/set_cap.h: /opt/ros/jazzy/share/rosidl_generator_c/resource/msg__struct.h.em
-rosidl_generator_c/custom_interfaces/srv/set_cap.h: /opt/ros/jazzy/share/rosidl_generator_c/resource/msg__type_support.h.em
-rosidl_generator_c/custom_interfaces/srv/set_cap.h: /opt/ros/jazzy/share/rosidl_generator_c/resource/srv__type_support.c.em
-rosidl_generator_c/custom_interfaces/srv/set_cap.h: /opt/ros/jazzy/share/rosidl_generator_c/resource/srv__type_support.h.em
-rosidl_generator_c/custom_interfaces/srv/set_cap.h: rosidl_adapter/custom_interfaces/srv/SetCap.idl
-rosidl_generator_c/custom_interfaces/srv/set_cap.h: rosidl_adapter/custom_interfaces/action/RobotGoal.idl
-rosidl_generator_c/custom_interfaces/srv/set_cap.h: /opt/ros/jazzy/share/service_msgs/msg/ServiceEventInfo.idl
-rosidl_generator_c/custom_interfaces/srv/set_cap.h: /opt/ros/jazzy/share/builtin_interfaces/msg/Duration.idl
-rosidl_generator_c/custom_interfaces/srv/set_cap.h: /opt/ros/jazzy/share/builtin_interfaces/msg/Time.idl
-rosidl_generator_c/custom_interfaces/srv/set_cap.h: /opt/ros/jazzy/share/action_msgs/msg/GoalInfo.idl
-rosidl_generator_c/custom_interfaces/srv/set_cap.h: /opt/ros/jazzy/share/action_msgs/msg/GoalStatus.idl
-rosidl_generator_c/custom_interfaces/srv/set_cap.h: /opt/ros/jazzy/share/action_msgs/msg/GoalStatusArray.idl
-rosidl_generator_c/custom_interfaces/srv/set_cap.h: /opt/ros/jazzy/share/action_msgs/srv/CancelGoal.idl
-rosidl_generator_c/custom_interfaces/srv/set_cap.h: /opt/ros/jazzy/share/unique_identifier_msgs/msg/UUID.idl
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/buenr/CS488/build/custom_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating C code for ROS interfaces"
-	/usr/bin/python3 /opt/ros/jazzy/share/rosidl_generator_c/cmake/../../../lib/rosidl_generator_c/rosidl_generator_c --generator-arguments-file /home/buenr/CS488/build/custom_interfaces/rosidl_generator_c__arguments.json
+rosidl_generator_c/custom_interfaces/msg/obs_list.h: /opt/ros/jazzy/lib/rosidl_generator_c/rosidl_generator_c
+rosidl_generator_c/custom_interfaces/msg/obs_list.h: /opt/ros/jazzy/lib/python3.12/site-packages/rosidl_generator_c/__init__.py
+rosidl_generator_c/custom_interfaces/msg/obs_list.h: /opt/ros/jazzy/share/rosidl_generator_c/resource/action__type_support.h.em
+rosidl_generator_c/custom_interfaces/msg/obs_list.h: /opt/ros/jazzy/share/rosidl_generator_c/resource/action__type_support.c.em
+rosidl_generator_c/custom_interfaces/msg/obs_list.h: /opt/ros/jazzy/share/rosidl_generator_c/resource/empty__description.c.em
+rosidl_generator_c/custom_interfaces/msg/obs_list.h: /opt/ros/jazzy/share/rosidl_generator_c/resource/full__description.c.em
+rosidl_generator_c/custom_interfaces/msg/obs_list.h: /opt/ros/jazzy/share/rosidl_generator_c/resource/idl.h.em
+rosidl_generator_c/custom_interfaces/msg/obs_list.h: /opt/ros/jazzy/share/rosidl_generator_c/resource/idl__description.c.em
+rosidl_generator_c/custom_interfaces/msg/obs_list.h: /opt/ros/jazzy/share/rosidl_generator_c/resource/idl__functions.c.em
+rosidl_generator_c/custom_interfaces/msg/obs_list.h: /opt/ros/jazzy/share/rosidl_generator_c/resource/idl__functions.h.em
+rosidl_generator_c/custom_interfaces/msg/obs_list.h: /opt/ros/jazzy/share/rosidl_generator_c/resource/idl__struct.h.em
+rosidl_generator_c/custom_interfaces/msg/obs_list.h: /opt/ros/jazzy/share/rosidl_generator_c/resource/idl__type_support.c.em
+rosidl_generator_c/custom_interfaces/msg/obs_list.h: /opt/ros/jazzy/share/rosidl_generator_c/resource/idl__type_support.h.em
+rosidl_generator_c/custom_interfaces/msg/obs_list.h: /opt/ros/jazzy/share/rosidl_generator_c/resource/msg__functions.c.em
+rosidl_generator_c/custom_interfaces/msg/obs_list.h: /opt/ros/jazzy/share/rosidl_generator_c/resource/msg__functions.h.em
+rosidl_generator_c/custom_interfaces/msg/obs_list.h: /opt/ros/jazzy/share/rosidl_generator_c/resource/msg__struct.h.em
+rosidl_generator_c/custom_interfaces/msg/obs_list.h: /opt/ros/jazzy/share/rosidl_generator_c/resource/msg__type_support.h.em
+rosidl_generator_c/custom_interfaces/msg/obs_list.h: /opt/ros/jazzy/share/rosidl_generator_c/resource/srv__type_support.c.em
+rosidl_generator_c/custom_interfaces/msg/obs_list.h: /opt/ros/jazzy/share/rosidl_generator_c/resource/srv__type_support.h.em
+rosidl_generator_c/custom_interfaces/msg/obs_list.h: rosidl_adapter/custom_interfaces/msg/ObsList.idl
+rosidl_generator_c/custom_interfaces/msg/obs_list.h: rosidl_adapter/custom_interfaces/srv/SetCap.idl
+rosidl_generator_c/custom_interfaces/msg/obs_list.h: rosidl_adapter/custom_interfaces/action/RobotGoal.idl
+rosidl_generator_c/custom_interfaces/msg/obs_list.h: /opt/ros/jazzy/share/service_msgs/msg/ServiceEventInfo.idl
+rosidl_generator_c/custom_interfaces/msg/obs_list.h: /opt/ros/jazzy/share/builtin_interfaces/msg/Duration.idl
+rosidl_generator_c/custom_interfaces/msg/obs_list.h: /opt/ros/jazzy/share/builtin_interfaces/msg/Time.idl
+rosidl_generator_c/custom_interfaces/msg/obs_list.h: /opt/ros/jazzy/share/action_msgs/msg/GoalInfo.idl
+rosidl_generator_c/custom_interfaces/msg/obs_list.h: /opt/ros/jazzy/share/action_msgs/msg/GoalStatus.idl
+rosidl_generator_c/custom_interfaces/msg/obs_list.h: /opt/ros/jazzy/share/action_msgs/msg/GoalStatusArray.idl
+rosidl_generator_c/custom_interfaces/msg/obs_list.h: /opt/ros/jazzy/share/action_msgs/srv/CancelGoal.idl
+rosidl_generator_c/custom_interfaces/msg/obs_list.h: /opt/ros/jazzy/share/unique_identifier_msgs/msg/UUID.idl
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/gbonham/turtlebot4_ws/build/custom_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating C code for ROS interfaces"
+	/usr/bin/python3 /opt/ros/jazzy/share/rosidl_generator_c/cmake/../../../lib/rosidl_generator_c/rosidl_generator_c --generator-arguments-file /home/gbonham/turtlebot4_ws/build/custom_interfaces/rosidl_generator_c__arguments.json
 
-rosidl_generator_c/custom_interfaces/srv/detail/set_cap__functions.h: rosidl_generator_c/custom_interfaces/srv/set_cap.h
+rosidl_generator_c/custom_interfaces/msg/detail/obs_list__functions.h: rosidl_generator_c/custom_interfaces/msg/obs_list.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/custom_interfaces/msg/detail/obs_list__functions.h
+
+rosidl_generator_c/custom_interfaces/msg/detail/obs_list__struct.h: rosidl_generator_c/custom_interfaces/msg/obs_list.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/custom_interfaces/msg/detail/obs_list__struct.h
+
+rosidl_generator_c/custom_interfaces/msg/detail/obs_list__type_support.h: rosidl_generator_c/custom_interfaces/msg/obs_list.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/custom_interfaces/msg/detail/obs_list__type_support.h
+
+rosidl_generator_c/custom_interfaces/srv/set_cap.h: rosidl_generator_c/custom_interfaces/msg/obs_list.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/custom_interfaces/srv/set_cap.h
+
+rosidl_generator_c/custom_interfaces/srv/detail/set_cap__functions.h: rosidl_generator_c/custom_interfaces/msg/obs_list.h
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/custom_interfaces/srv/detail/set_cap__functions.h
 
-rosidl_generator_c/custom_interfaces/srv/detail/set_cap__struct.h: rosidl_generator_c/custom_interfaces/srv/set_cap.h
+rosidl_generator_c/custom_interfaces/srv/detail/set_cap__struct.h: rosidl_generator_c/custom_interfaces/msg/obs_list.h
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/custom_interfaces/srv/detail/set_cap__struct.h
 
-rosidl_generator_c/custom_interfaces/srv/detail/set_cap__type_support.h: rosidl_generator_c/custom_interfaces/srv/set_cap.h
+rosidl_generator_c/custom_interfaces/srv/detail/set_cap__type_support.h: rosidl_generator_c/custom_interfaces/msg/obs_list.h
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/custom_interfaces/srv/detail/set_cap__type_support.h
 
-rosidl_generator_c/custom_interfaces/action/robot_goal.h: rosidl_generator_c/custom_interfaces/srv/set_cap.h
+rosidl_generator_c/custom_interfaces/action/robot_goal.h: rosidl_generator_c/custom_interfaces/msg/obs_list.h
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/custom_interfaces/action/robot_goal.h
 
-rosidl_generator_c/custom_interfaces/action/detail/robot_goal__functions.h: rosidl_generator_c/custom_interfaces/srv/set_cap.h
+rosidl_generator_c/custom_interfaces/action/detail/robot_goal__functions.h: rosidl_generator_c/custom_interfaces/msg/obs_list.h
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/custom_interfaces/action/detail/robot_goal__functions.h
 
-rosidl_generator_c/custom_interfaces/action/detail/robot_goal__struct.h: rosidl_generator_c/custom_interfaces/srv/set_cap.h
+rosidl_generator_c/custom_interfaces/action/detail/robot_goal__struct.h: rosidl_generator_c/custom_interfaces/msg/obs_list.h
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/custom_interfaces/action/detail/robot_goal__struct.h
 
-rosidl_generator_c/custom_interfaces/action/detail/robot_goal__type_support.h: rosidl_generator_c/custom_interfaces/srv/set_cap.h
+rosidl_generator_c/custom_interfaces/action/detail/robot_goal__type_support.h: rosidl_generator_c/custom_interfaces/msg/obs_list.h
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/custom_interfaces/action/detail/robot_goal__type_support.h
 
-rosidl_generator_c/custom_interfaces/srv/detail/set_cap__description.c: rosidl_generator_c/custom_interfaces/srv/set_cap.h
+rosidl_generator_c/custom_interfaces/msg/detail/obs_list__description.c: rosidl_generator_c/custom_interfaces/msg/obs_list.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/custom_interfaces/msg/detail/obs_list__description.c
+
+rosidl_generator_c/custom_interfaces/msg/detail/obs_list__functions.c: rosidl_generator_c/custom_interfaces/msg/obs_list.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/custom_interfaces/msg/detail/obs_list__functions.c
+
+rosidl_generator_c/custom_interfaces/msg/detail/obs_list__type_support.c: rosidl_generator_c/custom_interfaces/msg/obs_list.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/custom_interfaces/msg/detail/obs_list__type_support.c
+
+rosidl_generator_c/custom_interfaces/srv/detail/set_cap__description.c: rosidl_generator_c/custom_interfaces/msg/obs_list.h
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/custom_interfaces/srv/detail/set_cap__description.c
 
-rosidl_generator_c/custom_interfaces/srv/detail/set_cap__functions.c: rosidl_generator_c/custom_interfaces/srv/set_cap.h
+rosidl_generator_c/custom_interfaces/srv/detail/set_cap__functions.c: rosidl_generator_c/custom_interfaces/msg/obs_list.h
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/custom_interfaces/srv/detail/set_cap__functions.c
 
-rosidl_generator_c/custom_interfaces/srv/detail/set_cap__type_support.c: rosidl_generator_c/custom_interfaces/srv/set_cap.h
+rosidl_generator_c/custom_interfaces/srv/detail/set_cap__type_support.c: rosidl_generator_c/custom_interfaces/msg/obs_list.h
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/custom_interfaces/srv/detail/set_cap__type_support.c
 
-rosidl_generator_c/custom_interfaces/action/detail/robot_goal__description.c: rosidl_generator_c/custom_interfaces/srv/set_cap.h
+rosidl_generator_c/custom_interfaces/action/detail/robot_goal__description.c: rosidl_generator_c/custom_interfaces/msg/obs_list.h
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/custom_interfaces/action/detail/robot_goal__description.c
 
-rosidl_generator_c/custom_interfaces/action/detail/robot_goal__functions.c: rosidl_generator_c/custom_interfaces/srv/set_cap.h
+rosidl_generator_c/custom_interfaces/action/detail/robot_goal__functions.c: rosidl_generator_c/custom_interfaces/msg/obs_list.h
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/custom_interfaces/action/detail/robot_goal__functions.c
 
-rosidl_generator_c/custom_interfaces/action/detail/robot_goal__type_support.c: rosidl_generator_c/custom_interfaces/srv/set_cap.h
+rosidl_generator_c/custom_interfaces/action/detail/robot_goal__type_support.c: rosidl_generator_c/custom_interfaces/msg/obs_list.h
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/custom_interfaces/action/detail/robot_goal__type_support.c
+
+CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/msg/detail/obs_list__description.c.o: CMakeFiles/custom_interfaces__rosidl_generator_c.dir/flags.make
+CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/msg/detail/obs_list__description.c.o: rosidl_generator_c/custom_interfaces/msg/detail/obs_list__description.c
+CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/msg/detail/obs_list__description.c.o: CMakeFiles/custom_interfaces__rosidl_generator_c.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/gbonham/turtlebot4_ws/build/custom_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/msg/detail/obs_list__description.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/msg/detail/obs_list__description.c.o -MF CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/msg/detail/obs_list__description.c.o.d -o CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/msg/detail/obs_list__description.c.o -c /home/gbonham/turtlebot4_ws/build/custom_interfaces/rosidl_generator_c/custom_interfaces/msg/detail/obs_list__description.c
+
+CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/msg/detail/obs_list__description.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/msg/detail/obs_list__description.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/gbonham/turtlebot4_ws/build/custom_interfaces/rosidl_generator_c/custom_interfaces/msg/detail/obs_list__description.c > CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/msg/detail/obs_list__description.c.i
+
+CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/msg/detail/obs_list__description.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/msg/detail/obs_list__description.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/gbonham/turtlebot4_ws/build/custom_interfaces/rosidl_generator_c/custom_interfaces/msg/detail/obs_list__description.c -o CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/msg/detail/obs_list__description.c.s
+
+CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/msg/detail/obs_list__functions.c.o: CMakeFiles/custom_interfaces__rosidl_generator_c.dir/flags.make
+CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/msg/detail/obs_list__functions.c.o: rosidl_generator_c/custom_interfaces/msg/detail/obs_list__functions.c
+CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/msg/detail/obs_list__functions.c.o: CMakeFiles/custom_interfaces__rosidl_generator_c.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/gbonham/turtlebot4_ws/build/custom_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/msg/detail/obs_list__functions.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/msg/detail/obs_list__functions.c.o -MF CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/msg/detail/obs_list__functions.c.o.d -o CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/msg/detail/obs_list__functions.c.o -c /home/gbonham/turtlebot4_ws/build/custom_interfaces/rosidl_generator_c/custom_interfaces/msg/detail/obs_list__functions.c
+
+CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/msg/detail/obs_list__functions.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/msg/detail/obs_list__functions.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/gbonham/turtlebot4_ws/build/custom_interfaces/rosidl_generator_c/custom_interfaces/msg/detail/obs_list__functions.c > CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/msg/detail/obs_list__functions.c.i
+
+CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/msg/detail/obs_list__functions.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/msg/detail/obs_list__functions.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/gbonham/turtlebot4_ws/build/custom_interfaces/rosidl_generator_c/custom_interfaces/msg/detail/obs_list__functions.c -o CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/msg/detail/obs_list__functions.c.s
+
+CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/msg/detail/obs_list__type_support.c.o: CMakeFiles/custom_interfaces__rosidl_generator_c.dir/flags.make
+CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/msg/detail/obs_list__type_support.c.o: rosidl_generator_c/custom_interfaces/msg/detail/obs_list__type_support.c
+CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/msg/detail/obs_list__type_support.c.o: CMakeFiles/custom_interfaces__rosidl_generator_c.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/gbonham/turtlebot4_ws/build/custom_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/msg/detail/obs_list__type_support.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/msg/detail/obs_list__type_support.c.o -MF CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/msg/detail/obs_list__type_support.c.o.d -o CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/msg/detail/obs_list__type_support.c.o -c /home/gbonham/turtlebot4_ws/build/custom_interfaces/rosidl_generator_c/custom_interfaces/msg/detail/obs_list__type_support.c
+
+CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/msg/detail/obs_list__type_support.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/msg/detail/obs_list__type_support.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/gbonham/turtlebot4_ws/build/custom_interfaces/rosidl_generator_c/custom_interfaces/msg/detail/obs_list__type_support.c > CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/msg/detail/obs_list__type_support.c.i
+
+CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/msg/detail/obs_list__type_support.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/msg/detail/obs_list__type_support.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/gbonham/turtlebot4_ws/build/custom_interfaces/rosidl_generator_c/custom_interfaces/msg/detail/obs_list__type_support.c -o CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/msg/detail/obs_list__type_support.c.s
 
 CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/srv/detail/set_cap__description.c.o: CMakeFiles/custom_interfaces__rosidl_generator_c.dir/flags.make
 CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/srv/detail/set_cap__description.c.o: rosidl_generator_c/custom_interfaces/srv/detail/set_cap__description.c
 CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/srv/detail/set_cap__description.c.o: CMakeFiles/custom_interfaces__rosidl_generator_c.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/buenr/CS488/build/custom_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/srv/detail/set_cap__description.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/srv/detail/set_cap__description.c.o -MF CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/srv/detail/set_cap__description.c.o.d -o CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/srv/detail/set_cap__description.c.o -c /home/buenr/CS488/build/custom_interfaces/rosidl_generator_c/custom_interfaces/srv/detail/set_cap__description.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/gbonham/turtlebot4_ws/build/custom_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/srv/detail/set_cap__description.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/srv/detail/set_cap__description.c.o -MF CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/srv/detail/set_cap__description.c.o.d -o CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/srv/detail/set_cap__description.c.o -c /home/gbonham/turtlebot4_ws/build/custom_interfaces/rosidl_generator_c/custom_interfaces/srv/detail/set_cap__description.c
 
 CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/srv/detail/set_cap__description.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/srv/detail/set_cap__description.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/buenr/CS488/build/custom_interfaces/rosidl_generator_c/custom_interfaces/srv/detail/set_cap__description.c > CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/srv/detail/set_cap__description.c.i
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/gbonham/turtlebot4_ws/build/custom_interfaces/rosidl_generator_c/custom_interfaces/srv/detail/set_cap__description.c > CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/srv/detail/set_cap__description.c.i
 
 CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/srv/detail/set_cap__description.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/srv/detail/set_cap__description.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/buenr/CS488/build/custom_interfaces/rosidl_generator_c/custom_interfaces/srv/detail/set_cap__description.c -o CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/srv/detail/set_cap__description.c.s
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/gbonham/turtlebot4_ws/build/custom_interfaces/rosidl_generator_c/custom_interfaces/srv/detail/set_cap__description.c -o CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/srv/detail/set_cap__description.c.s
 
 CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/srv/detail/set_cap__functions.c.o: CMakeFiles/custom_interfaces__rosidl_generator_c.dir/flags.make
 CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/srv/detail/set_cap__functions.c.o: rosidl_generator_c/custom_interfaces/srv/detail/set_cap__functions.c
 CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/srv/detail/set_cap__functions.c.o: CMakeFiles/custom_interfaces__rosidl_generator_c.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/buenr/CS488/build/custom_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/srv/detail/set_cap__functions.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/srv/detail/set_cap__functions.c.o -MF CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/srv/detail/set_cap__functions.c.o.d -o CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/srv/detail/set_cap__functions.c.o -c /home/buenr/CS488/build/custom_interfaces/rosidl_generator_c/custom_interfaces/srv/detail/set_cap__functions.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/gbonham/turtlebot4_ws/build/custom_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/srv/detail/set_cap__functions.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/srv/detail/set_cap__functions.c.o -MF CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/srv/detail/set_cap__functions.c.o.d -o CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/srv/detail/set_cap__functions.c.o -c /home/gbonham/turtlebot4_ws/build/custom_interfaces/rosidl_generator_c/custom_interfaces/srv/detail/set_cap__functions.c
 
 CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/srv/detail/set_cap__functions.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/srv/detail/set_cap__functions.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/buenr/CS488/build/custom_interfaces/rosidl_generator_c/custom_interfaces/srv/detail/set_cap__functions.c > CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/srv/detail/set_cap__functions.c.i
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/gbonham/turtlebot4_ws/build/custom_interfaces/rosidl_generator_c/custom_interfaces/srv/detail/set_cap__functions.c > CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/srv/detail/set_cap__functions.c.i
 
 CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/srv/detail/set_cap__functions.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/srv/detail/set_cap__functions.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/buenr/CS488/build/custom_interfaces/rosidl_generator_c/custom_interfaces/srv/detail/set_cap__functions.c -o CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/srv/detail/set_cap__functions.c.s
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/gbonham/turtlebot4_ws/build/custom_interfaces/rosidl_generator_c/custom_interfaces/srv/detail/set_cap__functions.c -o CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/srv/detail/set_cap__functions.c.s
 
 CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/srv/detail/set_cap__type_support.c.o: CMakeFiles/custom_interfaces__rosidl_generator_c.dir/flags.make
 CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/srv/detail/set_cap__type_support.c.o: rosidl_generator_c/custom_interfaces/srv/detail/set_cap__type_support.c
 CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/srv/detail/set_cap__type_support.c.o: CMakeFiles/custom_interfaces__rosidl_generator_c.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/buenr/CS488/build/custom_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/srv/detail/set_cap__type_support.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/srv/detail/set_cap__type_support.c.o -MF CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/srv/detail/set_cap__type_support.c.o.d -o CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/srv/detail/set_cap__type_support.c.o -c /home/buenr/CS488/build/custom_interfaces/rosidl_generator_c/custom_interfaces/srv/detail/set_cap__type_support.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/gbonham/turtlebot4_ws/build/custom_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building C object CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/srv/detail/set_cap__type_support.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/srv/detail/set_cap__type_support.c.o -MF CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/srv/detail/set_cap__type_support.c.o.d -o CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/srv/detail/set_cap__type_support.c.o -c /home/gbonham/turtlebot4_ws/build/custom_interfaces/rosidl_generator_c/custom_interfaces/srv/detail/set_cap__type_support.c
 
 CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/srv/detail/set_cap__type_support.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/srv/detail/set_cap__type_support.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/buenr/CS488/build/custom_interfaces/rosidl_generator_c/custom_interfaces/srv/detail/set_cap__type_support.c > CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/srv/detail/set_cap__type_support.c.i
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/gbonham/turtlebot4_ws/build/custom_interfaces/rosidl_generator_c/custom_interfaces/srv/detail/set_cap__type_support.c > CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/srv/detail/set_cap__type_support.c.i
 
 CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/srv/detail/set_cap__type_support.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/srv/detail/set_cap__type_support.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/buenr/CS488/build/custom_interfaces/rosidl_generator_c/custom_interfaces/srv/detail/set_cap__type_support.c -o CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/srv/detail/set_cap__type_support.c.s
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/gbonham/turtlebot4_ws/build/custom_interfaces/rosidl_generator_c/custom_interfaces/srv/detail/set_cap__type_support.c -o CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/srv/detail/set_cap__type_support.c.s
 
 CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/action/detail/robot_goal__description.c.o: CMakeFiles/custom_interfaces__rosidl_generator_c.dir/flags.make
 CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/action/detail/robot_goal__description.c.o: rosidl_generator_c/custom_interfaces/action/detail/robot_goal__description.c
 CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/action/detail/robot_goal__description.c.o: CMakeFiles/custom_interfaces__rosidl_generator_c.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/buenr/CS488/build/custom_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/action/detail/robot_goal__description.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/action/detail/robot_goal__description.c.o -MF CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/action/detail/robot_goal__description.c.o.d -o CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/action/detail/robot_goal__description.c.o -c /home/buenr/CS488/build/custom_interfaces/rosidl_generator_c/custom_interfaces/action/detail/robot_goal__description.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/gbonham/turtlebot4_ws/build/custom_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building C object CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/action/detail/robot_goal__description.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/action/detail/robot_goal__description.c.o -MF CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/action/detail/robot_goal__description.c.o.d -o CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/action/detail/robot_goal__description.c.o -c /home/gbonham/turtlebot4_ws/build/custom_interfaces/rosidl_generator_c/custom_interfaces/action/detail/robot_goal__description.c
 
 CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/action/detail/robot_goal__description.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/action/detail/robot_goal__description.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/buenr/CS488/build/custom_interfaces/rosidl_generator_c/custom_interfaces/action/detail/robot_goal__description.c > CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/action/detail/robot_goal__description.c.i
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/gbonham/turtlebot4_ws/build/custom_interfaces/rosidl_generator_c/custom_interfaces/action/detail/robot_goal__description.c > CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/action/detail/robot_goal__description.c.i
 
 CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/action/detail/robot_goal__description.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/action/detail/robot_goal__description.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/buenr/CS488/build/custom_interfaces/rosidl_generator_c/custom_interfaces/action/detail/robot_goal__description.c -o CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/action/detail/robot_goal__description.c.s
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/gbonham/turtlebot4_ws/build/custom_interfaces/rosidl_generator_c/custom_interfaces/action/detail/robot_goal__description.c -o CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/action/detail/robot_goal__description.c.s
 
 CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/action/detail/robot_goal__functions.c.o: CMakeFiles/custom_interfaces__rosidl_generator_c.dir/flags.make
 CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/action/detail/robot_goal__functions.c.o: rosidl_generator_c/custom_interfaces/action/detail/robot_goal__functions.c
 CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/action/detail/robot_goal__functions.c.o: CMakeFiles/custom_interfaces__rosidl_generator_c.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/buenr/CS488/build/custom_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/action/detail/robot_goal__functions.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/action/detail/robot_goal__functions.c.o -MF CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/action/detail/robot_goal__functions.c.o.d -o CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/action/detail/robot_goal__functions.c.o -c /home/buenr/CS488/build/custom_interfaces/rosidl_generator_c/custom_interfaces/action/detail/robot_goal__functions.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/gbonham/turtlebot4_ws/build/custom_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building C object CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/action/detail/robot_goal__functions.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/action/detail/robot_goal__functions.c.o -MF CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/action/detail/robot_goal__functions.c.o.d -o CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/action/detail/robot_goal__functions.c.o -c /home/gbonham/turtlebot4_ws/build/custom_interfaces/rosidl_generator_c/custom_interfaces/action/detail/robot_goal__functions.c
 
 CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/action/detail/robot_goal__functions.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/action/detail/robot_goal__functions.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/buenr/CS488/build/custom_interfaces/rosidl_generator_c/custom_interfaces/action/detail/robot_goal__functions.c > CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/action/detail/robot_goal__functions.c.i
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/gbonham/turtlebot4_ws/build/custom_interfaces/rosidl_generator_c/custom_interfaces/action/detail/robot_goal__functions.c > CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/action/detail/robot_goal__functions.c.i
 
 CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/action/detail/robot_goal__functions.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/action/detail/robot_goal__functions.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/buenr/CS488/build/custom_interfaces/rosidl_generator_c/custom_interfaces/action/detail/robot_goal__functions.c -o CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/action/detail/robot_goal__functions.c.s
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/gbonham/turtlebot4_ws/build/custom_interfaces/rosidl_generator_c/custom_interfaces/action/detail/robot_goal__functions.c -o CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/action/detail/robot_goal__functions.c.s
 
 CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/action/detail/robot_goal__type_support.c.o: CMakeFiles/custom_interfaces__rosidl_generator_c.dir/flags.make
 CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/action/detail/robot_goal__type_support.c.o: rosidl_generator_c/custom_interfaces/action/detail/robot_goal__type_support.c
 CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/action/detail/robot_goal__type_support.c.o: CMakeFiles/custom_interfaces__rosidl_generator_c.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/buenr/CS488/build/custom_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building C object CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/action/detail/robot_goal__type_support.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/action/detail/robot_goal__type_support.c.o -MF CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/action/detail/robot_goal__type_support.c.o.d -o CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/action/detail/robot_goal__type_support.c.o -c /home/buenr/CS488/build/custom_interfaces/rosidl_generator_c/custom_interfaces/action/detail/robot_goal__type_support.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/gbonham/turtlebot4_ws/build/custom_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building C object CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/action/detail/robot_goal__type_support.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/action/detail/robot_goal__type_support.c.o -MF CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/action/detail/robot_goal__type_support.c.o.d -o CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/action/detail/robot_goal__type_support.c.o -c /home/gbonham/turtlebot4_ws/build/custom_interfaces/rosidl_generator_c/custom_interfaces/action/detail/robot_goal__type_support.c
 
 CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/action/detail/robot_goal__type_support.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/action/detail/robot_goal__type_support.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/buenr/CS488/build/custom_interfaces/rosidl_generator_c/custom_interfaces/action/detail/robot_goal__type_support.c > CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/action/detail/robot_goal__type_support.c.i
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/gbonham/turtlebot4_ws/build/custom_interfaces/rosidl_generator_c/custom_interfaces/action/detail/robot_goal__type_support.c > CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/action/detail/robot_goal__type_support.c.i
 
 CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/action/detail/robot_goal__type_support.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/action/detail/robot_goal__type_support.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/buenr/CS488/build/custom_interfaces/rosidl_generator_c/custom_interfaces/action/detail/robot_goal__type_support.c -o CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/action/detail/robot_goal__type_support.c.s
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/gbonham/turtlebot4_ws/build/custom_interfaces/rosidl_generator_c/custom_interfaces/action/detail/robot_goal__type_support.c -o CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/action/detail/robot_goal__type_support.c.s
 
 # Object files for target custom_interfaces__rosidl_generator_c
 custom_interfaces__rosidl_generator_c_OBJECTS = \
+"CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/msg/detail/obs_list__description.c.o" \
+"CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/msg/detail/obs_list__functions.c.o" \
+"CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/msg/detail/obs_list__type_support.c.o" \
 "CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/srv/detail/set_cap__description.c.o" \
 "CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/srv/detail/set_cap__functions.c.o" \
 "CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/srv/detail/set_cap__type_support.c.o" \
@@ -236,6 +303,9 @@ custom_interfaces__rosidl_generator_c_OBJECTS = \
 # External object files for target custom_interfaces__rosidl_generator_c
 custom_interfaces__rosidl_generator_c_EXTERNAL_OBJECTS =
 
+libcustom_interfaces__rosidl_generator_c.so: CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/msg/detail/obs_list__description.c.o
+libcustom_interfaces__rosidl_generator_c.so: CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/msg/detail/obs_list__functions.c.o
+libcustom_interfaces__rosidl_generator_c.so: CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/msg/detail/obs_list__type_support.c.o
 libcustom_interfaces__rosidl_generator_c.so: CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/srv/detail/set_cap__description.c.o
 libcustom_interfaces__rosidl_generator_c.so: CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/srv/detail/set_cap__functions.c.o
 libcustom_interfaces__rosidl_generator_c.so: CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/srv/detail/set_cap__type_support.c.o
@@ -250,7 +320,7 @@ libcustom_interfaces__rosidl_generator_c.so: /opt/ros/jazzy/lib/libbuiltin_inter
 libcustom_interfaces__rosidl_generator_c.so: /opt/ros/jazzy/lib/librosidl_runtime_c.so
 libcustom_interfaces__rosidl_generator_c.so: /opt/ros/jazzy/lib/librcutils.so
 libcustom_interfaces__rosidl_generator_c.so: CMakeFiles/custom_interfaces__rosidl_generator_c.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/buenr/CS488/build/custom_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking C shared library libcustom_interfaces__rosidl_generator_c.so"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/gbonham/turtlebot4_ws/build/custom_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Linking C shared library libcustom_interfaces__rosidl_generator_c.so"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/custom_interfaces__rosidl_generator_c.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -268,6 +338,13 @@ CMakeFiles/custom_interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/
 CMakeFiles/custom_interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/custom_interfaces/action/detail/robot_goal__type_support.c
 CMakeFiles/custom_interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/custom_interfaces/action/detail/robot_goal__type_support.h
 CMakeFiles/custom_interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/custom_interfaces/action/robot_goal.h
+CMakeFiles/custom_interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/custom_interfaces/msg/detail/obs_list__description.c
+CMakeFiles/custom_interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/custom_interfaces/msg/detail/obs_list__functions.c
+CMakeFiles/custom_interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/custom_interfaces/msg/detail/obs_list__functions.h
+CMakeFiles/custom_interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/custom_interfaces/msg/detail/obs_list__struct.h
+CMakeFiles/custom_interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/custom_interfaces/msg/detail/obs_list__type_support.c
+CMakeFiles/custom_interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/custom_interfaces/msg/detail/obs_list__type_support.h
+CMakeFiles/custom_interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/custom_interfaces/msg/obs_list.h
 CMakeFiles/custom_interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/custom_interfaces/srv/detail/set_cap__description.c
 CMakeFiles/custom_interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/custom_interfaces/srv/detail/set_cap__functions.c
 CMakeFiles/custom_interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/custom_interfaces/srv/detail/set_cap__functions.h
@@ -275,6 +352,6 @@ CMakeFiles/custom_interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/
 CMakeFiles/custom_interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/custom_interfaces/srv/detail/set_cap__type_support.c
 CMakeFiles/custom_interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/custom_interfaces/srv/detail/set_cap__type_support.h
 CMakeFiles/custom_interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/custom_interfaces/srv/set_cap.h
-	cd /home/buenr/CS488/build/custom_interfaces && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/buenr/CS488/src/custom_interfaces /home/buenr/CS488/src/custom_interfaces /home/buenr/CS488/build/custom_interfaces /home/buenr/CS488/build/custom_interfaces /home/buenr/CS488/build/custom_interfaces/CMakeFiles/custom_interfaces__rosidl_generator_c.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /home/gbonham/turtlebot4_ws/build/custom_interfaces && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/gbonham/turtlebot4_ws/src/custom_interfaces /home/gbonham/turtlebot4_ws/src/custom_interfaces /home/gbonham/turtlebot4_ws/build/custom_interfaces /home/gbonham/turtlebot4_ws/build/custom_interfaces /home/gbonham/turtlebot4_ws/build/custom_interfaces/CMakeFiles/custom_interfaces__rosidl_generator_c.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : CMakeFiles/custom_interfaces__rosidl_generator_c.dir/depend
 

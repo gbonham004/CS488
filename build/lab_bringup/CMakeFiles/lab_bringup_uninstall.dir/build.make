@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/buenr/CS488/src/lab_bringup
+CMAKE_SOURCE_DIR = /home/gbonham/turtlebot4_ws/src/lab_bringup
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/buenr/CS488/build/lab_bringup
+CMAKE_BINARY_DIR = /home/gbonham/turtlebot4_ws/build/lab_bringup
 
 # Utility rule file for lab_bringup_uninstall.
 
@@ -67,7 +67,7 @@ include CMakeFiles/lab_bringup_uninstall.dir/compiler_depend.make
 include CMakeFiles/lab_bringup_uninstall.dir/progress.make
 
 CMakeFiles/lab_bringup_uninstall:
-	/usr/bin/cmake -P /home/buenr/CS488/build/lab_bringup/ament_cmake_uninstall_target/ament_cmake_uninstall_target.cmake
+	/usr/bin/cmake -P /home/gbonham/turtlebot4_ws/build/lab_bringup/ament_cmake_uninstall_target/ament_cmake_uninstall_target.cmake
 
 lab_bringup_uninstall: CMakeFiles/lab_bringup_uninstall
 lab_bringup_uninstall: CMakeFiles/lab_bringup_uninstall.dir/build.make
@@ -82,6 +82,6 @@ CMakeFiles/lab_bringup_uninstall.dir/clean:
 .PHONY : CMakeFiles/lab_bringup_uninstall.dir/clean
 
 CMakeFiles/lab_bringup_uninstall.dir/depend:
-	cd /home/buenr/CS488/build/lab_bringup && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/buenr/CS488/src/lab_bringup /home/buenr/CS488/src/lab_bringup /home/buenr/CS488/build/lab_bringup /home/buenr/CS488/build/lab_bringup /home/buenr/CS488/build/lab_bringup/CMakeFiles/lab_bringup_uninstall.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /home/gbonham/turtlebot4_ws/build/lab_bringup && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/gbonham/turtlebot4_ws/src/lab_bringup /home/gbonham/turtlebot4_ws/src/lab_bringup /home/gbonham/turtlebot4_ws/build/lab_bringup /home/gbonham/turtlebot4_ws/build/lab_bringup /home/gbonham/turtlebot4_ws/build/lab_bringup/CMakeFiles/lab_bringup_uninstall.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : CMakeFiles/lab_bringup_uninstall.dir/depend
 

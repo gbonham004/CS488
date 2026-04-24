@@ -1,7 +1,8 @@
 # CMake generated Testfile for 
-# Source directory: /home/buenr/CS488/src/custom_interfaces
-# Build directory: /home/buenr/CS488/build/custom_interfaces
+# Source directory: /home/gbonham/turtlebot4_ws/src/custom_interfaces
+# Build directory: /home/gbonham/turtlebot4_ws/build/custom_interfaces
 # 
 # This file includes the relevant testing commands required for 
 # testing this directory and lists subdirectories to be tested as well.
 subdirs("custom_interfaces__py")
+subdirs("custom_interfaces__rs")

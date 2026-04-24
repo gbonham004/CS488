@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/buenr/CS488/src/custom_interfaces
+CMAKE_SOURCE_DIR = /home/gbonham/turtlebot4_ws/src/custom_interfaces
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/buenr/CS488/build/custom_interfaces
+CMAKE_BINARY_DIR = /home/gbonham/turtlebot4_ws/build/custom_interfaces
 
 # Utility rule file for custom_interfaces__cpp.
 
@@ -66,6 +66,11 @@ include CMakeFiles/custom_interfaces__cpp.dir/compiler_depend.make
 # Include the progress variables for this target.
 include CMakeFiles/custom_interfaces__cpp.dir/progress.make
 
+CMakeFiles/custom_interfaces__cpp: rosidl_generator_cpp/custom_interfaces/msg/obs_list.hpp
+CMakeFiles/custom_interfaces__cpp: rosidl_generator_cpp/custom_interfaces/msg/detail/obs_list__builder.hpp
+CMakeFiles/custom_interfaces__cpp: rosidl_generator_cpp/custom_interfaces/msg/detail/obs_list__struct.hpp
+CMakeFiles/custom_interfaces__cpp: rosidl_generator_cpp/custom_interfaces/msg/detail/obs_list__traits.hpp
+CMakeFiles/custom_interfaces__cpp: rosidl_generator_cpp/custom_interfaces/msg/detail/obs_list__type_support.hpp
 CMakeFiles/custom_interfaces__cpp: rosidl_generator_cpp/custom_interfaces/srv/set_cap.hpp
 CMakeFiles/custom_interfaces__cpp: rosidl_generator_cpp/custom_interfaces/srv/detail/set_cap__builder.hpp
 CMakeFiles/custom_interfaces__cpp: rosidl_generator_cpp/custom_interfaces/srv/detail/set_cap__struct.hpp
@@ -78,66 +83,82 @@ CMakeFiles/custom_interfaces__cpp: rosidl_generator_cpp/custom_interfaces/action
 CMakeFiles/custom_interfaces__cpp: rosidl_generator_cpp/custom_interfaces/action/detail/robot_goal__type_support.hpp
 CMakeFiles/custom_interfaces__cpp: rosidl_generator_cpp/custom_interfaces/msg/rosidl_generator_cpp__visibility_control.hpp
 
-rosidl_generator_cpp/custom_interfaces/srv/set_cap.hpp: /opt/ros/jazzy/lib/rosidl_generator_cpp/rosidl_generator_cpp
-rosidl_generator_cpp/custom_interfaces/srv/set_cap.hpp: /opt/ros/jazzy/lib/python3.12/site-packages/rosidl_generator_cpp/__init__.py
-rosidl_generator_cpp/custom_interfaces/srv/set_cap.hpp: /opt/ros/jazzy/share/rosidl_generator_cpp/resource/action__builder.hpp.em
-rosidl_generator_cpp/custom_interfaces/srv/set_cap.hpp: /opt/ros/jazzy/share/rosidl_generator_cpp/resource/action__struct.hpp.em
-rosidl_generator_cpp/custom_interfaces/srv/set_cap.hpp: /opt/ros/jazzy/share/rosidl_generator_cpp/resource/action__traits.hpp.em
-rosidl_generator_cpp/custom_interfaces/srv/set_cap.hpp: /opt/ros/jazzy/share/rosidl_generator_cpp/resource/action__type_support.hpp.em
-rosidl_generator_cpp/custom_interfaces/srv/set_cap.hpp: /opt/ros/jazzy/share/rosidl_generator_cpp/resource/idl.hpp.em
-rosidl_generator_cpp/custom_interfaces/srv/set_cap.hpp: /opt/ros/jazzy/share/rosidl_generator_cpp/resource/idl__builder.hpp.em
-rosidl_generator_cpp/custom_interfaces/srv/set_cap.hpp: /opt/ros/jazzy/share/rosidl_generator_cpp/resource/idl__struct.hpp.em
-rosidl_generator_cpp/custom_interfaces/srv/set_cap.hpp: /opt/ros/jazzy/share/rosidl_generator_cpp/resource/idl__traits.hpp.em
-rosidl_generator_cpp/custom_interfaces/srv/set_cap.hpp: /opt/ros/jazzy/share/rosidl_generator_cpp/resource/idl__type_support.hpp.em
-rosidl_generator_cpp/custom_interfaces/srv/set_cap.hpp: /opt/ros/jazzy/share/rosidl_generator_cpp/resource/msg__builder.hpp.em
-rosidl_generator_cpp/custom_interfaces/srv/set_cap.hpp: /opt/ros/jazzy/share/rosidl_generator_cpp/resource/msg__struct.hpp.em
-rosidl_generator_cpp/custom_interfaces/srv/set_cap.hpp: /opt/ros/jazzy/share/rosidl_generator_cpp/resource/msg__traits.hpp.em
-rosidl_generator_cpp/custom_interfaces/srv/set_cap.hpp: /opt/ros/jazzy/share/rosidl_generator_cpp/resource/msg__type_support.hpp.em
-rosidl_generator_cpp/custom_interfaces/srv/set_cap.hpp: /opt/ros/jazzy/share/rosidl_generator_cpp/resource/srv__builder.hpp.em
-rosidl_generator_cpp/custom_interfaces/srv/set_cap.hpp: /opt/ros/jazzy/share/rosidl_generator_cpp/resource/srv__struct.hpp.em
-rosidl_generator_cpp/custom_interfaces/srv/set_cap.hpp: /opt/ros/jazzy/share/rosidl_generator_cpp/resource/srv__traits.hpp.em
-rosidl_generator_cpp/custom_interfaces/srv/set_cap.hpp: /opt/ros/jazzy/share/rosidl_generator_cpp/resource/srv__type_support.hpp.em
-rosidl_generator_cpp/custom_interfaces/srv/set_cap.hpp: rosidl_adapter/custom_interfaces/srv/SetCap.idl
-rosidl_generator_cpp/custom_interfaces/srv/set_cap.hpp: rosidl_adapter/custom_interfaces/action/RobotGoal.idl
-rosidl_generator_cpp/custom_interfaces/srv/set_cap.hpp: /opt/ros/jazzy/share/service_msgs/msg/ServiceEventInfo.idl
-rosidl_generator_cpp/custom_interfaces/srv/set_cap.hpp: /opt/ros/jazzy/share/builtin_interfaces/msg/Duration.idl
-rosidl_generator_cpp/custom_interfaces/srv/set_cap.hpp: /opt/ros/jazzy/share/builtin_interfaces/msg/Time.idl
-rosidl_generator_cpp/custom_interfaces/srv/set_cap.hpp: /opt/ros/jazzy/share/action_msgs/msg/GoalInfo.idl
-rosidl_generator_cpp/custom_interfaces/srv/set_cap.hpp: /opt/ros/jazzy/share/action_msgs/msg/GoalStatus.idl
-rosidl_generator_cpp/custom_interfaces/srv/set_cap.hpp: /opt/ros/jazzy/share/action_msgs/msg/GoalStatusArray.idl
-rosidl_generator_cpp/custom_interfaces/srv/set_cap.hpp: /opt/ros/jazzy/share/action_msgs/srv/CancelGoal.idl
-rosidl_generator_cpp/custom_interfaces/srv/set_cap.hpp: /opt/ros/jazzy/share/unique_identifier_msgs/msg/UUID.idl
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/buenr/CS488/build/custom_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating C++ code for ROS interfaces"
-	/usr/bin/python3 /opt/ros/jazzy/share/rosidl_generator_cpp/cmake/../../../lib/rosidl_generator_cpp/rosidl_generator_cpp --generator-arguments-file /home/buenr/CS488/build/custom_interfaces/rosidl_generator_cpp__arguments.json
+rosidl_generator_cpp/custom_interfaces/msg/obs_list.hpp: /opt/ros/jazzy/lib/rosidl_generator_cpp/rosidl_generator_cpp
+rosidl_generator_cpp/custom_interfaces/msg/obs_list.hpp: /opt/ros/jazzy/lib/python3.12/site-packages/rosidl_generator_cpp/__init__.py
+rosidl_generator_cpp/custom_interfaces/msg/obs_list.hpp: /opt/ros/jazzy/share/rosidl_generator_cpp/resource/action__builder.hpp.em
+rosidl_generator_cpp/custom_interfaces/msg/obs_list.hpp: /opt/ros/jazzy/share/rosidl_generator_cpp/resource/action__struct.hpp.em
+rosidl_generator_cpp/custom_interfaces/msg/obs_list.hpp: /opt/ros/jazzy/share/rosidl_generator_cpp/resource/action__traits.hpp.em
+rosidl_generator_cpp/custom_interfaces/msg/obs_list.hpp: /opt/ros/jazzy/share/rosidl_generator_cpp/resource/action__type_support.hpp.em
+rosidl_generator_cpp/custom_interfaces/msg/obs_list.hpp: /opt/ros/jazzy/share/rosidl_generator_cpp/resource/idl.hpp.em
+rosidl_generator_cpp/custom_interfaces/msg/obs_list.hpp: /opt/ros/jazzy/share/rosidl_generator_cpp/resource/idl__builder.hpp.em
+rosidl_generator_cpp/custom_interfaces/msg/obs_list.hpp: /opt/ros/jazzy/share/rosidl_generator_cpp/resource/idl__struct.hpp.em
+rosidl_generator_cpp/custom_interfaces/msg/obs_list.hpp: /opt/ros/jazzy/share/rosidl_generator_cpp/resource/idl__traits.hpp.em
+rosidl_generator_cpp/custom_interfaces/msg/obs_list.hpp: /opt/ros/jazzy/share/rosidl_generator_cpp/resource/idl__type_support.hpp.em
+rosidl_generator_cpp/custom_interfaces/msg/obs_list.hpp: /opt/ros/jazzy/share/rosidl_generator_cpp/resource/msg__builder.hpp.em
+rosidl_generator_cpp/custom_interfaces/msg/obs_list.hpp: /opt/ros/jazzy/share/rosidl_generator_cpp/resource/msg__struct.hpp.em
+rosidl_generator_cpp/custom_interfaces/msg/obs_list.hpp: /opt/ros/jazzy/share/rosidl_generator_cpp/resource/msg__traits.hpp.em
+rosidl_generator_cpp/custom_interfaces/msg/obs_list.hpp: /opt/ros/jazzy/share/rosidl_generator_cpp/resource/msg__type_support.hpp.em
+rosidl_generator_cpp/custom_interfaces/msg/obs_list.hpp: /opt/ros/jazzy/share/rosidl_generator_cpp/resource/srv__builder.hpp.em
+rosidl_generator_cpp/custom_interfaces/msg/obs_list.hpp: /opt/ros/jazzy/share/rosidl_generator_cpp/resource/srv__struct.hpp.em
+rosidl_generator_cpp/custom_interfaces/msg/obs_list.hpp: /opt/ros/jazzy/share/rosidl_generator_cpp/resource/srv__traits.hpp.em
+rosidl_generator_cpp/custom_interfaces/msg/obs_list.hpp: /opt/ros/jazzy/share/rosidl_generator_cpp/resource/srv__type_support.hpp.em
+rosidl_generator_cpp/custom_interfaces/msg/obs_list.hpp: rosidl_adapter/custom_interfaces/msg/ObsList.idl
+rosidl_generator_cpp/custom_interfaces/msg/obs_list.hpp: rosidl_adapter/custom_interfaces/srv/SetCap.idl
+rosidl_generator_cpp/custom_interfaces/msg/obs_list.hpp: rosidl_adapter/custom_interfaces/action/RobotGoal.idl
+rosidl_generator_cpp/custom_interfaces/msg/obs_list.hpp: /opt/ros/jazzy/share/service_msgs/msg/ServiceEventInfo.idl
+rosidl_generator_cpp/custom_interfaces/msg/obs_list.hpp: /opt/ros/jazzy/share/builtin_interfaces/msg/Duration.idl
+rosidl_generator_cpp/custom_interfaces/msg/obs_list.hpp: /opt/ros/jazzy/share/builtin_interfaces/msg/Time.idl
+rosidl_generator_cpp/custom_interfaces/msg/obs_list.hpp: /opt/ros/jazzy/share/action_msgs/msg/GoalInfo.idl
+rosidl_generator_cpp/custom_interfaces/msg/obs_list.hpp: /opt/ros/jazzy/share/action_msgs/msg/GoalStatus.idl
+rosidl_generator_cpp/custom_interfaces/msg/obs_list.hpp: /opt/ros/jazzy/share/action_msgs/msg/GoalStatusArray.idl
+rosidl_generator_cpp/custom_interfaces/msg/obs_list.hpp: /opt/ros/jazzy/share/action_msgs/srv/CancelGoal.idl
+rosidl_generator_cpp/custom_interfaces/msg/obs_list.hpp: /opt/ros/jazzy/share/unique_identifier_msgs/msg/UUID.idl
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/gbonham/turtlebot4_ws/build/custom_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating C++ code for ROS interfaces"
+	/usr/bin/python3 /opt/ros/jazzy/share/rosidl_generator_cpp/cmake/../../../lib/rosidl_generator_cpp/rosidl_generator_cpp --generator-arguments-file /home/gbonham/turtlebot4_ws/build/custom_interfaces/rosidl_generator_cpp__arguments.json
 
-rosidl_generator_cpp/custom_interfaces/srv/detail/set_cap__builder.hpp: rosidl_generator_cpp/custom_interfaces/srv/set_cap.hpp
+rosidl_generator_cpp/custom_interfaces/msg/detail/obs_list__builder.hpp: rosidl_generator_cpp/custom_interfaces/msg/obs_list.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/custom_interfaces/msg/detail/obs_list__builder.hpp
+
+rosidl_generator_cpp/custom_interfaces/msg/detail/obs_list__struct.hpp: rosidl_generator_cpp/custom_interfaces/msg/obs_list.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/custom_interfaces/msg/detail/obs_list__struct.hpp
+
+rosidl_generator_cpp/custom_interfaces/msg/detail/obs_list__traits.hpp: rosidl_generator_cpp/custom_interfaces/msg/obs_list.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/custom_interfaces/msg/detail/obs_list__traits.hpp
+
+rosidl_generator_cpp/custom_interfaces/msg/detail/obs_list__type_support.hpp: rosidl_generator_cpp/custom_interfaces/msg/obs_list.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/custom_interfaces/msg/detail/obs_list__type_support.hpp
+
+rosidl_generator_cpp/custom_interfaces/srv/set_cap.hpp: rosidl_generator_cpp/custom_interfaces/msg/obs_list.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/custom_interfaces/srv/set_cap.hpp
+
+rosidl_generator_cpp/custom_interfaces/srv/detail/set_cap__builder.hpp: rosidl_generator_cpp/custom_interfaces/msg/obs_list.hpp
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/custom_interfaces/srv/detail/set_cap__builder.hpp
 
-rosidl_generator_cpp/custom_interfaces/srv/detail/set_cap__struct.hpp: rosidl_generator_cpp/custom_interfaces/srv/set_cap.hpp
+rosidl_generator_cpp/custom_interfaces/srv/detail/set_cap__struct.hpp: rosidl_generator_cpp/custom_interfaces/msg/obs_list.hpp
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/custom_interfaces/srv/detail/set_cap__struct.hpp
 
-rosidl_generator_cpp/custom_interfaces/srv/detail/set_cap__traits.hpp: rosidl_generator_cpp/custom_interfaces/srv/set_cap.hpp
+rosidl_generator_cpp/custom_interfaces/srv/detail/set_cap__traits.hpp: rosidl_generator_cpp/custom_interfaces/msg/obs_list.hpp
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/custom_interfaces/srv/detail/set_cap__traits.hpp
 
-rosidl_generator_cpp/custom_interfaces/srv/detail/set_cap__type_support.hpp: rosidl_generator_cpp/custom_interfaces/srv/set_cap.hpp
+rosidl_generator_cpp/custom_interfaces/srv/detail/set_cap__type_support.hpp: rosidl_generator_cpp/custom_interfaces/msg/obs_list.hpp
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/custom_interfaces/srv/detail/set_cap__type_support.hpp
 
-rosidl_generator_cpp/custom_interfaces/action/robot_goal.hpp: rosidl_generator_cpp/custom_interfaces/srv/set_cap.hpp
+rosidl_generator_cpp/custom_interfaces/action/robot_goal.hpp: rosidl_generator_cpp/custom_interfaces/msg/obs_list.hpp
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/custom_interfaces/action/robot_goal.hpp
 
-rosidl_generator_cpp/custom_interfaces/action/detail/robot_goal__builder.hpp: rosidl_generator_cpp/custom_interfaces/srv/set_cap.hpp
+rosidl_generator_cpp/custom_interfaces/action/detail/robot_goal__builder.hpp: rosidl_generator_cpp/custom_interfaces/msg/obs_list.hpp
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/custom_interfaces/action/detail/robot_goal__builder.hpp
 
-rosidl_generator_cpp/custom_interfaces/action/detail/robot_goal__struct.hpp: rosidl_generator_cpp/custom_interfaces/srv/set_cap.hpp
+rosidl_generator_cpp/custom_interfaces/action/detail/robot_goal__struct.hpp: rosidl_generator_cpp/custom_interfaces/msg/obs_list.hpp
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/custom_interfaces/action/detail/robot_goal__struct.hpp
 
-rosidl_generator_cpp/custom_interfaces/action/detail/robot_goal__traits.hpp: rosidl_generator_cpp/custom_interfaces/srv/set_cap.hpp
+rosidl_generator_cpp/custom_interfaces/action/detail/robot_goal__traits.hpp: rosidl_generator_cpp/custom_interfaces/msg/obs_list.hpp
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/custom_interfaces/action/detail/robot_goal__traits.hpp
 
-rosidl_generator_cpp/custom_interfaces/action/detail/robot_goal__type_support.hpp: rosidl_generator_cpp/custom_interfaces/srv/set_cap.hpp
+rosidl_generator_cpp/custom_interfaces/action/detail/robot_goal__type_support.hpp: rosidl_generator_cpp/custom_interfaces/msg/obs_list.hpp
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/custom_interfaces/action/detail/robot_goal__type_support.hpp
 
-rosidl_generator_cpp/custom_interfaces/msg/rosidl_generator_cpp__visibility_control.hpp: rosidl_generator_cpp/custom_interfaces/srv/set_cap.hpp
+rosidl_generator_cpp/custom_interfaces/msg/rosidl_generator_cpp__visibility_control.hpp: rosidl_generator_cpp/custom_interfaces/msg/obs_list.hpp
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/custom_interfaces/msg/rosidl_generator_cpp__visibility_control.hpp
 
 custom_interfaces__cpp: CMakeFiles/custom_interfaces__cpp
@@ -146,6 +167,11 @@ custom_interfaces__cpp: rosidl_generator_cpp/custom_interfaces/action/detail/rob
 custom_interfaces__cpp: rosidl_generator_cpp/custom_interfaces/action/detail/robot_goal__traits.hpp
 custom_interfaces__cpp: rosidl_generator_cpp/custom_interfaces/action/detail/robot_goal__type_support.hpp
 custom_interfaces__cpp: rosidl_generator_cpp/custom_interfaces/action/robot_goal.hpp
+custom_interfaces__cpp: rosidl_generator_cpp/custom_interfaces/msg/detail/obs_list__builder.hpp
+custom_interfaces__cpp: rosidl_generator_cpp/custom_interfaces/msg/detail/obs_list__struct.hpp
+custom_interfaces__cpp: rosidl_generator_cpp/custom_interfaces/msg/detail/obs_list__traits.hpp
+custom_interfaces__cpp: rosidl_generator_cpp/custom_interfaces/msg/detail/obs_list__type_support.hpp
+custom_interfaces__cpp: rosidl_generator_cpp/custom_interfaces/msg/obs_list.hpp
 custom_interfaces__cpp: rosidl_generator_cpp/custom_interfaces/msg/rosidl_generator_cpp__visibility_control.hpp
 custom_interfaces__cpp: rosidl_generator_cpp/custom_interfaces/srv/detail/set_cap__builder.hpp
 custom_interfaces__cpp: rosidl_generator_cpp/custom_interfaces/srv/detail/set_cap__struct.hpp
@@ -164,6 +190,6 @@ CMakeFiles/custom_interfaces__cpp.dir/clean:
 .PHONY : CMakeFiles/custom_interfaces__cpp.dir/clean
 
 CMakeFiles/custom_interfaces__cpp.dir/depend:
-	cd /home/buenr/CS488/build/custom_interfaces && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/buenr/CS488/src/custom_interfaces /home/buenr/CS488/src/custom_interfaces /home/buenr/CS488/build/custom_interfaces /home/buenr/CS488/build/custom_interfaces /home/buenr/CS488/build/custom_interfaces/CMakeFiles/custom_interfaces__cpp.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /home/gbonham/turtlebot4_ws/build/custom_interfaces && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/gbonham/turtlebot4_ws/src/custom_interfaces /home/gbonham/turtlebot4_ws/src/custom_interfaces /home/gbonham/turtlebot4_ws/build/custom_interfaces /home/gbonham/turtlebot4_ws/build/custom_interfaces /home/gbonham/turtlebot4_ws/build/custom_interfaces/CMakeFiles/custom_interfaces__cpp.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : CMakeFiles/custom_interfaces__cpp.dir/depend
 

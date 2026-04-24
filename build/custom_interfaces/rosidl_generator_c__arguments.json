@@ -1,14 +1,16 @@
 {
   "package_name": "custom_interfaces",
-  "output_dir": "/home/buenr/CS488/build/custom_interfaces/rosidl_generator_c/custom_interfaces",
+  "output_dir": "/home/gbonham/turtlebot4_ws/build/custom_interfaces/rosidl_generator_c/custom_interfaces",
   "template_dir": "/opt/ros/jazzy/share/rosidl_generator_c/cmake/../resource",
   "idl_tuples": [
-    "/home/buenr/CS488/build/custom_interfaces/rosidl_adapter/custom_interfaces:srv/SetCap.idl",
-    "/home/buenr/CS488/build/custom_interfaces/rosidl_adapter/custom_interfaces:action/RobotGoal.idl"
+    "/home/gbonham/turtlebot4_ws/build/custom_interfaces/rosidl_adapter/custom_interfaces:msg/ObsList.idl",
+    "/home/gbonham/turtlebot4_ws/build/custom_interfaces/rosidl_adapter/custom_interfaces:srv/SetCap.idl",
+    "/home/gbonham/turtlebot4_ws/build/custom_interfaces/rosidl_adapter/custom_interfaces:action/RobotGoal.idl"
   ],
   "ros_interface_files": [
-    "/home/buenr/CS488/src/custom_interfaces/srv/SetCap.srv",
-    "/home/buenr/CS488/src/custom_interfaces/action/RobotGoal.action"
+    "/home/gbonham/turtlebot4_ws/src/custom_interfaces/msg/ObsList.msg",
+    "/home/gbonham/turtlebot4_ws/src/custom_interfaces/srv/SetCap.srv",
+    "/home/gbonham/turtlebot4_ws/src/custom_interfaces/action/RobotGoal.action"
   ],
   "ros_interface_dependencies": [
     "service_msgs:/opt/ros/jazzy/share/service_msgs/msg/ServiceEventInfo.idl",
@@ -40,8 +42,9 @@
     "/opt/ros/jazzy/share/rosidl_generator_c/cmake/../resource/msg__type_support.h.em",
     "/opt/ros/jazzy/share/rosidl_generator_c/cmake/../resource/srv__type_support.c.em",
     "/opt/ros/jazzy/share/rosidl_generator_c/cmake/../resource/srv__type_support.h.em",
-    "/home/buenr/CS488/build/custom_interfaces/rosidl_adapter/custom_interfaces/srv/SetCap.idl",
-    "/home/buenr/CS488/build/custom_interfaces/rosidl_adapter/custom_interfaces/action/RobotGoal.idl",
+    "/home/gbonham/turtlebot4_ws/build/custom_interfaces/rosidl_adapter/custom_interfaces/msg/ObsList.idl",
+    "/home/gbonham/turtlebot4_ws/build/custom_interfaces/rosidl_adapter/custom_interfaces/srv/SetCap.idl",
+    "/home/gbonham/turtlebot4_ws/build/custom_interfaces/rosidl_adapter/custom_interfaces/action/RobotGoal.idl",
     "/opt/ros/jazzy/share/service_msgs/msg/ServiceEventInfo.idl",
     "/opt/ros/jazzy/share/builtin_interfaces/msg/Duration.idl",
     "/opt/ros/jazzy/share/builtin_interfaces/msg/Time.idl",
@@ -52,7 +55,8 @@
     "/opt/ros/jazzy/share/unique_identifier_msgs/msg/UUID.idl"
   ],
   "type_description_tuples": [
-    "srv/SetCap.idl:/home/buenr/CS488/build/custom_interfaces/rosidl_generator_type_description/custom_interfaces/srv/SetCap.json",
-    "action/RobotGoal.idl:/home/buenr/CS488/build/custom_interfaces/rosidl_generator_type_description/custom_interfaces/action/RobotGoal.json"
+    "msg/ObsList.idl:/home/gbonham/turtlebot4_ws/build/custom_interfaces/rosidl_generator_type_description/custom_interfaces/msg/ObsList.json",
+    "srv/SetCap.idl:/home/gbonham/turtlebot4_ws/build/custom_interfaces/rosidl_generator_type_description/custom_interfaces/srv/SetCap.json",
+    "action/RobotGoal.idl:/home/gbonham/turtlebot4_ws/build/custom_interfaces/rosidl_generator_type_description/custom_interfaces/action/RobotGoal.json"
   ]
 }

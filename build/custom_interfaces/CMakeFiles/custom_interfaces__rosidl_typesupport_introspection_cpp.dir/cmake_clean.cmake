@@ -1,12 +1,16 @@
 file(REMOVE_RECURSE
   "CMakeFiles/custom_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/custom_interfaces/action/detail/robot_goal__type_support.cpp.o"
   "CMakeFiles/custom_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/custom_interfaces/action/detail/robot_goal__type_support.cpp.o.d"
+  "CMakeFiles/custom_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/custom_interfaces/msg/detail/obs_list__type_support.cpp.o"
+  "CMakeFiles/custom_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/custom_interfaces/msg/detail/obs_list__type_support.cpp.o.d"
   "CMakeFiles/custom_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/custom_interfaces/srv/detail/set_cap__type_support.cpp.o"
   "CMakeFiles/custom_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/custom_interfaces/srv/detail/set_cap__type_support.cpp.o.d"
   "libcustom_interfaces__rosidl_typesupport_introspection_cpp.pdb"
   "libcustom_interfaces__rosidl_typesupport_introspection_cpp.so"
   "rosidl_typesupport_introspection_cpp/custom_interfaces/action/detail/robot_goal__rosidl_typesupport_introspection_cpp.hpp"
   "rosidl_typesupport_introspection_cpp/custom_interfaces/action/detail/robot_goal__type_support.cpp"
+  "rosidl_typesupport_introspection_cpp/custom_interfaces/msg/detail/obs_list__rosidl_typesupport_introspection_cpp.hpp"
+  "rosidl_typesupport_introspection_cpp/custom_interfaces/msg/detail/obs_list__type_support.cpp"
   "rosidl_typesupport_introspection_cpp/custom_interfaces/srv/detail/set_cap__rosidl_typesupport_introspection_cpp.hpp"
   "rosidl_typesupport_introspection_cpp/custom_interfaces/srv/detail/set_cap__type_support.cpp"
 )
