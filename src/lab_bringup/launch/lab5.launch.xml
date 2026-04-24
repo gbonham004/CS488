@@ -1,0 +1,4 @@
+<launch>
+    <node pkg="lab5_pkg" exec="go_to_goal_server"/>
+    <node pkg="lab5_pkg" exec="go_to_goal_client"/>
+</launch>
