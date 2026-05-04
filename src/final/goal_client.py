@@ -20,8 +20,8 @@ class GoToGoalClient(Node):
         # self.bounds = "No bounds received yet"
         # self.got_bounds = False
 
-        # while not self.go_to_goal_client.wait_for_server(1.0):
-        #     self.get_logger().info("Waiting for server")
+        while not self.go_to_goal_client.wait_for_server(1.0):
+            self.get_logger().info("Waiting for server")
 
     # def callback_bounds(self,msg):
     #     self.bounds = msg.data
@@ -87,6 +87,7 @@ def main(args=None):
     # print(action_client.show_bounds())
 
     # Send the goal
+    print("say anything...")
     action_client.send_goal(float(input("Enter x: ")), float(input("Enter y: ")), float(input("Enter theta: ")))
 
     # Normal spin, yay! (callback handles shutdown)

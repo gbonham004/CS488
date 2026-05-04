@@ -4,7 +4,7 @@ from rclpy.node import Node
 import cv2
 from cv_bridge import CvBridge as cvb
 from sensor_msgs.msg import Image
-#from pyzbar.pyzbar import decode 
+from pyzbar.pyzbar import decode 
 # Any additional imports here
 
 # Decide your node class name
@@ -21,26 +21,22 @@ class ColorVision(Node):
             cv_image = self.bridge.imgmsg_to_cv2(msg, desired_encoding="bgr8")
             cv2.imshow("camera", cv_image)
             cv2.waitKey(1)
-            
-            # qr_codes = decode(cv_image)
-            # if qr_codes:
-            #     for qr in qr_codes:
-            #         (x,y,w,h) = qr.rect 
-            #         data = qr.data.decode("utf-8")
-            #         code_type = qr.type
-            #         self.get_logger().info("we have a code!")
-            #         self.get_logger().info(data)
 
-            # barcodes = decode(cv_image)
+            barcodes = decode(cv_image) 
+            self.get_logger().info("hi people")
 
-            # if barcodes:
-            #     for barcode in barcodes:
-            #         (x, y, w, h) = barcode.rect
-            #         cv2.rectangle(cv_image, (x, y), (x + w, y+ h), (0, 255, 0), 2)
-            #         data = barcode.data.decode("utf-8")
-            #         code_type = barcode.type
-            #         text = f"{code_type}: {data}"
-            #         cv2.putText(cv_image, text, (x, y - 10), cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0, 255, 0), 2)
+            if barcodes:
+                for barcode in barcodes:
+                    (x, y, w, h) = barcode.rect
+                    data = barcode.data.decode("utf-8")
+                    code_type = barcode.type
+                    
+                    text = f"{code_type}: {data}"
+                    cv2.rectangle(cv_image, (x, y), (x + w, y+ h), (0, 255, 0), 2)
+                    cv2.putText(cv_image, text, (x, y - 10), cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0, 255, 0), 2)
+
+                    self.get_logger().info("we have a code!")
+                    self.get_logger().info(data)
             
 
             upper_range_1 = (15, 255, 255)
@@ -56,7 +52,7 @@ class ColorVision(Node):
             flag = False
 
 
-            area_threshold = 256.0
+            area_threshold = 1000
             for cnt in contours_lower:
                 area = cv2.contourArea(cnt)
                 if area > area_threshold:

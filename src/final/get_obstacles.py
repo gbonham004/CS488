@@ -22,7 +22,7 @@ class getObs(Node):
 
         self.obs_pub = self.create_publisher(ObsList, '/obs', 10)
 
-        self.scan_sub = self.create_subscription(LaserScan, '/robot4/scan', self.scan_callback, 10)
+        self.scan_sub = self.create_subscription(LaserScan, '/robot1/scan', self.scan_callback, 10)
 
 
     def scan_callback(self,msg):
