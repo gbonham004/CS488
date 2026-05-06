@@ -33,14 +33,16 @@ class GoToGoalNode(Node):
         # Set by pose from pose topic
         self.x = 0
         self.y = 0
-        self.max_x
         self.ang = 0
 
         # Robot radius
         self.robot_radius = 0.3
 
+        # Store obstacle locations
+        self.obstacle_space = []
+
         # Meta data from occupancy grid
-        self.resoltuion = 0.05 # Default 5cm
+        self.resolution = 0.05 # Default 5cm
         self.width = 0
         self.height = 0
         self.origin_x = 0.0
@@ -54,7 +56,7 @@ class GoToGoalNode(Node):
         self.total_err_ang = 0.0
 
         # Subscribe to the robot position
-        self.pos_subscriber = self.create_subscription(PoseWithCovarianceStamped, '/robot1/pose', self.callback_pos, 10)
+        self.pos_subscriber = self.create_subscription(PoseWithCovarianceStamped, '/robot1/odom', self.callback_pos, 10)
         self.pos_subscriber
 
         # Subscribe to the occupancy grid

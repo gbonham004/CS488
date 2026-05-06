@@ -4,7 +4,7 @@ from rclpy.node import Node
 import cv2
 from cv_bridge import CvBridge as cvb
 from sensor_msgs.msg import Image
-
+from pyzbar.pyzbar import decode 
 # Any additional imports here
 
 # Decide your node class name
@@ -15,12 +15,33 @@ class ColorVision(Node):
         self.bridge = cvb()
 
         self.cam_sub = self.create_subscription(Image, "robot1/oakd/rgb/preview/image_raw", self.cam_callback, 10)
+        self.barcode_list = []
 
     def cam_callback(self, msg):
         try:
             cv_image = self.bridge.imgmsg_to_cv2(msg, desired_encoding="bgr8")
             cv2.imshow("camera", cv_image)
             cv2.waitKey(1)
+
+            barcodes = decode(cv_image) 
+
+            if barcodes:
+                self.get_logger().info("we have a code!")
+                for barcode in barcodes:
+                    (x, y, w, h) = barcode.rect
+                    self.get_logger().info(f"X: {x}")
+                    self.get_logger().info(f"Y: {y}")
+                    self.get_logger().info(f"W: {w}")
+                    self.get_logger().info(f"H: {h}")
+                    data = barcode.data.decode("utf-8")
+                    code_type = barcode.type
+                    self.get_logger().info(data)
+                    self.barcode_list.append(data)
+
+                    text = f"{code_type}: {data}"
+                    cv2.rectangle(cv_image, (x, y), (x + w, y+ h), (0, 255, 0), 2)
+                    cv2.putText(cv_image, text, (x, y - 10), cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0, 255, 0), 2)
+            
 
             upper_range_1 = (15, 255, 255)
             lower_range_1 = (0, 100, 100)
@@ -35,7 +56,7 @@ class ColorVision(Node):
             flag = False
 
 
-            area_threshold = 256.0
+            area_threshold = 1000
             for cnt in contours_lower:
                 area = cv2.contourArea(cnt)
                 if area > area_threshold:

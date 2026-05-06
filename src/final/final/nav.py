@@ -23,6 +23,7 @@ from rclpy.node import Node
 from rclpy.qos import qos_profile_sensor_data
 
 import math
+import os
 
 class NavNode(Node):
     def __init__(self):
@@ -46,24 +47,32 @@ class NavNode(Node):
         # Threshold of close enough
         self.pos_threshold = 0.1
         self.ang_threshold = 0.1
+       
 
         # How long to try getting to goal before giving up
         self.max_iteration = 1e20
 
-        # Store our obstacle locations
-        self.obstacle_space = []
+        # Store our obstacle locations relative to robot (robot center is 0,0)
+        self.obs_space_rob_frame = []
+
+        # Store our obstacle locations relative to world frame (world 0,0)
+        self.obs_space_world_frame = []
+
+        # Store distances from obstacles to robot
+        self.obs_dist = []
 
         # Subscribe to the odometry (robot location?)
-        self.pos_subscriber = self.create_subscription(Odometry, '/robot4/odom', self.callback_pos, 10)
+        self.pos_subscriber = self.create_subscription(Odometry, '/robot1/odom', self.callback_pos, 10)
 
         # Subscribe to the obstacle locations
-        self.obs_subscriber = self.create_subscription(ObsList, '/obs', self.callback_obs, 10)
+        
+        self.obs_subscriber = self.create_subscription(ObsList, '/robot1/obs', self.callback_obs, 10)
 
         # Velocity publisher
-        self.velocity_pub = self.create_publisher(Twist, '/robot4/cmd_vel_unfiltered', 10)
+        self.velocity_pub = self.create_publisher(Twist, '/robot1/cmd_vel_unfiltered', 10)
 
         # Obstcles publisher
-        self.obstacles_pub = self.create_publisher(String, '/closest_obs', 10)
+        self.obstacles_pub = self.create_publisher(String, '/robot1/closest_obs', 10)
 
         # Bounds publisher
         self.loc_pub = self.create_publisher(String, 'loc', 10)
@@ -73,7 +82,7 @@ class NavNode(Node):
 
     # Callback for pos sub
     def callback_pos(self, msg):
-        x = msg.pose.pose.position.x * -1
+        x = msg.pose.pose.position.x
         y = msg.pose.pose.position.y
         quaternion = msg.pose.pose.orientation
          # Angle converted from quaternion to euler
@@ -85,37 +94,58 @@ class NavNode(Node):
             self.y_offset = -y
             self.ang_offset = -ang
             self.got_offset = True
-         
-        self.x = x + self.x_offset
-        self.y = y + self.y_offset
 
         ang += self.ang_offset
-        ang +=  self.PI 
-        if ang > self.PI:
-            self.ang += -2*self.PI
+        
+        if ang < -self.PI:
+            self.ang = ang + (2*self.PI)
         else:
             self.ang = ang
 
+        # Transform
+        self.x = x*math.cos(self.ang_offset) - y*math.sin(self.ang_offset) + self.x_offset
+        self.y = x*math.sin(self.ang_offset) + y*math.cos(self.ang_offset) + self.y_offset       
+
+        # with open("/home/alexandra.bacula/turtlebot4_ws/loc.csv", "w") as f:
+        #     f.write(str(round(self.x,3)) + "," + str(round(self.y,3)) + "\n")
+
         test = String()
-        test.data = "Current position x: " + str(round(self.x,2)) + " y: " + str(round(self.y,2)) + " ang: " + str(round(self.ang,2)) + "\n"
+        test.data = "Current position x: " + str(round(self.x,2)) + " y: " + str(round(self.y,2)) + " ang: " + str(round(self.ang,4)) + "\n"
         self.loc_pub.publish(test)
 
     # Callback for obstacle locations
     def callback_obs(self,msg):
-        self.obstacle_space = []
+        self.obs_space_rob_frame = []
+        self.obs_space_world_frame = []
+        self.obs_dist = msg.d_list
         lim  = len(msg.x_list)
         i = 0
         while i < lim:
-            self.obstacle_space.append([msg.x_list[i],msg.y_list[i]])
+            x_rob = msg.x_list[i]
+            y_rob = msg.y_list[i]
+            self.obs_space_rob_frame.append([x_rob,y_rob])
+
+            x_world = x_rob*math.cos(self.ang) - y_rob*math.sin(self.ang) + self.x
+            y_world = x_rob*math.sin(self.ang) + y_rob*math.cos(self.ang) + self.y
+            self.obs_space_world_frame.append([x_world,y_world])
+
+            
             i+=1
 
+        # with open("/home/alexandra.bacula/turtlebot4_ws/obs_loc.csv", "w") as f:
+        #     n = 0
+        #     for obs in self.obs_space_world_frame:
+        #         f.write(str(round(obs[0],3)) + "," + str(round(obs[1],3)) + "," + str(round(self.obs_dist[n],3))+ "\n")
+        #         n += 1
+
+    
     # Goal callback
     def goal_callback(self, goal_request):
         goal = [goal_request.goal_x,goal_request.goal_y]
         min_distance = 10000
         closest_obs = [0,0]
 
-        for obstacle in self.obstacle_space:
+        for obstacle in self.obs_space_world_frame:
             distance = math.dist(goal,obstacle)
             if distance < min_distance:
                 min_distance = distance
@@ -140,9 +170,6 @@ class NavNode(Node):
 
         result = RobotGoal.Result()
         feedback = RobotGoal.Feedback()
-
-        # Base speeds
-        rotation_speed = 0.25
        
         # Get initial distance
         err_pos = math.dist([goal_x,goal_y],[self.x,self.y])
@@ -159,7 +186,7 @@ class NavNode(Node):
 
         kpa = 0.1
         kda = 0.02
-        kia = 0
+        kia = 0.0
 
         iteration = 0
 
@@ -195,7 +222,11 @@ class NavNode(Node):
 
             # If not close enough to desired angle
             if abs(err_ang) > self.ang_threshold:
-                vel_ang = kpa*err_ang + kda*(err_ang - err_ang_prev) + kia*err_ang_sum
+                # If at the -pi to pi boundary just keep prior vel until past that point
+                if abs(err_ang) > self.PI:
+                    vel_ang = vel_ang_prev
+                else:
+                    vel_ang = kpa*err_ang + kda*(err_ang - err_ang_prev) + kia*err_ang_sum
             else:
                 vel_lin = kpl*err_pos + kdl*(err_pos - err_pos_prev) + kil*err_pos_sum
 
@@ -217,6 +248,7 @@ class NavNode(Node):
             # Replace prev err
             err_pos_prev = err_pos
             err_ang_prev = err_ang
+            vel_ang_prev = vel_ang
 
             # Calc new errs
             err_pos = math.dist([goal_x,goal_y],[self.x,self.y])

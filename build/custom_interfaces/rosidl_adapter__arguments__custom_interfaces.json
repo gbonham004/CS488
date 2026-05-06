@@ -1,8 +1,8 @@
 {
   "package_name": "custom_interfaces",
   "non_idl_tuples": [
-    "/home/gbonham/turtlebot4_ws/src/custom_interfaces:msg/ObsList.msg",
-    "/home/gbonham/turtlebot4_ws/src/custom_interfaces:srv/SetCap.srv",
-    "/home/gbonham/turtlebot4_ws/src/custom_interfaces:action/RobotGoal.action"
+    "/home/cnutter/turtlebot4_ws/src/custom_interfaces:msg/ObsList.msg",
+    "/home/cnutter/turtlebot4_ws/src/custom_interfaces:srv/SetCap.srv",
+    "/home/cnutter/turtlebot4_ws/src/custom_interfaces:action/RobotGoal.action"
   ]
 }

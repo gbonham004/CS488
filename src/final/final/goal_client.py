@@ -1,280 +1,97 @@
-# Interface imports
-from geometry_msgs.msg import Twist
-from nav_msgs.msg import Odometry
-from std_msgs.msg import String
-from custom_interfaces.action import RobotGoal
-from custom_interfaces.msg import ObsList
-
-# ROS TF Transforms
-from tf_transformations import euler_from_quaternion
-
-# Action imports
-from rclpy.action import ActionServer, GoalResponse
-from rclpy.action.server import ServerGoalHandle
-
-# Threading imports
-from rclpy.executors import MultiThreadedExecutor
-from rclpy.executors import ExternalShutdownException
-from rclpy.callback_groups import ReentrantCallbackGroup
-
-# Base stuff
 import rclpy
 from rclpy.node import Node
-from rclpy.qos import qos_profile_sensor_data
+from std_msgs.msg import String
 
-import math
+from rclpy.action import ActionClient
+from rclpy.action.client import ClientGoalHandle, GoalStatus
 
-class NavNode(Node):
+from tb_interfaces.action import RobotGoal
+
+class GoToGoalClient(Node):
+
     def __init__(self):
-        super().__init__('go_to_goal')
-        
-        self.PI = 3.14159265358979323846
 
-        # Current robot position
-        self.x = 0
-        self.y = 0
-        self.ang = 0
+        super().__init__('go_to_goal_client')
 
-        self.x_offset = 0 
-        self.y_offset = 0
-        self.ang_offset = 0
-        self.got_offset = False
+        self.go_to_goal_client = ActionClient(self, RobotGoal, "nav_goal")
 
-        # Size of the robot
-        self.robot_radius = 0.3
+        # # Subscribe to the bounds
+        # self.bounds_sub = self.create_subscription(String, '/bounds', self.callback_bounds, 10)
+        # self.bounds = "No bounds received yet"
+        # self.got_bounds = False
 
-        # Threshold of close enough
-        self.pos_threshold = 0.1
-        self.ang_threshold = 0.1
+        while not self.go_to_goal_client.wait_for_server(1.0):
+            self.get_logger().info("Waiting for server")
 
-        # How long to try getting to goal before giving up
-        self.max_iteration = 1e20
+    # def callback_bounds(self,msg):
+    #     self.bounds = msg.data
+    #     self.got_bounds = True
 
-        # Store our obstacle locations
-        self.obstacle_space = []
+    # def show_bounds(self):
+    #     return self.bounds
 
-        # Subscribe to the odometry (robot location?)
-        self.pos_subscriber = self.create_subscription(Odometry, '/robot4/odom', self.callback_pos, 10)
+    # Send Goal
+    def send_goal(self, goal_x, goal_y, goal_theta):
+        goal = RobotGoal.Goal()
+        goal.goal_x = goal_x
+        goal.goal_y = goal_y
+        goal.goal_theta = goal_theta
+        self.go_to_goal_client.send_goal_async(goal, feedback_callback=self.goal_feedback_callback).add_done_callback(self.goal_response_callback)
 
-        # Subscribe to the obstacle locations
-        self.obs_subscriber = self.create_subscription(ObsList, '/obs', self.callback_obs, 10)
 
-        # Velocity publisher
-        self.velocity_pub = self.create_publisher(Twist, '/robot4/cmd_vel_unfiltered', 10)
+    # Process Goal Accept/Reject
+    def goal_response_callback(self, future):
+        goal_handle = future.result()
 
-        # Obstcles publisher
-        self.obstacles_pub = self.create_publisher(String, '/closest_obs', 10)
-
-        # Bounds publisher
-        self.loc_pub = self.create_publisher(String, 'loc', 10)
-
-        # ACtion server
-        self.go_to_goal = ActionServer(self, RobotGoal,"nav_goal",goal_callback=self.goal_callback,execute_callback=self.execute_callback)
-
-    # Callback for pos sub
-    def callback_pos(self, msg):
-        x = msg.pose.pose.position.x * -1
-        y = msg.pose.pose.position.y
-        quaternion = msg.pose.pose.orientation
-         # Angle converted from quaternion to euler
-        (_,_,ang) = euler_from_quaternion([quaternion.x, quaternion.y, quaternion.z, quaternion.w])   
-        
-        if self.got_offset is False:
-            # Point where node starts is 0, 0, rotation 0
-            self.x_offset = -x
-            self.y_offset = -y
-            self.ang_offset = -ang
-            self.got_offset = True
-         
-        self.x = x + self.x_offset
-        self.y = y + self.y_offset
-
-        ang += self.ang_offset
-        ang +=  self.PI 
-        if ang > self.PI:
-            self.ang += -2*self.PI
+        if goal_handle.accepted:
+            self.get_logger().info("Goal got accepted")
+            goal_handle.get_result_async().add_done_callback(self.goal_result_callback)
         else:
-            self.ang = ang
+            self.get_logger().info("Goal got rejected: ripperoni")
 
-        test = String()
-        test.data = "Current position x: " + str(round(self.x,2)) + " y: " + str(round(self.y,2)) + " ang: " + str(round(self.ang,2)) + "\n"
-        self.loc_pub.publish(test)
 
-    # Callback for obstacle locations
-    def callback_obs(self,msg):
-        self.obstacle_space = []
-        lim  = len(msg.x_list)
-        i = 0
-        while i < lim:
-            self.obstacle_space.append([msg.x_list[i],msg.y_list[i]])
-            i+=1
+    # Process Goal Feedback
+    def goal_feedback_callback(self, feedback_msg):
+        current_x = feedback_msg.feedback.current_x
+        current_y = feedback_msg.feedback.current_y
+        current_theta = feedback_msg.feedback.current_theta
+        distance_from_goal = feedback_msg.feedback.distance_from_goal
+        self.get_logger().info(f"current_x: {current_x} \n current_y: {current_y} \n current_theta: {current_theta} \n distance_from_goal: {distance_from_goal} \n")
 
-    # Goal callback
-    def goal_callback(self, goal_request):
-        goal = [goal_request.goal_x,goal_request.goal_y]
-        min_distance = 10000
-        closest_obs = [0,0]
 
-        for obstacle in self.obstacle_space:
-            distance = math.dist(goal,obstacle)
-            if distance < min_distance:
-                min_distance = distance
-                closest_obs = obstacle
-        
-        test = String()
-        test.data = "closest obs: " + str(closest_obs[0]) + " y: " + str(closest_obs[1]) + "\n"
-        self.obstacles_pub.publish(test)
+    # Process Action Result
+    def goal_result_callback(self, future):
+        result = future.result().result
+        status = future.result().status
 
-        if min_distance < self.robot_radius:
-            self.get_logger().info("Rejected, too close to obstacle at x: " + str(closest_obs[0]) + " y: " + str(closest_obs[1]))
-            return GoalResponse.REJECT
-        
-        self.get_logger().info("Accepted goal!")
-        return GoalResponse.ACCEPT
+        if status == GoalStatus.STATUS_SUCCEEDED:
+            success = result.success
+            self.get_logger().info("Success!")
+        else:
+            self.get_logger().info("Failed in goal result callback")
+
+        rclpy.shutdown()
+
+def main(args=None):
+    # Start up rclpy
+    rclpy.init(args=args)
+
+    # Create instance of node
+    action_client = GoToGoalClient()
     
-    def execute_callback(self, goal_handle):
-        # Make goal relative to robot current pose
-        goal_x = goal_handle.request.goal_x 
-        goal_y = goal_handle.request.goal_y 
-        goal_theta = goal_handle.request.goal_theta
+    
+    # while not action_client.got_bounds:
+    #     rclpy.spin_once(action_client)
+    #     print(action_client.show_bounds())
 
-        result = RobotGoal.Result()
-        feedback = RobotGoal.Feedback()
+    # print(action_client.show_bounds())
 
-        # Base speeds
-        rotation_speed = 0.25
-       
-        # Get initial distance
-        err_pos = math.dist([goal_x,goal_y],[self.x,self.y])
+    # Send the goal
+    print("say anything...")
+    action_client.send_goal(float(input("Enter x: ")), float(input("Enter y: ")), float(input("Enter theta: ")))
 
-        # For PID
-        err_pos_prev = 0
-        err_ang_prev = 0
-        err_pos_sum = 0
-        err_ang_sum = 0
-
-        kpl = 0.4
-        kdl = 0.2
-        kil = 0
-
-        kpa = 0.1
-        kda = 0.02
-        kia = 0
-
-        iteration = 0
-
-        # While not close enough
-        while err_pos > self.pos_threshold:
-
-            if iteration > self.max_iteration:
-                # Set result success to true
-                result.success = False
-                self.get_logger().info("Timed out")
-                # Set status to succeed
-                goal_handle.succeed()
-                # Return result
-                return result
-                
-
-            # New velocity msg
-            vel = Twist()
-            
-            vel_lin = 0.0
-            vel_ang = 0.0
-            
-            # Calc desired angle
-            desired_angle = math.atan2(goal_y - self.y, goal_x - self.x)
-        
-            # Calc ang error
-            err_ang =  desired_angle - self.ang
-
-            self.get_logger().info("dAng: " + str(round(desired_angle,2)) + ", err: " + str(round(self.ang,2)))
-
-            err_ang_sum += err_ang     
-            err_pos_sum += err_pos
-
-            # If not close enough to desired angle
-            if abs(err_ang) > self.ang_threshold:
-                vel_ang = kpa*err_ang + kda*(err_ang - err_ang_prev) + kia*err_ang_sum
-            else:
-                vel_lin = kpl*err_pos + kdl*(err_pos - err_pos_prev) + kil*err_pos_sum
-
-            vel.linear.x = vel_lin
-            vel.angular.z = vel_ang
-  
-            # Publish velocity
-        # Calc dif between current angle and goal angle
-
-            self.velocity_pub.publish(vel)
-
-            # Publish feedback
-            feedback.current_x = float(round(self.x,2))
-            feedback.current_y = float(round(self.y,2))
-            feedback.current_theta = float(round(self.ang,2))
-            feedback.distance_from_goal = float(round(err_pos,2))
-            goal_handle.publish_feedback(feedback)
-
-            # Replace prev err
-            err_pos_prev = err_pos
-            err_ang_prev = err_ang
-
-            # Calc new errs
-            err_pos = math.dist([goal_x,goal_y],[self.x,self.y])
-            iteration += 1
-
-        # Calc dif between current angle and goal angle
-        err_ang = goal_theta - self.ang
-
-        # While not close enough
-        while abs(err_ang) > self.ang_threshold:
-            vel = Twist()
-            vel.linear.x = 0.0
-            # Rotate
-            vel.angular.z = kpa*err_ang + kda*(err_ang - err_ang_prev) + kia*err_ang_sum
-            # Publish 
-            self.velocity_pub.publish(vel)
-
-            # Calc dif between current angle and goal angle
-            err_ang = goal_theta - self.ang
-
-            # Publish feedback
-            feedback.current_x = float(round(self.x,2))
-            feedback.current_y = float(round(self.y,2))
-            feedback.current_theta = float(round(self.ang,2))
-            feedback.distance_from_goal= float(round(err_pos,2))
-            goal_handle.publish_feedback(feedback)
-
-        # Stop moving
-        vel = Twist()
-        vel.linear.x = 0.0
-        vel.angular.z = 0.0
-        # Publish
-        self.velocity_pub.publish(vel)
-
-        # Set result success to true
-        result.success = True
-        self.get_logger().info("Arrived")
-        # Set status to succeed
-        goal_handle.succeed()
-        # Return result
-        return result
-
-
-def main(args=None): 
-    rclpy.init(args=None)
-    node = NavNode()
-
-    # Use a MultiThreadedExecutor to enable processing goals concurrently
-    executor = MultiThreadedExecutor()
-    executor.add_node(node)
-
-    try:
-        executor.spin()
-    except (KeyboardInterrupt, ExternalShutdownException):
-        pass
-   
-    node.destroy_node()
-    rclpy.shutdown()
+    # Normal spin, yay! (callback handles shutdown)
+    rclpy.spin(action_client)
 
 if __name__ == '__main__':
     main()

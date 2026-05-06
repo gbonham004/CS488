@@ -5,8 +5,8 @@
 #include <string.h>
 
 #include "custom_interfaces/msg/detail/obs_list__type_support.h"
-#include "custom_interfaces/msg/detail/obs_list__struct.h"
 #include "rosidl_typesupport_interface/macros.h"
+#include "custom_interfaces/msg/detail/obs_list__struct.h"
 #include "custom_interfaces/msg/detail/obs_list__functions.h"
 
 #ifdef __cplusplus

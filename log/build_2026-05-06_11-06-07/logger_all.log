@@ -1,0 +1,550 @@
+[0.483s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build']
+[0.483s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=False, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=16, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, mixin_files=None, mixin=None, verb_parser=<colcon_mixin.mixin.mixin_argument.MixinArgumentDecorator object at 0x7a9e18f9df10>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x7a9e190be870>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x7a9e190be870>>, mixin_verb=('build',))
+[0.628s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.628s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.628s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.629s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.629s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[0.629s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.629s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/cnutter/turtlebot4_ws'
+[0.629s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.629s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[0.629s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[0.629s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[0.629s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[0.629s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[0.629s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[0.629s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[0.629s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[0.678s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[0.678s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[0.678s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[0.678s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[0.678s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[0.678s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[0.678s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[0.678s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[0.678s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[0.679s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[0.679s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[0.679s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[0.679s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[0.679s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[0.679s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ignore', 'ignore_ament_install']
+[0.679s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore'
+[0.679s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore_ament_install'
+[0.679s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_pkg']
+[0.679s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_pkg'
+[0.679s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_meta']
+[0.679s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_meta'
+[0.679s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ros']
+[0.679s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ros'
+[0.679s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['cmake', 'python']
+[0.679s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'cmake'
+[0.679s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python'
+[0.679s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['python_setup_py']
+[0.679s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python_setup_py'
+[0.679s] Level 1:colcon.colcon_core.package_identification:_identify(src/custom_interfaces) by extensions ['ignore', 'ignore_ament_install']
+[0.680s] Level 1:colcon.colcon_core.package_identification:_identify(src/custom_interfaces) by extension 'ignore'
+[0.680s] Level 1:colcon.colcon_core.package_identification:_identify(src/custom_interfaces) by extension 'ignore_ament_install'
+[0.680s] Level 1:colcon.colcon_core.package_identification:_identify(src/custom_interfaces) by extensions ['colcon_pkg']
+[0.680s] Level 1:colcon.colcon_core.package_identification:_identify(src/custom_interfaces) by extension 'colcon_pkg'
+[0.680s] Level 1:colcon.colcon_core.package_identification:_identify(src/custom_interfaces) by extensions ['colcon_meta']
+[0.680s] Level 1:colcon.colcon_core.package_identification:_identify(src/custom_interfaces) by extension 'colcon_meta'
+[0.680s] Level 1:colcon.colcon_core.package_identification:_identify(src/custom_interfaces) by extensions ['ros']
+[0.680s] Level 1:colcon.colcon_core.package_identification:_identify(src/custom_interfaces) by extension 'ros'
+[0.687s] DEBUG:colcon.colcon_core.package_identification:Package 'src/custom_interfaces' with type 'ros.ament_cmake' and name 'custom_interfaces'
+[0.687s] Level 1:colcon.colcon_core.package_identification:_identify(src/final) by extensions ['ignore', 'ignore_ament_install']
+[0.687s] Level 1:colcon.colcon_core.package_identification:_identify(src/final) by extension 'ignore'
+[0.687s] Level 1:colcon.colcon_core.package_identification:_identify(src/final) by extension 'ignore_ament_install'
+[0.687s] Level 1:colcon.colcon_core.package_identification:_identify(src/final) by extensions ['colcon_pkg']
+[0.687s] Level 1:colcon.colcon_core.package_identification:_identify(src/final) by extension 'colcon_pkg'
+[0.687s] Level 1:colcon.colcon_core.package_identification:_identify(src/final) by extensions ['colcon_meta']
+[0.687s] Level 1:colcon.colcon_core.package_identification:_identify(src/final) by extension 'colcon_meta'
+[0.687s] Level 1:colcon.colcon_core.package_identification:_identify(src/final) by extensions ['ros']
+[0.687s] Level 1:colcon.colcon_core.package_identification:_identify(src/final) by extension 'ros'
+[0.688s] DEBUG:colcon.colcon_core.package_identification:Package 'src/final' with type 'ros.ament_python' and name 'final'
+[0.688s] Level 1:colcon.colcon_core.package_identification:_identify(src/final_bringup) by extensions ['ignore', 'ignore_ament_install']
+[0.688s] Level 1:colcon.colcon_core.package_identification:_identify(src/final_bringup) by extension 'ignore'
+[0.689s] Level 1:colcon.colcon_core.package_identification:_identify(src/final_bringup) by extension 'ignore_ament_install'
+[0.689s] Level 1:colcon.colcon_core.package_identification:_identify(src/final_bringup) by extensions ['colcon_pkg']
+[0.689s] Level 1:colcon.colcon_core.package_identification:_identify(src/final_bringup) by extension 'colcon_pkg'
+[0.689s] Level 1:colcon.colcon_core.package_identification:_identify(src/final_bringup) by extensions ['colcon_meta']
+[0.689s] Level 1:colcon.colcon_core.package_identification:_identify(src/final_bringup) by extension 'colcon_meta'
+[0.689s] Level 1:colcon.colcon_core.package_identification:_identify(src/final_bringup) by extensions ['ros']
+[0.689s] Level 1:colcon.colcon_core.package_identification:_identify(src/final_bringup) by extension 'ros'
+[0.690s] DEBUG:colcon.colcon_core.package_identification:Package 'src/final_bringup' with type 'ros.ament_cmake' and name 'final_bringup'
+[0.690s] Level 1:colcon.colcon_core.package_identification:_identify(src/lab1_pkg) by extensions ['ignore', 'ignore_ament_install']
+[0.690s] Level 1:colcon.colcon_core.package_identification:_identify(src/lab1_pkg) by extension 'ignore'
+[0.690s] Level 1:colcon.colcon_core.package_identification:_identify(src/lab1_pkg) by extension 'ignore_ament_install'
+[0.690s] Level 1:colcon.colcon_core.package_identification:_identify(src/lab1_pkg) by extensions ['colcon_pkg']
+[0.690s] Level 1:colcon.colcon_core.package_identification:_identify(src/lab1_pkg) by extension 'colcon_pkg'
+[0.690s] Level 1:colcon.colcon_core.package_identification:_identify(src/lab1_pkg) by extensions ['colcon_meta']
+[0.690s] Level 1:colcon.colcon_core.package_identification:_identify(src/lab1_pkg) by extension 'colcon_meta'
+[0.690s] Level 1:colcon.colcon_core.package_identification:_identify(src/lab1_pkg) by extensions ['ros']
+[0.690s] Level 1:colcon.colcon_core.package_identification:_identify(src/lab1_pkg) by extension 'ros'
+[0.692s] DEBUG:colcon.colcon_core.package_identification:Package 'src/lab1_pkg' with type 'ros.ament_python' and name 'lab1_pkg'
+[0.692s] Level 1:colcon.colcon_core.package_identification:_identify(src/lab2_pkg) by extensions ['ignore', 'ignore_ament_install']
+[0.692s] Level 1:colcon.colcon_core.package_identification:_identify(src/lab2_pkg) by extension 'ignore'
+[0.692s] Level 1:colcon.colcon_core.package_identification:_identify(src/lab2_pkg) by extension 'ignore_ament_install'
+[0.692s] Level 1:colcon.colcon_core.package_identification:_identify(src/lab2_pkg) by extensions ['colcon_pkg']
+[0.692s] Level 1:colcon.colcon_core.package_identification:_identify(src/lab2_pkg) by extension 'colcon_pkg'
+[0.692s] Level 1:colcon.colcon_core.package_identification:_identify(src/lab2_pkg) by extensions ['colcon_meta']
+[0.692s] Level 1:colcon.colcon_core.package_identification:_identify(src/lab2_pkg) by extension 'colcon_meta'
+[0.692s] Level 1:colcon.colcon_core.package_identification:_identify(src/lab2_pkg) by extensions ['ros']
+[0.692s] Level 1:colcon.colcon_core.package_identification:_identify(src/lab2_pkg) by extension 'ros'
+[0.693s] DEBUG:colcon.colcon_core.package_identification:Package 'src/lab2_pkg' with type 'ros.ament_python' and name 'lab2_pkg'
+[0.693s] Level 1:colcon.colcon_core.package_identification:_identify(src/lab3_pkg) by extensions ['ignore', 'ignore_ament_install']
+[0.693s] Level 1:colcon.colcon_core.package_identification:_identify(src/lab3_pkg) by extension 'ignore'
+[0.693s] Level 1:colcon.colcon_core.package_identification:_identify(src/lab3_pkg) by extension 'ignore_ament_install'
+[0.694s] Level 1:colcon.colcon_core.package_identification:_identify(src/lab3_pkg) by extensions ['colcon_pkg']
+[0.694s] Level 1:colcon.colcon_core.package_identification:_identify(src/lab3_pkg) by extension 'colcon_pkg'
+[0.694s] Level 1:colcon.colcon_core.package_identification:_identify(src/lab3_pkg) by extensions ['colcon_meta']
+[0.694s] Level 1:colcon.colcon_core.package_identification:_identify(src/lab3_pkg) by extension 'colcon_meta'
+[0.694s] Level 1:colcon.colcon_core.package_identification:_identify(src/lab3_pkg) by extensions ['ros']
+[0.694s] Level 1:colcon.colcon_core.package_identification:_identify(src/lab3_pkg) by extension 'ros'
+[0.695s] DEBUG:colcon.colcon_core.package_identification:Package 'src/lab3_pkg' with type 'ros.ament_python' and name 'lab3_pkg'
+[0.695s] Level 1:colcon.colcon_core.package_identification:_identify(src/lab4_pkg) by extensions ['ignore', 'ignore_ament_install']
+[0.695s] Level 1:colcon.colcon_core.package_identification:_identify(src/lab4_pkg) by extension 'ignore'
+[0.695s] Level 1:colcon.colcon_core.package_identification:_identify(src/lab4_pkg) by extension 'ignore_ament_install'
+[0.695s] Level 1:colcon.colcon_core.package_identification:_identify(src/lab4_pkg) by extensions ['colcon_pkg']
+[0.695s] Level 1:colcon.colcon_core.package_identification:_identify(src/lab4_pkg) by extension 'colcon_pkg'
+[0.695s] Level 1:colcon.colcon_core.package_identification:_identify(src/lab4_pkg) by extensions ['colcon_meta']
+[0.695s] Level 1:colcon.colcon_core.package_identification:_identify(src/lab4_pkg) by extension 'colcon_meta'
+[0.695s] Level 1:colcon.colcon_core.package_identification:_identify(src/lab4_pkg) by extensions ['ros']
+[0.695s] Level 1:colcon.colcon_core.package_identification:_identify(src/lab4_pkg) by extension 'ros'
+[0.695s] Level 1:colcon.colcon_core.package_identification:_identify(src/lab4_pkg) by extensions ['cmake', 'python']
+[0.695s] Level 1:colcon.colcon_core.package_identification:_identify(src/lab4_pkg) by extension 'cmake'
+[0.695s] Level 1:colcon.colcon_core.package_identification:_identify(src/lab4_pkg) by extension 'python'
+[0.696s] Level 1:colcon.colcon_core.package_identification:_identify(src/lab4_pkg) by extensions ['python_setup_py']
+[0.696s] Level 1:colcon.colcon_core.package_identification:_identify(src/lab4_pkg) by extension 'python_setup_py'
+[0.696s] Level 1:colcon.colcon_core.package_identification:_identify(src/lab5_pkg) by extensions ['ignore', 'ignore_ament_install']
+[0.696s] Level 1:colcon.colcon_core.package_identification:_identify(src/lab5_pkg) by extension 'ignore'
+[0.696s] Level 1:colcon.colcon_core.package_identification:_identify(src/lab5_pkg) by extension 'ignore_ament_install'
+[0.696s] Level 1:colcon.colcon_core.package_identification:_identify(src/lab5_pkg) by extensions ['colcon_pkg']
+[0.696s] Level 1:colcon.colcon_core.package_identification:_identify(src/lab5_pkg) by extension 'colcon_pkg'
+[0.696s] Level 1:colcon.colcon_core.package_identification:_identify(src/lab5_pkg) by extensions ['colcon_meta']
+[0.696s] Level 1:colcon.colcon_core.package_identification:_identify(src/lab5_pkg) by extension 'colcon_meta'
+[0.696s] Level 1:colcon.colcon_core.package_identification:_identify(src/lab5_pkg) by extensions ['ros']
+[0.696s] Level 1:colcon.colcon_core.package_identification:_identify(src/lab5_pkg) by extension 'ros'
+[0.697s] DEBUG:colcon.colcon_core.package_identification:Package 'src/lab5_pkg' with type 'ros.ament_python' and name 'lab5_pkg'
+[0.697s] Level 1:colcon.colcon_core.package_identification:_identify(src/lab_bringup) by extensions ['ignore', 'ignore_ament_install']
+[0.697s] Level 1:colcon.colcon_core.package_identification:_identify(src/lab_bringup) by extension 'ignore'
+[0.697s] Level 1:colcon.colcon_core.package_identification:_identify(src/lab_bringup) by extension 'ignore_ament_install'
+[0.697s] Level 1:colcon.colcon_core.package_identification:_identify(src/lab_bringup) by extensions ['colcon_pkg']
+[0.697s] Level 1:colcon.colcon_core.package_identification:_identify(src/lab_bringup) by extension 'colcon_pkg'
+[0.697s] Level 1:colcon.colcon_core.package_identification:_identify(src/lab_bringup) by extensions ['colcon_meta']
+[0.698s] Level 1:colcon.colcon_core.package_identification:_identify(src/lab_bringup) by extension 'colcon_meta'
+[0.698s] Level 1:colcon.colcon_core.package_identification:_identify(src/lab_bringup) by extensions ['ros']
+[0.698s] Level 1:colcon.colcon_core.package_identification:_identify(src/lab_bringup) by extension 'ros'
+[0.699s] DEBUG:colcon.colcon_core.package_identification:Package 'src/lab_bringup' with type 'ros.ament_cmake' and name 'lab_bringup'
+[0.699s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.699s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[0.699s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[0.699s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[0.699s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[0.750s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[0.750s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[0.759s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 443 installed packages in /opt/ros/jazzy
+[0.761s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[0.819s] Level 5:colcon.colcon_core.verb:set package 'custom_interfaces' build argument 'cmake_args' from command line to 'None'
+[0.819s] Level 5:colcon.colcon_core.verb:set package 'custom_interfaces' build argument 'cmake_target' from command line to 'None'
+[0.819s] Level 5:colcon.colcon_core.verb:set package 'custom_interfaces' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.819s] Level 5:colcon.colcon_core.verb:set package 'custom_interfaces' build argument 'cmake_clean_cache' from command line to 'False'
+[0.819s] Level 5:colcon.colcon_core.verb:set package 'custom_interfaces' build argument 'cmake_clean_first' from command line to 'False'
+[0.819s] Level 5:colcon.colcon_core.verb:set package 'custom_interfaces' build argument 'cmake_force_configure' from command line to 'False'
+[0.819s] Level 5:colcon.colcon_core.verb:set package 'custom_interfaces' build argument 'ament_cmake_args' from command line to 'None'
+[0.819s] Level 5:colcon.colcon_core.verb:set package 'custom_interfaces' build argument 'catkin_cmake_args' from command line to 'None'
+[0.819s] Level 5:colcon.colcon_core.verb:set package 'custom_interfaces' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.819s] DEBUG:colcon.colcon_core.verb:Building package 'custom_interfaces' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/cnutter/turtlebot4_ws/build/custom_interfaces', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/cnutter/turtlebot4_ws/install/custom_interfaces', 'merge_install': False, 'path': '/home/cnutter/turtlebot4_ws/src/custom_interfaces', 'symlink_install': False, 'test_result_base': None}
+[0.819s] Level 5:colcon.colcon_core.verb:set package 'lab1_pkg' build argument 'cmake_args' from command line to 'None'
+[0.819s] Level 5:colcon.colcon_core.verb:set package 'lab1_pkg' build argument 'cmake_target' from command line to 'None'
+[0.819s] Level 5:colcon.colcon_core.verb:set package 'lab1_pkg' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.819s] Level 5:colcon.colcon_core.verb:set package 'lab1_pkg' build argument 'cmake_clean_cache' from command line to 'False'
+[0.819s] Level 5:colcon.colcon_core.verb:set package 'lab1_pkg' build argument 'cmake_clean_first' from command line to 'False'
+[0.819s] Level 5:colcon.colcon_core.verb:set package 'lab1_pkg' build argument 'cmake_force_configure' from command line to 'False'
+[0.819s] Level 5:colcon.colcon_core.verb:set package 'lab1_pkg' build argument 'ament_cmake_args' from command line to 'None'
+[0.819s] Level 5:colcon.colcon_core.verb:set package 'lab1_pkg' build argument 'catkin_cmake_args' from command line to 'None'
+[0.819s] Level 5:colcon.colcon_core.verb:set package 'lab1_pkg' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.819s] DEBUG:colcon.colcon_core.verb:Building package 'lab1_pkg' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/cnutter/turtlebot4_ws/build/lab1_pkg', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/cnutter/turtlebot4_ws/install/lab1_pkg', 'merge_install': False, 'path': '/home/cnutter/turtlebot4_ws/src/lab1_pkg', 'symlink_install': False, 'test_result_base': None}
+[0.820s] Level 5:colcon.colcon_core.verb:set package 'lab2_pkg' build argument 'cmake_args' from command line to 'None'
+[0.820s] Level 5:colcon.colcon_core.verb:set package 'lab2_pkg' build argument 'cmake_target' from command line to 'None'
+[0.820s] Level 5:colcon.colcon_core.verb:set package 'lab2_pkg' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.820s] Level 5:colcon.colcon_core.verb:set package 'lab2_pkg' build argument 'cmake_clean_cache' from command line to 'False'
+[0.820s] Level 5:colcon.colcon_core.verb:set package 'lab2_pkg' build argument 'cmake_clean_first' from command line to 'False'
+[0.820s] Level 5:colcon.colcon_core.verb:set package 'lab2_pkg' build argument 'cmake_force_configure' from command line to 'False'
+[0.820s] Level 5:colcon.colcon_core.verb:set package 'lab2_pkg' build argument 'ament_cmake_args' from command line to 'None'
+[0.820s] Level 5:colcon.colcon_core.verb:set package 'lab2_pkg' build argument 'catkin_cmake_args' from command line to 'None'
+[0.820s] Level 5:colcon.colcon_core.verb:set package 'lab2_pkg' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.820s] DEBUG:colcon.colcon_core.verb:Building package 'lab2_pkg' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/cnutter/turtlebot4_ws/build/lab2_pkg', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/cnutter/turtlebot4_ws/install/lab2_pkg', 'merge_install': False, 'path': '/home/cnutter/turtlebot4_ws/src/lab2_pkg', 'symlink_install': False, 'test_result_base': None}
+[0.820s] Level 5:colcon.colcon_core.verb:set package 'final' build argument 'cmake_args' from command line to 'None'
+[0.820s] Level 5:colcon.colcon_core.verb:set package 'final' build argument 'cmake_target' from command line to 'None'
+[0.820s] Level 5:colcon.colcon_core.verb:set package 'final' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.820s] Level 5:colcon.colcon_core.verb:set package 'final' build argument 'cmake_clean_cache' from command line to 'False'
+[0.820s] Level 5:colcon.colcon_core.verb:set package 'final' build argument 'cmake_clean_first' from command line to 'False'
+[0.820s] Level 5:colcon.colcon_core.verb:set package 'final' build argument 'cmake_force_configure' from command line to 'False'
+[0.820s] Level 5:colcon.colcon_core.verb:set package 'final' build argument 'ament_cmake_args' from command line to 'None'
+[0.820s] Level 5:colcon.colcon_core.verb:set package 'final' build argument 'catkin_cmake_args' from command line to 'None'
+[0.820s] Level 5:colcon.colcon_core.verb:set package 'final' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.820s] DEBUG:colcon.colcon_core.verb:Building package 'final' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/cnutter/turtlebot4_ws/build/final', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/cnutter/turtlebot4_ws/install/final', 'merge_install': False, 'path': '/home/cnutter/turtlebot4_ws/src/final', 'symlink_install': False, 'test_result_base': None}
+[0.820s] Level 5:colcon.colcon_core.verb:set package 'lab3_pkg' build argument 'cmake_args' from command line to 'None'
+[0.820s] Level 5:colcon.colcon_core.verb:set package 'lab3_pkg' build argument 'cmake_target' from command line to 'None'
+[0.820s] Level 5:colcon.colcon_core.verb:set package 'lab3_pkg' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.821s] Level 5:colcon.colcon_core.verb:set package 'lab3_pkg' build argument 'cmake_clean_cache' from command line to 'False'
+[0.821s] Level 5:colcon.colcon_core.verb:set package 'lab3_pkg' build argument 'cmake_clean_first' from command line to 'False'
+[0.821s] Level 5:colcon.colcon_core.verb:set package 'lab3_pkg' build argument 'cmake_force_configure' from command line to 'False'
+[0.821s] Level 5:colcon.colcon_core.verb:set package 'lab3_pkg' build argument 'ament_cmake_args' from command line to 'None'
+[0.821s] Level 5:colcon.colcon_core.verb:set package 'lab3_pkg' build argument 'catkin_cmake_args' from command line to 'None'
+[0.821s] Level 5:colcon.colcon_core.verb:set package 'lab3_pkg' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.821s] DEBUG:colcon.colcon_core.verb:Building package 'lab3_pkg' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/cnutter/turtlebot4_ws/build/lab3_pkg', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/cnutter/turtlebot4_ws/install/lab3_pkg', 'merge_install': False, 'path': '/home/cnutter/turtlebot4_ws/src/lab3_pkg', 'symlink_install': False, 'test_result_base': None}
+[0.821s] Level 5:colcon.colcon_core.verb:set package 'lab5_pkg' build argument 'cmake_args' from command line to 'None'
+[0.821s] Level 5:colcon.colcon_core.verb:set package 'lab5_pkg' build argument 'cmake_target' from command line to 'None'
+[0.821s] Level 5:colcon.colcon_core.verb:set package 'lab5_pkg' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.821s] Level 5:colcon.colcon_core.verb:set package 'lab5_pkg' build argument 'cmake_clean_cache' from command line to 'False'
+[0.821s] Level 5:colcon.colcon_core.verb:set package 'lab5_pkg' build argument 'cmake_clean_first' from command line to 'False'
+[0.821s] Level 5:colcon.colcon_core.verb:set package 'lab5_pkg' build argument 'cmake_force_configure' from command line to 'False'
+[0.821s] Level 5:colcon.colcon_core.verb:set package 'lab5_pkg' build argument 'ament_cmake_args' from command line to 'None'
+[0.821s] Level 5:colcon.colcon_core.verb:set package 'lab5_pkg' build argument 'catkin_cmake_args' from command line to 'None'
+[0.821s] Level 5:colcon.colcon_core.verb:set package 'lab5_pkg' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.821s] DEBUG:colcon.colcon_core.verb:Building package 'lab5_pkg' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/cnutter/turtlebot4_ws/build/lab5_pkg', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/cnutter/turtlebot4_ws/install/lab5_pkg', 'merge_install': False, 'path': '/home/cnutter/turtlebot4_ws/src/lab5_pkg', 'symlink_install': False, 'test_result_base': None}
+[0.821s] Level 5:colcon.colcon_core.verb:set package 'final_bringup' build argument 'cmake_args' from command line to 'None'
+[0.821s] Level 5:colcon.colcon_core.verb:set package 'final_bringup' build argument 'cmake_target' from command line to 'None'
+[0.821s] Level 5:colcon.colcon_core.verb:set package 'final_bringup' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.821s] Level 5:colcon.colcon_core.verb:set package 'final_bringup' build argument 'cmake_clean_cache' from command line to 'False'
+[0.821s] Level 5:colcon.colcon_core.verb:set package 'final_bringup' build argument 'cmake_clean_first' from command line to 'False'
+[0.821s] Level 5:colcon.colcon_core.verb:set package 'final_bringup' build argument 'cmake_force_configure' from command line to 'False'
+[0.821s] Level 5:colcon.colcon_core.verb:set package 'final_bringup' build argument 'ament_cmake_args' from command line to 'None'
+[0.821s] Level 5:colcon.colcon_core.verb:set package 'final_bringup' build argument 'catkin_cmake_args' from command line to 'None'
+[0.821s] Level 5:colcon.colcon_core.verb:set package 'final_bringup' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.821s] DEBUG:colcon.colcon_core.verb:Building package 'final_bringup' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/cnutter/turtlebot4_ws/build/final_bringup', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/cnutter/turtlebot4_ws/install/final_bringup', 'merge_install': False, 'path': '/home/cnutter/turtlebot4_ws/src/final_bringup', 'symlink_install': False, 'test_result_base': None}
+[0.822s] Level 5:colcon.colcon_core.verb:set package 'lab_bringup' build argument 'cmake_args' from command line to 'None'
+[0.822s] Level 5:colcon.colcon_core.verb:set package 'lab_bringup' build argument 'cmake_target' from command line to 'None'
+[0.822s] Level 5:colcon.colcon_core.verb:set package 'lab_bringup' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.822s] Level 5:colcon.colcon_core.verb:set package 'lab_bringup' build argument 'cmake_clean_cache' from command line to 'False'
+[0.822s] Level 5:colcon.colcon_core.verb:set package 'lab_bringup' build argument 'cmake_clean_first' from command line to 'False'
+[0.822s] Level 5:colcon.colcon_core.verb:set package 'lab_bringup' build argument 'cmake_force_configure' from command line to 'False'
+[0.822s] Level 5:colcon.colcon_core.verb:set package 'lab_bringup' build argument 'ament_cmake_args' from command line to 'None'
+[0.822s] Level 5:colcon.colcon_core.verb:set package 'lab_bringup' build argument 'catkin_cmake_args' from command line to 'None'
+[0.822s] Level 5:colcon.colcon_core.verb:set package 'lab_bringup' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.822s] DEBUG:colcon.colcon_core.verb:Building package 'lab_bringup' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/cnutter/turtlebot4_ws/build/lab_bringup', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/cnutter/turtlebot4_ws/install/lab_bringup', 'merge_install': False, 'path': '/home/cnutter/turtlebot4_ws/src/lab_bringup', 'symlink_install': False, 'test_result_base': None}
+[0.822s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[0.822s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[0.823s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/cnutter/turtlebot4_ws/src/custom_interfaces' with build type 'ament_cmake'
+[0.823s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/cnutter/turtlebot4_ws/src/custom_interfaces'
+[0.835s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[0.835s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.835s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.840s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/cnutter/turtlebot4_ws/src/lab1_pkg' with build type 'ament_python'
+[0.840s] Level 1:colcon.colcon_core.shell:create_environment_hook('lab1_pkg', 'ament_prefix_path')
+[0.840s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/cnutter/turtlebot4_ws/install/lab1_pkg/share/lab1_pkg/hook/ament_prefix_path.ps1'
+[0.846s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/cnutter/turtlebot4_ws/install/lab1_pkg/share/lab1_pkg/hook/ament_prefix_path.dsv'
+[0.848s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/cnutter/turtlebot4_ws/install/lab1_pkg/share/lab1_pkg/hook/ament_prefix_path.sh'
+[0.853s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.853s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.855s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/cnutter/turtlebot4_ws/src/lab2_pkg' with build type 'ament_python'
+[0.855s] Level 1:colcon.colcon_core.shell:create_environment_hook('lab2_pkg', 'ament_prefix_path')
+[0.855s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/cnutter/turtlebot4_ws/install/lab2_pkg/share/lab2_pkg/hook/ament_prefix_path.ps1'
+[0.858s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/cnutter/turtlebot4_ws/install/lab2_pkg/share/lab2_pkg/hook/ament_prefix_path.dsv'
+[0.860s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/cnutter/turtlebot4_ws/install/lab2_pkg/share/lab2_pkg/hook/ament_prefix_path.sh'
+[0.861s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.861s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.866s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/cnutter/turtlebot4_ws/build/custom_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake /home/cnutter/turtlebot4_ws/src/custom_interfaces -DCMAKE_INSTALL_PREFIX=/home/cnutter/turtlebot4_ws/install/custom_interfaces
+[1.103s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/cnutter/turtlebot4_ws/src/lab1_pkg'
+[1.103s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.103s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.317s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/cnutter/turtlebot4_ws/src/lab2_pkg'
+[1.317s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.317s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[3.341s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/cnutter/turtlebot4_ws/src/lab1_pkg': PYTHONPATH=/home/cnutter/turtlebot4_ws/build/lab1_pkg/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/cnutter/turtlebot4_ws/install/lab1_pkg/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/lab1_pkg build --build-base /home/cnutter/turtlebot4_ws/build/lab1_pkg/build install --record /home/cnutter/turtlebot4_ws/build/lab1_pkg/install.log --single-version-externally-managed install_data
+[3.342s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/cnutter/turtlebot4_ws/src/lab2_pkg': PYTHONPATH=/home/cnutter/turtlebot4_ws/build/lab2_pkg/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/cnutter/turtlebot4_ws/install/lab2_pkg/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/lab2_pkg build --build-base /home/cnutter/turtlebot4_ws/build/lab2_pkg/build install --record /home/cnutter/turtlebot4_ws/build/lab2_pkg/install.log --single-version-externally-managed install_data
+[3.926s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/cnutter/turtlebot4_ws/src/lab2_pkg' returned '0': PYTHONPATH=/home/cnutter/turtlebot4_ws/build/lab2_pkg/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/cnutter/turtlebot4_ws/install/lab2_pkg/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/lab2_pkg build --build-base /home/cnutter/turtlebot4_ws/build/lab2_pkg/build install --record /home/cnutter/turtlebot4_ws/build/lab2_pkg/install.log --single-version-externally-managed install_data
+[3.940s] Level 1:colcon.colcon_core.environment:checking '/home/cnutter/turtlebot4_ws/install/lab2_pkg' for CMake module files
+[3.940s] Level 1:colcon.colcon_core.environment:checking '/home/cnutter/turtlebot4_ws/install/lab2_pkg' for CMake config files
+[3.941s] Level 1:colcon.colcon_core.environment:checking '/home/cnutter/turtlebot4_ws/install/lab2_pkg/lib'
+[3.941s] Level 1:colcon.colcon_core.environment:checking '/home/cnutter/turtlebot4_ws/install/lab2_pkg/bin'
+[3.941s] Level 1:colcon.colcon_core.environment:checking '/home/cnutter/turtlebot4_ws/install/lab2_pkg/lib/pkgconfig/lab2_pkg.pc'
+[3.941s] Level 1:colcon.colcon_core.environment:checking '/home/cnutter/turtlebot4_ws/install/lab2_pkg/lib/python3.12/site-packages'
+[3.941s] Level 1:colcon.colcon_core.shell:create_environment_hook('lab2_pkg', 'pythonpath')
+[3.942s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/cnutter/turtlebot4_ws/install/lab2_pkg/share/lab2_pkg/hook/pythonpath.ps1'
+[3.944s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/cnutter/turtlebot4_ws/install/lab2_pkg/share/lab2_pkg/hook/pythonpath.dsv'
+[3.946s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/cnutter/turtlebot4_ws/install/lab2_pkg/share/lab2_pkg/hook/pythonpath.sh'
+[3.948s] Level 1:colcon.colcon_core.environment:checking '/home/cnutter/turtlebot4_ws/install/lab2_pkg/bin'
+[3.948s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(lab2_pkg)
+[3.948s] INFO:colcon.colcon_core.shell:Creating package script '/home/cnutter/turtlebot4_ws/install/lab2_pkg/share/lab2_pkg/package.ps1'
+[3.990s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/cnutter/turtlebot4_ws/install/lab2_pkg/share/lab2_pkg/package.dsv'
+[3.993s] INFO:colcon.colcon_core.shell:Creating package script '/home/cnutter/turtlebot4_ws/install/lab2_pkg/share/lab2_pkg/package.sh'
+[3.996s] INFO:colcon.colcon_core.shell:Creating package script '/home/cnutter/turtlebot4_ws/install/lab2_pkg/share/lab2_pkg/package.bash'
+[4.003s] INFO:colcon.colcon_core.shell:Creating package script '/home/cnutter/turtlebot4_ws/install/lab2_pkg/share/lab2_pkg/package.zsh'
+[4.010s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/cnutter/turtlebot4_ws/install/lab2_pkg/share/colcon-core/packages/lab2_pkg)
+[4.012s] Level 1:colcon.colcon_core.environment:checking '/home/cnutter/turtlebot4_ws/install/lab1_pkg' for CMake module files
+[4.013s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/cnutter/turtlebot4_ws/src/lab1_pkg' returned '0': PYTHONPATH=/home/cnutter/turtlebot4_ws/build/lab1_pkg/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/cnutter/turtlebot4_ws/install/lab1_pkg/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/lab1_pkg build --build-base /home/cnutter/turtlebot4_ws/build/lab1_pkg/build install --record /home/cnutter/turtlebot4_ws/build/lab1_pkg/install.log --single-version-externally-managed install_data
+[4.013s] Level 1:colcon.colcon_core.environment:checking '/home/cnutter/turtlebot4_ws/install/lab1_pkg' for CMake config files
+[4.014s] Level 1:colcon.colcon_core.environment:checking '/home/cnutter/turtlebot4_ws/install/lab1_pkg/lib'
+[4.014s] Level 1:colcon.colcon_core.environment:checking '/home/cnutter/turtlebot4_ws/install/lab1_pkg/bin'
+[4.014s] Level 1:colcon.colcon_core.environment:checking '/home/cnutter/turtlebot4_ws/install/lab1_pkg/lib/pkgconfig/lab1_pkg.pc'
+[4.014s] Level 1:colcon.colcon_core.environment:checking '/home/cnutter/turtlebot4_ws/install/lab1_pkg/lib/python3.12/site-packages'
+[4.014s] Level 1:colcon.colcon_core.shell:create_environment_hook('lab1_pkg', 'pythonpath')
+[4.014s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/cnutter/turtlebot4_ws/install/lab1_pkg/share/lab1_pkg/hook/pythonpath.ps1'
+[4.017s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/cnutter/turtlebot4_ws/install/lab1_pkg/share/lab1_pkg/hook/pythonpath.dsv'
+[4.019s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/cnutter/turtlebot4_ws/install/lab1_pkg/share/lab1_pkg/hook/pythonpath.sh'
+[4.020s] Level 1:colcon.colcon_core.environment:checking '/home/cnutter/turtlebot4_ws/install/lab1_pkg/bin'
+[4.020s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(lab1_pkg)
+[4.021s] INFO:colcon.colcon_core.shell:Creating package script '/home/cnutter/turtlebot4_ws/install/lab1_pkg/share/lab1_pkg/package.ps1'
+[4.047s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/cnutter/turtlebot4_ws/install/lab1_pkg/share/lab1_pkg/package.dsv'
+[4.049s] INFO:colcon.colcon_core.shell:Creating package script '/home/cnutter/turtlebot4_ws/install/lab1_pkg/share/lab1_pkg/package.sh'
+[4.051s] INFO:colcon.colcon_core.shell:Creating package script '/home/cnutter/turtlebot4_ws/install/lab1_pkg/share/lab1_pkg/package.bash'
+[4.055s] INFO:colcon.colcon_core.shell:Creating package script '/home/cnutter/turtlebot4_ws/install/lab1_pkg/share/lab1_pkg/package.zsh'
+[4.059s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/cnutter/turtlebot4_ws/install/lab1_pkg/share/colcon-core/packages/lab1_pkg)
+[5.881s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/cnutter/turtlebot4_ws/build/custom_interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake /home/cnutter/turtlebot4_ws/src/custom_interfaces -DCMAKE_INSTALL_PREFIX=/home/cnutter/turtlebot4_ws/install/custom_interfaces
+[5.882s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/cnutter/turtlebot4_ws/build/custom_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --build /home/cnutter/turtlebot4_ws/build/custom_interfaces -- -j16 -l16
+[10.175s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/cnutter/turtlebot4_ws/build/custom_interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --build /home/cnutter/turtlebot4_ws/build/custom_interfaces -- -j16 -l16
+[10.186s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/cnutter/turtlebot4_ws/build/custom_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --install /home/cnutter/turtlebot4_ws/build/custom_interfaces
+[10.441s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(custom_interfaces)
+[10.441s] Level 1:colcon.colcon_core.environment:checking '/home/cnutter/turtlebot4_ws/install/custom_interfaces' for CMake module files
+[10.441s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/cnutter/turtlebot4_ws/build/custom_interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --install /home/cnutter/turtlebot4_ws/build/custom_interfaces
+[10.442s] Level 1:colcon.colcon_core.environment:checking '/home/cnutter/turtlebot4_ws/install/custom_interfaces' for CMake config files
+[10.442s] Level 1:colcon.colcon_core.shell:create_environment_hook('custom_interfaces', 'cmake_prefix_path')
+[10.443s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/cnutter/turtlebot4_ws/install/custom_interfaces/share/custom_interfaces/hook/cmake_prefix_path.ps1'
+[10.446s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/cnutter/turtlebot4_ws/install/custom_interfaces/share/custom_interfaces/hook/cmake_prefix_path.dsv'
+[10.447s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/cnutter/turtlebot4_ws/install/custom_interfaces/share/custom_interfaces/hook/cmake_prefix_path.sh'
+[10.449s] Level 1:colcon.colcon_core.environment:checking '/home/cnutter/turtlebot4_ws/install/custom_interfaces/lib'
+[10.449s] Level 1:colcon.colcon_core.shell:create_environment_hook('custom_interfaces', 'ld_library_path_lib')
+[10.449s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/cnutter/turtlebot4_ws/install/custom_interfaces/share/custom_interfaces/hook/ld_library_path_lib.ps1'
+[10.452s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/cnutter/turtlebot4_ws/install/custom_interfaces/share/custom_interfaces/hook/ld_library_path_lib.dsv'
+[10.454s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/cnutter/turtlebot4_ws/install/custom_interfaces/share/custom_interfaces/hook/ld_library_path_lib.sh'
+[10.455s] Level 1:colcon.colcon_core.environment:checking '/home/cnutter/turtlebot4_ws/install/custom_interfaces/bin'
+[10.455s] Level 1:colcon.colcon_core.environment:checking '/home/cnutter/turtlebot4_ws/install/custom_interfaces/lib/pkgconfig/custom_interfaces.pc'
+[10.455s] Level 1:colcon.colcon_core.environment:checking '/home/cnutter/turtlebot4_ws/install/custom_interfaces/lib/python3.12/site-packages'
+[10.455s] Level 1:colcon.colcon_core.shell:create_environment_hook('custom_interfaces', 'pythonpath')
+[10.456s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/cnutter/turtlebot4_ws/install/custom_interfaces/share/custom_interfaces/hook/pythonpath.ps1'
+[10.459s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/cnutter/turtlebot4_ws/install/custom_interfaces/share/custom_interfaces/hook/pythonpath.dsv'
+[10.460s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/cnutter/turtlebot4_ws/install/custom_interfaces/share/custom_interfaces/hook/pythonpath.sh'
+[10.462s] Level 1:colcon.colcon_core.environment:checking '/home/cnutter/turtlebot4_ws/install/custom_interfaces/bin'
+[10.463s] INFO:colcon.colcon_core.shell:Creating package script '/home/cnutter/turtlebot4_ws/install/custom_interfaces/share/custom_interfaces/package.ps1'
+[10.491s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/cnutter/turtlebot4_ws/install/custom_interfaces/share/custom_interfaces/package.dsv'
+[10.492s] INFO:colcon.colcon_core.shell:Creating package script '/home/cnutter/turtlebot4_ws/install/custom_interfaces/share/custom_interfaces/package.sh'
+[10.494s] INFO:colcon.colcon_core.shell:Creating package script '/home/cnutter/turtlebot4_ws/install/custom_interfaces/share/custom_interfaces/package.bash'
+[10.498s] INFO:colcon.colcon_core.shell:Creating package script '/home/cnutter/turtlebot4_ws/install/custom_interfaces/share/custom_interfaces/package.zsh'
+[10.501s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/cnutter/turtlebot4_ws/install/custom_interfaces/share/colcon-core/packages/custom_interfaces)
+[10.503s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(custom_interfaces)
+[10.503s] Level 1:colcon.colcon_core.environment:checking '/home/cnutter/turtlebot4_ws/install/custom_interfaces' for CMake module files
+[10.504s] Level 1:colcon.colcon_core.environment:checking '/home/cnutter/turtlebot4_ws/install/custom_interfaces' for CMake config files
+[10.504s] Level 1:colcon.colcon_core.shell:create_environment_hook('custom_interfaces', 'cmake_prefix_path')
+[10.505s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/cnutter/turtlebot4_ws/install/custom_interfaces/share/custom_interfaces/hook/cmake_prefix_path.ps1'
+[10.505s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/cnutter/turtlebot4_ws/install/custom_interfaces/share/custom_interfaces/hook/cmake_prefix_path.dsv'
+[10.506s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/cnutter/turtlebot4_ws/install/custom_interfaces/share/custom_interfaces/hook/cmake_prefix_path.sh'
+[10.506s] Level 1:colcon.colcon_core.environment:checking '/home/cnutter/turtlebot4_ws/install/custom_interfaces/lib'
+[10.506s] Level 1:colcon.colcon_core.shell:create_environment_hook('custom_interfaces', 'ld_library_path_lib')
+[10.506s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/cnutter/turtlebot4_ws/install/custom_interfaces/share/custom_interfaces/hook/ld_library_path_lib.ps1'
+[10.507s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/cnutter/turtlebot4_ws/install/custom_interfaces/share/custom_interfaces/hook/ld_library_path_lib.dsv'
+[10.507s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/cnutter/turtlebot4_ws/install/custom_interfaces/share/custom_interfaces/hook/ld_library_path_lib.sh'
+[10.508s] Level 1:colcon.colcon_core.environment:checking '/home/cnutter/turtlebot4_ws/install/custom_interfaces/bin'
+[10.508s] Level 1:colcon.colcon_core.environment:checking '/home/cnutter/turtlebot4_ws/install/custom_interfaces/lib/pkgconfig/custom_interfaces.pc'
+[10.508s] Level 1:colcon.colcon_core.environment:checking '/home/cnutter/turtlebot4_ws/install/custom_interfaces/lib/python3.12/site-packages'
+[10.508s] Level 1:colcon.colcon_core.shell:create_environment_hook('custom_interfaces', 'pythonpath')
+[10.508s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/cnutter/turtlebot4_ws/install/custom_interfaces/share/custom_interfaces/hook/pythonpath.ps1'
+[10.509s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/cnutter/turtlebot4_ws/install/custom_interfaces/share/custom_interfaces/hook/pythonpath.dsv'
+[10.509s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/cnutter/turtlebot4_ws/install/custom_interfaces/share/custom_interfaces/hook/pythonpath.sh'
+[10.510s] Level 1:colcon.colcon_core.environment:checking '/home/cnutter/turtlebot4_ws/install/custom_interfaces/bin'
+[10.510s] INFO:colcon.colcon_core.shell:Creating package script '/home/cnutter/turtlebot4_ws/install/custom_interfaces/share/custom_interfaces/package.ps1'
+[10.543s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/cnutter/turtlebot4_ws/install/custom_interfaces/share/custom_interfaces/package.dsv'
+[10.544s] INFO:colcon.colcon_core.shell:Creating package script '/home/cnutter/turtlebot4_ws/install/custom_interfaces/share/custom_interfaces/package.sh'
+[10.545s] INFO:colcon.colcon_core.shell:Creating package script '/home/cnutter/turtlebot4_ws/install/custom_interfaces/share/custom_interfaces/package.bash'
+[10.545s] INFO:colcon.colcon_core.shell:Creating package script '/home/cnutter/turtlebot4_ws/install/custom_interfaces/share/custom_interfaces/package.zsh'
+[10.546s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/cnutter/turtlebot4_ws/install/custom_interfaces/share/colcon-core/packages/custom_interfaces)
+[10.546s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/cnutter/turtlebot4_ws/src/lab3_pkg' with build type 'ament_python'
+[10.546s] Level 1:colcon.colcon_core.shell:create_environment_hook('lab3_pkg', 'ament_prefix_path')
+[10.547s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/cnutter/turtlebot4_ws/install/lab3_pkg/share/lab3_pkg/hook/ament_prefix_path.ps1'
+[10.550s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/cnutter/turtlebot4_ws/install/lab3_pkg/share/lab3_pkg/hook/ament_prefix_path.dsv'
+[10.551s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/cnutter/turtlebot4_ws/install/lab3_pkg/share/lab3_pkg/hook/ament_prefix_path.sh'
+[10.552s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[10.552s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[10.555s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/cnutter/turtlebot4_ws/src/final' with build type 'ament_python'
+[10.555s] Level 1:colcon.colcon_core.shell:create_environment_hook('final', 'ament_prefix_path')
+[10.555s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/cnutter/turtlebot4_ws/install/final/share/final/hook/ament_prefix_path.ps1'
+[10.558s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/cnutter/turtlebot4_ws/install/final/share/final/hook/ament_prefix_path.dsv'
+[10.559s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/cnutter/turtlebot4_ws/install/final/share/final/hook/ament_prefix_path.sh'
+[10.561s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[10.561s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[10.564s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/cnutter/turtlebot4_ws/src/lab5_pkg' with build type 'ament_python'
+[10.564s] Level 1:colcon.colcon_core.shell:create_environment_hook('lab5_pkg', 'ament_prefix_path')
+[10.564s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/cnutter/turtlebot4_ws/install/lab5_pkg/share/lab5_pkg/hook/ament_prefix_path.ps1'
+[10.567s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/cnutter/turtlebot4_ws/install/lab5_pkg/share/lab5_pkg/hook/ament_prefix_path.dsv'
+[10.569s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/cnutter/turtlebot4_ws/install/lab5_pkg/share/lab5_pkg/hook/ament_prefix_path.sh'
+[10.570s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[10.570s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[10.776s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/cnutter/turtlebot4_ws/src/lab3_pkg'
+[10.776s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[10.776s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[10.980s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/cnutter/turtlebot4_ws/src/final'
+[10.980s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[10.980s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[11.205s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/cnutter/turtlebot4_ws/src/lab5_pkg'
+[11.205s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[11.205s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[11.853s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/cnutter/turtlebot4_ws/src/final': AMENT_PREFIX_PATH=/home/cnutter/turtlebot4_ws/install/custom_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/cnutter/turtlebot4_ws/install/custom_interfaces:${CMAKE_PREFIX_PATH} LD_LIBRARY_PATH=/home/cnutter/turtlebot4_ws/install/custom_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/cnutter/turtlebot4_ws/build/final/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/cnutter/turtlebot4_ws/install/final/lib/python3.12/site-packages:/home/cnutter/turtlebot4_ws/install/custom_interfaces/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/final build --build-base /home/cnutter/turtlebot4_ws/build/final/build install --record /home/cnutter/turtlebot4_ws/build/final/install.log --single-version-externally-managed install_data
+[11.865s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/cnutter/turtlebot4_ws/src/lab5_pkg': AMENT_PREFIX_PATH=/home/cnutter/turtlebot4_ws/install/custom_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/cnutter/turtlebot4_ws/install/custom_interfaces:${CMAKE_PREFIX_PATH} LD_LIBRARY_PATH=/home/cnutter/turtlebot4_ws/install/custom_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/cnutter/turtlebot4_ws/build/lab5_pkg/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/cnutter/turtlebot4_ws/install/lab5_pkg/lib/python3.12/site-packages:/home/cnutter/turtlebot4_ws/install/custom_interfaces/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/lab5_pkg build --build-base /home/cnutter/turtlebot4_ws/build/lab5_pkg/build install --record /home/cnutter/turtlebot4_ws/build/lab5_pkg/install.log --single-version-externally-managed install_data
+[11.894s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/cnutter/turtlebot4_ws/src/lab3_pkg': AMENT_PREFIX_PATH=/home/cnutter/turtlebot4_ws/install/custom_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/cnutter/turtlebot4_ws/install/custom_interfaces:${CMAKE_PREFIX_PATH} LD_LIBRARY_PATH=/home/cnutter/turtlebot4_ws/install/custom_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/cnutter/turtlebot4_ws/build/lab3_pkg/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/cnutter/turtlebot4_ws/install/lab3_pkg/lib/python3.12/site-packages:/home/cnutter/turtlebot4_ws/install/custom_interfaces/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/lab3_pkg build --build-base /home/cnutter/turtlebot4_ws/build/lab3_pkg/build install --record /home/cnutter/turtlebot4_ws/build/lab3_pkg/install.log --single-version-externally-managed install_data
+[12.489s] Level 1:colcon.colcon_core.environment:checking '/home/cnutter/turtlebot4_ws/install/final' for CMake module files
+[12.489s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/cnutter/turtlebot4_ws/src/final' returned '0': AMENT_PREFIX_PATH=/home/cnutter/turtlebot4_ws/install/custom_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/cnutter/turtlebot4_ws/install/custom_interfaces:${CMAKE_PREFIX_PATH} LD_LIBRARY_PATH=/home/cnutter/turtlebot4_ws/install/custom_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/cnutter/turtlebot4_ws/build/final/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/cnutter/turtlebot4_ws/install/final/lib/python3.12/site-packages:/home/cnutter/turtlebot4_ws/install/custom_interfaces/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/final build --build-base /home/cnutter/turtlebot4_ws/build/final/build install --record /home/cnutter/turtlebot4_ws/build/final/install.log --single-version-externally-managed install_data
+[12.490s] Level 1:colcon.colcon_core.environment:checking '/home/cnutter/turtlebot4_ws/install/final' for CMake config files
+[12.490s] Level 1:colcon.colcon_core.environment:checking '/home/cnutter/turtlebot4_ws/install/final/lib'
+[12.490s] Level 1:colcon.colcon_core.environment:checking '/home/cnutter/turtlebot4_ws/install/final/bin'
+[12.490s] Level 1:colcon.colcon_core.environment:checking '/home/cnutter/turtlebot4_ws/install/final/lib/pkgconfig/final.pc'
+[12.491s] Level 1:colcon.colcon_core.environment:checking '/home/cnutter/turtlebot4_ws/install/final/lib/python3.12/site-packages'
+[12.491s] Level 1:colcon.colcon_core.shell:create_environment_hook('final', 'pythonpath')
+[12.491s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/cnutter/turtlebot4_ws/install/final/share/final/hook/pythonpath.ps1'
+[12.494s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/cnutter/turtlebot4_ws/install/final/share/final/hook/pythonpath.dsv'
+[12.497s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/cnutter/turtlebot4_ws/install/final/share/final/hook/pythonpath.sh'
+[12.499s] Level 1:colcon.colcon_core.environment:checking '/home/cnutter/turtlebot4_ws/install/final/bin'
+[12.499s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(final)
+[12.499s] INFO:colcon.colcon_core.shell:Creating package script '/home/cnutter/turtlebot4_ws/install/final/share/final/package.ps1'
+[12.525s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/cnutter/turtlebot4_ws/install/final/share/final/package.dsv'
+[12.528s] INFO:colcon.colcon_core.shell:Creating package script '/home/cnutter/turtlebot4_ws/install/final/share/final/package.sh'
+[12.530s] INFO:colcon.colcon_core.shell:Creating package script '/home/cnutter/turtlebot4_ws/install/final/share/final/package.bash'
+[12.533s] INFO:colcon.colcon_core.shell:Creating package script '/home/cnutter/turtlebot4_ws/install/final/share/final/package.zsh'
+[12.537s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/cnutter/turtlebot4_ws/install/final/share/colcon-core/packages/final)
+[12.540s] Level 1:colcon.colcon_core.environment:checking '/home/cnutter/turtlebot4_ws/install/lab5_pkg' for CMake module files
+[12.541s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/cnutter/turtlebot4_ws/src/lab5_pkg' returned '0': AMENT_PREFIX_PATH=/home/cnutter/turtlebot4_ws/install/custom_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/cnutter/turtlebot4_ws/install/custom_interfaces:${CMAKE_PREFIX_PATH} LD_LIBRARY_PATH=/home/cnutter/turtlebot4_ws/install/custom_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/cnutter/turtlebot4_ws/build/lab5_pkg/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/cnutter/turtlebot4_ws/install/lab5_pkg/lib/python3.12/site-packages:/home/cnutter/turtlebot4_ws/install/custom_interfaces/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/lab5_pkg build --build-base /home/cnutter/turtlebot4_ws/build/lab5_pkg/build install --record /home/cnutter/turtlebot4_ws/build/lab5_pkg/install.log --single-version-externally-managed install_data
+[12.541s] Level 1:colcon.colcon_core.environment:checking '/home/cnutter/turtlebot4_ws/install/lab5_pkg' for CMake config files
+[12.541s] Level 1:colcon.colcon_core.environment:checking '/home/cnutter/turtlebot4_ws/install/lab5_pkg/lib'
+[12.542s] Level 1:colcon.colcon_core.environment:checking '/home/cnutter/turtlebot4_ws/install/lab5_pkg/bin'
+[12.542s] Level 1:colcon.colcon_core.environment:checking '/home/cnutter/turtlebot4_ws/install/lab5_pkg/lib/pkgconfig/lab5_pkg.pc'
+[12.542s] Level 1:colcon.colcon_core.environment:checking '/home/cnutter/turtlebot4_ws/install/lab5_pkg/lib/python3.12/site-packages'
+[12.542s] Level 1:colcon.colcon_core.shell:create_environment_hook('lab5_pkg', 'pythonpath')
+[12.542s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/cnutter/turtlebot4_ws/install/lab5_pkg/share/lab5_pkg/hook/pythonpath.ps1'
+[12.546s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/cnutter/turtlebot4_ws/install/lab5_pkg/share/lab5_pkg/hook/pythonpath.dsv'
+[12.548s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/cnutter/turtlebot4_ws/install/lab5_pkg/share/lab5_pkg/hook/pythonpath.sh'
+[12.549s] Level 1:colcon.colcon_core.environment:checking '/home/cnutter/turtlebot4_ws/install/lab5_pkg/bin'
+[12.549s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(lab5_pkg)
+[12.550s] INFO:colcon.colcon_core.shell:Creating package script '/home/cnutter/turtlebot4_ws/install/lab5_pkg/share/lab5_pkg/package.ps1'
+[12.577s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/cnutter/turtlebot4_ws/install/lab5_pkg/share/lab5_pkg/package.dsv'
+[12.579s] INFO:colcon.colcon_core.shell:Creating package script '/home/cnutter/turtlebot4_ws/install/lab5_pkg/share/lab5_pkg/package.sh'
+[12.581s] INFO:colcon.colcon_core.shell:Creating package script '/home/cnutter/turtlebot4_ws/install/lab5_pkg/share/lab5_pkg/package.bash'
+[12.584s] INFO:colcon.colcon_core.shell:Creating package script '/home/cnutter/turtlebot4_ws/install/lab5_pkg/share/lab5_pkg/package.zsh'
+[12.588s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/cnutter/turtlebot4_ws/install/lab5_pkg/share/colcon-core/packages/lab5_pkg)
+[12.590s] Level 1:colcon.colcon_core.environment:checking '/home/cnutter/turtlebot4_ws/install/lab3_pkg' for CMake module files
+[12.591s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/cnutter/turtlebot4_ws/src/lab3_pkg' returned '0': AMENT_PREFIX_PATH=/home/cnutter/turtlebot4_ws/install/custom_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/cnutter/turtlebot4_ws/install/custom_interfaces:${CMAKE_PREFIX_PATH} LD_LIBRARY_PATH=/home/cnutter/turtlebot4_ws/install/custom_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/cnutter/turtlebot4_ws/build/lab3_pkg/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/cnutter/turtlebot4_ws/install/lab3_pkg/lib/python3.12/site-packages:/home/cnutter/turtlebot4_ws/install/custom_interfaces/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/lab3_pkg build --build-base /home/cnutter/turtlebot4_ws/build/lab3_pkg/build install --record /home/cnutter/turtlebot4_ws/build/lab3_pkg/install.log --single-version-externally-managed install_data
+[12.591s] Level 1:colcon.colcon_core.environment:checking '/home/cnutter/turtlebot4_ws/install/lab3_pkg' for CMake config files
+[12.592s] Level 1:colcon.colcon_core.environment:checking '/home/cnutter/turtlebot4_ws/install/lab3_pkg/lib'
+[12.592s] Level 1:colcon.colcon_core.environment:checking '/home/cnutter/turtlebot4_ws/install/lab3_pkg/bin'
+[12.592s] Level 1:colcon.colcon_core.environment:checking '/home/cnutter/turtlebot4_ws/install/lab3_pkg/lib/pkgconfig/lab3_pkg.pc'
+[12.592s] Level 1:colcon.colcon_core.environment:checking '/home/cnutter/turtlebot4_ws/install/lab3_pkg/lib/python3.12/site-packages'
+[12.593s] Level 1:colcon.colcon_core.shell:create_environment_hook('lab3_pkg', 'pythonpath')
+[12.593s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/cnutter/turtlebot4_ws/install/lab3_pkg/share/lab3_pkg/hook/pythonpath.ps1'
+[12.597s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/cnutter/turtlebot4_ws/install/lab3_pkg/share/lab3_pkg/hook/pythonpath.dsv'
+[12.598s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/cnutter/turtlebot4_ws/install/lab3_pkg/share/lab3_pkg/hook/pythonpath.sh'
+[12.600s] Level 1:colcon.colcon_core.environment:checking '/home/cnutter/turtlebot4_ws/install/lab3_pkg/bin'
+[12.600s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(lab3_pkg)
+[12.600s] INFO:colcon.colcon_core.shell:Creating package script '/home/cnutter/turtlebot4_ws/install/lab3_pkg/share/lab3_pkg/package.ps1'
+[12.628s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/cnutter/turtlebot4_ws/install/lab3_pkg/share/lab3_pkg/package.dsv'
+[12.630s] INFO:colcon.colcon_core.shell:Creating package script '/home/cnutter/turtlebot4_ws/install/lab3_pkg/share/lab3_pkg/package.sh'
+[12.632s] INFO:colcon.colcon_core.shell:Creating package script '/home/cnutter/turtlebot4_ws/install/lab3_pkg/share/lab3_pkg/package.bash'
+[12.636s] INFO:colcon.colcon_core.shell:Creating package script '/home/cnutter/turtlebot4_ws/install/lab3_pkg/share/lab3_pkg/package.zsh'
+[12.639s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/cnutter/turtlebot4_ws/install/lab3_pkg/share/colcon-core/packages/lab3_pkg)
+[12.641s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/cnutter/turtlebot4_ws/src/final_bringup' with build type 'ament_cmake'
+[12.641s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/cnutter/turtlebot4_ws/src/final_bringup'
+[12.641s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[12.641s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[12.645s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/cnutter/turtlebot4_ws/src/lab_bringup' with build type 'ament_cmake'
+[12.645s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/cnutter/turtlebot4_ws/src/lab_bringup'
+[12.646s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[12.646s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[12.656s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/cnutter/turtlebot4_ws/build/final_bringup': AMENT_PREFIX_PATH=/home/cnutter/turtlebot4_ws/install/lab3_pkg:/home/cnutter/turtlebot4_ws/install/final:/home/cnutter/turtlebot4_ws/install/custom_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/cnutter/turtlebot4_ws/install/custom_interfaces:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy LD_LIBRARY_PATH=/home/cnutter/turtlebot4_ws/install/custom_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/cnutter/turtlebot4_ws/install/lab3_pkg/lib/python3.12/site-packages:/home/cnutter/turtlebot4_ws/install/final/lib/python3.12/site-packages:/home/cnutter/turtlebot4_ws/install/custom_interfaces/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/cmake /home/cnutter/turtlebot4_ws/src/final_bringup -DCMAKE_INSTALL_PREFIX=/home/cnutter/turtlebot4_ws/install/final_bringup
+[12.657s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/cnutter/turtlebot4_ws/build/lab_bringup': AMENT_PREFIX_PATH=/home/cnutter/turtlebot4_ws/install/lab3_pkg:/home/cnutter/turtlebot4_ws/install/custom_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/cnutter/turtlebot4_ws/install/custom_interfaces:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy LD_LIBRARY_PATH=/home/cnutter/turtlebot4_ws/install/custom_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/cnutter/turtlebot4_ws/install/lab3_pkg/lib/python3.12/site-packages:/home/cnutter/turtlebot4_ws/install/custom_interfaces/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/cmake /home/cnutter/turtlebot4_ws/src/lab_bringup -DCMAKE_INSTALL_PREFIX=/home/cnutter/turtlebot4_ws/install/lab_bringup
+[13.643s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/cnutter/turtlebot4_ws/build/final_bringup' returned '0': AMENT_PREFIX_PATH=/home/cnutter/turtlebot4_ws/install/lab3_pkg:/home/cnutter/turtlebot4_ws/install/final:/home/cnutter/turtlebot4_ws/install/custom_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/cnutter/turtlebot4_ws/install/custom_interfaces:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy LD_LIBRARY_PATH=/home/cnutter/turtlebot4_ws/install/custom_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/cnutter/turtlebot4_ws/install/lab3_pkg/lib/python3.12/site-packages:/home/cnutter/turtlebot4_ws/install/final/lib/python3.12/site-packages:/home/cnutter/turtlebot4_ws/install/custom_interfaces/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/cmake /home/cnutter/turtlebot4_ws/src/final_bringup -DCMAKE_INSTALL_PREFIX=/home/cnutter/turtlebot4_ws/install/final_bringup
+[13.644s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/cnutter/turtlebot4_ws/build/final_bringup': AMENT_PREFIX_PATH=/home/cnutter/turtlebot4_ws/install/lab3_pkg:/home/cnutter/turtlebot4_ws/install/final:/home/cnutter/turtlebot4_ws/install/custom_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/cnutter/turtlebot4_ws/install/custom_interfaces:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy LD_LIBRARY_PATH=/home/cnutter/turtlebot4_ws/install/custom_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/cnutter/turtlebot4_ws/install/lab3_pkg/lib/python3.12/site-packages:/home/cnutter/turtlebot4_ws/install/final/lib/python3.12/site-packages:/home/cnutter/turtlebot4_ws/install/custom_interfaces/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/cmake --build /home/cnutter/turtlebot4_ws/build/final_bringup -- -j16 -l16
+[13.655s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/cnutter/turtlebot4_ws/build/lab_bringup' returned '0': AMENT_PREFIX_PATH=/home/cnutter/turtlebot4_ws/install/lab3_pkg:/home/cnutter/turtlebot4_ws/install/custom_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/cnutter/turtlebot4_ws/install/custom_interfaces:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy LD_LIBRARY_PATH=/home/cnutter/turtlebot4_ws/install/custom_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/cnutter/turtlebot4_ws/install/lab3_pkg/lib/python3.12/site-packages:/home/cnutter/turtlebot4_ws/install/custom_interfaces/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/cmake /home/cnutter/turtlebot4_ws/src/lab_bringup -DCMAKE_INSTALL_PREFIX=/home/cnutter/turtlebot4_ws/install/lab_bringup
+[13.655s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/cnutter/turtlebot4_ws/build/lab_bringup': AMENT_PREFIX_PATH=/home/cnutter/turtlebot4_ws/install/lab3_pkg:/home/cnutter/turtlebot4_ws/install/custom_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/cnutter/turtlebot4_ws/install/custom_interfaces:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy LD_LIBRARY_PATH=/home/cnutter/turtlebot4_ws/install/custom_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/cnutter/turtlebot4_ws/install/lab3_pkg/lib/python3.12/site-packages:/home/cnutter/turtlebot4_ws/install/custom_interfaces/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/cmake --build /home/cnutter/turtlebot4_ws/build/lab_bringup -- -j16 -l16
+[13.683s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/cnutter/turtlebot4_ws/build/final_bringup' returned '0': AMENT_PREFIX_PATH=/home/cnutter/turtlebot4_ws/install/lab3_pkg:/home/cnutter/turtlebot4_ws/install/final:/home/cnutter/turtlebot4_ws/install/custom_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/cnutter/turtlebot4_ws/install/custom_interfaces:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy LD_LIBRARY_PATH=/home/cnutter/turtlebot4_ws/install/custom_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/cnutter/turtlebot4_ws/install/lab3_pkg/lib/python3.12/site-packages:/home/cnutter/turtlebot4_ws/install/final/lib/python3.12/site-packages:/home/cnutter/turtlebot4_ws/install/custom_interfaces/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/cmake --build /home/cnutter/turtlebot4_ws/build/final_bringup -- -j16 -l16
+[13.687s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/cnutter/turtlebot4_ws/build/final_bringup': AMENT_PREFIX_PATH=/home/cnutter/turtlebot4_ws/install/lab3_pkg:/home/cnutter/turtlebot4_ws/install/final:/home/cnutter/turtlebot4_ws/install/custom_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/cnutter/turtlebot4_ws/install/custom_interfaces:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy LD_LIBRARY_PATH=/home/cnutter/turtlebot4_ws/install/custom_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/cnutter/turtlebot4_ws/install/lab3_pkg/lib/python3.12/site-packages:/home/cnutter/turtlebot4_ws/install/final/lib/python3.12/site-packages:/home/cnutter/turtlebot4_ws/install/custom_interfaces/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/cmake --install /home/cnutter/turtlebot4_ws/build/final_bringup
+[13.695s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/cnutter/turtlebot4_ws/build/lab_bringup' returned '0': AMENT_PREFIX_PATH=/home/cnutter/turtlebot4_ws/install/lab3_pkg:/home/cnutter/turtlebot4_ws/install/custom_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/cnutter/turtlebot4_ws/install/custom_interfaces:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy LD_LIBRARY_PATH=/home/cnutter/turtlebot4_ws/install/custom_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/cnutter/turtlebot4_ws/install/lab3_pkg/lib/python3.12/site-packages:/home/cnutter/turtlebot4_ws/install/custom_interfaces/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/cmake --build /home/cnutter/turtlebot4_ws/build/lab_bringup -- -j16 -l16
+[13.698s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/cnutter/turtlebot4_ws/build/lab_bringup': AMENT_PREFIX_PATH=/home/cnutter/turtlebot4_ws/install/lab3_pkg:/home/cnutter/turtlebot4_ws/install/custom_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/cnutter/turtlebot4_ws/install/custom_interfaces:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy LD_LIBRARY_PATH=/home/cnutter/turtlebot4_ws/install/custom_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/cnutter/turtlebot4_ws/install/lab3_pkg/lib/python3.12/site-packages:/home/cnutter/turtlebot4_ws/install/custom_interfaces/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/cmake --install /home/cnutter/turtlebot4_ws/build/lab_bringup
+[13.711s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(final_bringup)
+[13.711s] Level 1:colcon.colcon_core.environment:checking '/home/cnutter/turtlebot4_ws/install/final_bringup' for CMake module files
+[13.712s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/cnutter/turtlebot4_ws/build/final_bringup' returned '0': AMENT_PREFIX_PATH=/home/cnutter/turtlebot4_ws/install/lab3_pkg:/home/cnutter/turtlebot4_ws/install/final:/home/cnutter/turtlebot4_ws/install/custom_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/cnutter/turtlebot4_ws/install/custom_interfaces:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy LD_LIBRARY_PATH=/home/cnutter/turtlebot4_ws/install/custom_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/cnutter/turtlebot4_ws/install/lab3_pkg/lib/python3.12/site-packages:/home/cnutter/turtlebot4_ws/install/final/lib/python3.12/site-packages:/home/cnutter/turtlebot4_ws/install/custom_interfaces/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/cmake --install /home/cnutter/turtlebot4_ws/build/final_bringup
+[13.713s] Level 1:colcon.colcon_core.environment:checking '/home/cnutter/turtlebot4_ws/install/final_bringup' for CMake config files
+[13.713s] Level 1:colcon.colcon_core.shell:create_environment_hook('final_bringup', 'cmake_prefix_path')
+[13.713s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/cnutter/turtlebot4_ws/install/final_bringup/share/final_bringup/hook/cmake_prefix_path.ps1'
+[13.717s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/cnutter/turtlebot4_ws/install/final_bringup/share/final_bringup/hook/cmake_prefix_path.dsv'
+[13.718s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/cnutter/turtlebot4_ws/install/final_bringup/share/final_bringup/hook/cmake_prefix_path.sh'
+[13.720s] Level 1:colcon.colcon_core.environment:checking '/home/cnutter/turtlebot4_ws/install/final_bringup/bin'
+[13.720s] Level 1:colcon.colcon_core.environment:checking '/home/cnutter/turtlebot4_ws/install/final_bringup/lib/pkgconfig/final_bringup.pc'
+[13.720s] Level 1:colcon.colcon_core.environment:checking '/home/cnutter/turtlebot4_ws/install/final_bringup/lib/python3.12/site-packages'
+[13.721s] Level 1:colcon.colcon_core.environment:checking '/home/cnutter/turtlebot4_ws/install/final_bringup/bin'
+[13.721s] INFO:colcon.colcon_core.shell:Creating package script '/home/cnutter/turtlebot4_ws/install/final_bringup/share/final_bringup/package.ps1'
+[13.751s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/cnutter/turtlebot4_ws/install/final_bringup/share/final_bringup/package.dsv'
+[13.752s] INFO:colcon.colcon_core.shell:Creating package script '/home/cnutter/turtlebot4_ws/install/final_bringup/share/final_bringup/package.sh'
+[13.754s] INFO:colcon.colcon_core.shell:Creating package script '/home/cnutter/turtlebot4_ws/install/final_bringup/share/final_bringup/package.bash'
+[13.758s] INFO:colcon.colcon_core.shell:Creating package script '/home/cnutter/turtlebot4_ws/install/final_bringup/share/final_bringup/package.zsh'
+[13.761s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/cnutter/turtlebot4_ws/install/final_bringup/share/colcon-core/packages/final_bringup)
+[13.762s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(final_bringup)
+[13.762s] Level 1:colcon.colcon_core.environment:checking '/home/cnutter/turtlebot4_ws/install/final_bringup' for CMake module files
+[13.763s] Level 1:colcon.colcon_core.environment:checking '/home/cnutter/turtlebot4_ws/install/final_bringup' for CMake config files
+[13.763s] Level 1:colcon.colcon_core.shell:create_environment_hook('final_bringup', 'cmake_prefix_path')
+[13.763s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/cnutter/turtlebot4_ws/install/final_bringup/share/final_bringup/hook/cmake_prefix_path.ps1'
+[13.763s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/cnutter/turtlebot4_ws/install/final_bringup/share/final_bringup/hook/cmake_prefix_path.dsv'
+[13.764s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/cnutter/turtlebot4_ws/install/final_bringup/share/final_bringup/hook/cmake_prefix_path.sh'
+[13.764s] Level 1:colcon.colcon_core.environment:checking '/home/cnutter/turtlebot4_ws/install/final_bringup/bin'
+[13.764s] Level 1:colcon.colcon_core.environment:checking '/home/cnutter/turtlebot4_ws/install/final_bringup/lib/pkgconfig/final_bringup.pc'
+[13.765s] Level 1:colcon.colcon_core.environment:checking '/home/cnutter/turtlebot4_ws/install/final_bringup/lib/python3.12/site-packages'
+[13.765s] Level 1:colcon.colcon_core.environment:checking '/home/cnutter/turtlebot4_ws/install/final_bringup/bin'
+[13.765s] INFO:colcon.colcon_core.shell:Creating package script '/home/cnutter/turtlebot4_ws/install/final_bringup/share/final_bringup/package.ps1'
+[13.800s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/cnutter/turtlebot4_ws/install/final_bringup/share/final_bringup/package.dsv'
+[13.801s] INFO:colcon.colcon_core.shell:Creating package script '/home/cnutter/turtlebot4_ws/install/final_bringup/share/final_bringup/package.sh'
+[13.801s] INFO:colcon.colcon_core.shell:Creating package script '/home/cnutter/turtlebot4_ws/install/final_bringup/share/final_bringup/package.bash'
+[13.802s] INFO:colcon.colcon_core.shell:Creating package script '/home/cnutter/turtlebot4_ws/install/final_bringup/share/final_bringup/package.zsh'
+[13.802s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/cnutter/turtlebot4_ws/install/final_bringup/share/colcon-core/packages/final_bringup)
+[13.803s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(lab_bringup)
+[13.804s] Level 1:colcon.colcon_core.environment:checking '/home/cnutter/turtlebot4_ws/install/lab_bringup' for CMake module files
+[13.805s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/cnutter/turtlebot4_ws/build/lab_bringup' returned '0': AMENT_PREFIX_PATH=/home/cnutter/turtlebot4_ws/install/lab3_pkg:/home/cnutter/turtlebot4_ws/install/custom_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/cnutter/turtlebot4_ws/install/custom_interfaces:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy LD_LIBRARY_PATH=/home/cnutter/turtlebot4_ws/install/custom_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/cnutter/turtlebot4_ws/install/lab3_pkg/lib/python3.12/site-packages:/home/cnutter/turtlebot4_ws/install/custom_interfaces/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/cmake --install /home/cnutter/turtlebot4_ws/build/lab_bringup
+[13.805s] Level 1:colcon.colcon_core.environment:checking '/home/cnutter/turtlebot4_ws/install/lab_bringup' for CMake config files
+[13.806s] Level 1:colcon.colcon_core.shell:create_environment_hook('lab_bringup', 'cmake_prefix_path')
+[13.806s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/cnutter/turtlebot4_ws/install/lab_bringup/share/lab_bringup/hook/cmake_prefix_path.ps1'
+[13.809s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/cnutter/turtlebot4_ws/install/lab_bringup/share/lab_bringup/hook/cmake_prefix_path.dsv'
+[13.810s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/cnutter/turtlebot4_ws/install/lab_bringup/share/lab_bringup/hook/cmake_prefix_path.sh'
+[13.811s] Level 1:colcon.colcon_core.environment:checking '/home/cnutter/turtlebot4_ws/install/lab_bringup/bin'
+[13.812s] Level 1:colcon.colcon_core.environment:checking '/home/cnutter/turtlebot4_ws/install/lab_bringup/lib/pkgconfig/lab_bringup.pc'
+[13.812s] Level 1:colcon.colcon_core.environment:checking '/home/cnutter/turtlebot4_ws/install/lab_bringup/lib/python3.12/site-packages'
+[13.812s] Level 1:colcon.colcon_core.environment:checking '/home/cnutter/turtlebot4_ws/install/lab_bringup/bin'
+[13.812s] INFO:colcon.colcon_core.shell:Creating package script '/home/cnutter/turtlebot4_ws/install/lab_bringup/share/lab_bringup/package.ps1'
+[13.837s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/cnutter/turtlebot4_ws/install/lab_bringup/share/lab_bringup/package.dsv'
+[13.838s] INFO:colcon.colcon_core.shell:Creating package script '/home/cnutter/turtlebot4_ws/install/lab_bringup/share/lab_bringup/package.sh'
+[13.839s] INFO:colcon.colcon_core.shell:Creating package script '/home/cnutter/turtlebot4_ws/install/lab_bringup/share/lab_bringup/package.bash'
+[13.843s] INFO:colcon.colcon_core.shell:Creating package script '/home/cnutter/turtlebot4_ws/install/lab_bringup/share/lab_bringup/package.zsh'
+[13.847s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/cnutter/turtlebot4_ws/install/lab_bringup/share/colcon-core/packages/lab_bringup)
+[13.848s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(lab_bringup)
+[13.848s] Level 1:colcon.colcon_core.environment:checking '/home/cnutter/turtlebot4_ws/install/lab_bringup' for CMake module files
+[13.849s] Level 1:colcon.colcon_core.environment:checking '/home/cnutter/turtlebot4_ws/install/lab_bringup' for CMake config files
+[13.849s] Level 1:colcon.colcon_core.shell:create_environment_hook('lab_bringup', 'cmake_prefix_path')
+[13.849s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/cnutter/turtlebot4_ws/install/lab_bringup/share/lab_bringup/hook/cmake_prefix_path.ps1'
+[13.849s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/cnutter/turtlebot4_ws/install/lab_bringup/share/lab_bringup/hook/cmake_prefix_path.dsv'
+[13.850s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/cnutter/turtlebot4_ws/install/lab_bringup/share/lab_bringup/hook/cmake_prefix_path.sh'
+[13.850s] Level 1:colcon.colcon_core.environment:checking '/home/cnutter/turtlebot4_ws/install/lab_bringup/bin'
+[13.850s] Level 1:colcon.colcon_core.environment:checking '/home/cnutter/turtlebot4_ws/install/lab_bringup/lib/pkgconfig/lab_bringup.pc'
+[13.851s] Level 1:colcon.colcon_core.environment:checking '/home/cnutter/turtlebot4_ws/install/lab_bringup/lib/python3.12/site-packages'
+[13.851s] Level 1:colcon.colcon_core.environment:checking '/home/cnutter/turtlebot4_ws/install/lab_bringup/bin'
+[13.851s] INFO:colcon.colcon_core.shell:Creating package script '/home/cnutter/turtlebot4_ws/install/lab_bringup/share/lab_bringup/package.ps1'
+[13.890s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/cnutter/turtlebot4_ws/install/lab_bringup/share/lab_bringup/package.dsv'
+[13.890s] INFO:colcon.colcon_core.shell:Creating package script '/home/cnutter/turtlebot4_ws/install/lab_bringup/share/lab_bringup/package.sh'
+[13.890s] INFO:colcon.colcon_core.shell:Creating package script '/home/cnutter/turtlebot4_ws/install/lab_bringup/share/lab_bringup/package.bash'
+[13.891s] INFO:colcon.colcon_core.shell:Creating package script '/home/cnutter/turtlebot4_ws/install/lab_bringup/share/lab_bringup/package.zsh'
+[13.891s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/cnutter/turtlebot4_ws/install/lab_bringup/share/colcon-core/packages/lab_bringup)
+[13.892s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[13.892s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[13.892s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[13.892s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[13.919s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[13.919s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[13.919s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[13.929s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[13.930s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/cnutter/turtlebot4_ws/install/local_setup.ps1'
+[13.961s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/cnutter/turtlebot4_ws/install/_local_setup_util_ps1.py'
+[13.965s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/cnutter/turtlebot4_ws/install/setup.ps1'
+[13.977s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/cnutter/turtlebot4_ws/install/local_setup.sh'
+[13.985s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/cnutter/turtlebot4_ws/install/_local_setup_util_sh.py'
+[13.986s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/cnutter/turtlebot4_ws/install/setup.sh'
+[13.992s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/cnutter/turtlebot4_ws/install/local_setup.bash'
+[13.994s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/cnutter/turtlebot4_ws/install/setup.bash'
+[13.996s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/cnutter/turtlebot4_ws/install/local_setup.zsh'
+[13.997s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/cnutter/turtlebot4_ws/install/setup.zsh'

@@ -3,7 +3,7 @@ from rclpy.node import Node
 
 from sensor_msgs.msg import LaserScan
 from std_msgs.msg import Bool
-from custom_interfaces.msg import ObsList
+from tb_interfaces.msg import ObsList
 
 from rclpy.qos import qos_profile_sensor_data
 
@@ -22,7 +22,7 @@ class getObs(Node):
 
         self.obs_pub = self.create_publisher(ObsList, '/obs', 10)
 
-        self.scan_sub = self.create_subscription(LaserScan, '/robot4/scan', self.scan_callback, 10)
+        self.scan_sub = self.create_subscription(LaserScan, '/robot1/scan', self.scan_callback, 10)
 
 
     def scan_callback(self,msg):
@@ -34,8 +34,10 @@ class getObs(Node):
         n = len(msg.ranges) 
         obs_x_list = []
         obs_y_list = []
+        obs_d_list = []
 
         i = 0
+        
         while i<n:
             scan_val = msg.ranges[i]
 
@@ -54,6 +56,7 @@ class getObs(Node):
                 obs_y = scan_val*math.sin(theta)
                 obs_x_list.append(obs_x)
                 obs_y_list.append(obs_y)
+                obs_d_list.append(scan_val)
             i += 1
                 
 
@@ -61,6 +64,7 @@ class getObs(Node):
         obs = ObsList()
         obs.x_list = obs_x_list
         obs.y_list = obs_y_list
+        obs.d_list = obs_d_list
         self.obs_pub.publish(obs)
 
 

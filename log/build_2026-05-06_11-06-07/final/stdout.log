@@ -1,0 +1,32 @@
+running egg_info
+creating ../../build/final/final.egg-info
+writing ../../build/final/final.egg-info/PKG-INFO
+writing dependency_links to ../../build/final/final.egg-info/dependency_links.txt
+writing entry points to ../../build/final/final.egg-info/entry_points.txt
+writing requirements to ../../build/final/final.egg-info/requires.txt
+writing top-level names to ../../build/final/final.egg-info/top_level.txt
+writing manifest file '../../build/final/final.egg-info/SOURCES.txt'
+reading manifest file '../../build/final/final.egg-info/SOURCES.txt'
+writing manifest file '../../build/final/final.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /home/cnutter/turtlebot4_ws/build/final/build
+creating /home/cnutter/turtlebot4_ws/build/final/build/lib
+creating /home/cnutter/turtlebot4_ws/build/final/build/lib/final
+copying final/get_obstacles.py -> /home/cnutter/turtlebot4_ws/build/final/build/lib/final
+copying final/color_vision.py -> /home/cnutter/turtlebot4_ws/build/final/build/lib/final
+copying final/__init__.py -> /home/cnutter/turtlebot4_ws/build/final/build/lib/final
+copying final/goal_client.py -> /home/cnutter/turtlebot4_ws/build/final/build/lib/final
+copying final/nav.py -> /home/cnutter/turtlebot4_ws/build/final/build/lib/final
+running install
+running install_lib
+running install_data
+running install_egg_info
+removing '/home/cnutter/turtlebot4_ws/install/final/lib/python3.12/site-packages/final-0.0.0-py3.12.egg-info' (and everything under it)
+Copying ../../build/final/final.egg-info to /home/cnutter/turtlebot4_ws/install/final/lib/python3.12/site-packages/final-0.0.0-py3.12.egg-info
+running install_scripts
+Installing color_vision script to /home/cnutter/turtlebot4_ws/install/final/lib/final
+Installing get_obs script to /home/cnutter/turtlebot4_ws/install/final/lib/final
+Installing go_to_goal script to /home/cnutter/turtlebot4_ws/install/final/lib/final
+Installing goal_client script to /home/cnutter/turtlebot4_ws/install/final/lib/final
+writing list of installed files to '/home/cnutter/turtlebot4_ws/build/final/install.log'
