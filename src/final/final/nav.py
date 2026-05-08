@@ -1,9 +1,16 @@
+import cv2
+import math
+import os
+import rclpy
+
 # Interface imports
 from geometry_msgs.msg import Twist
 from nav_msgs.msg import Odometry
 from std_msgs.msg import String
+from std_msgs.msg import Bool
 from custom_interfaces.action import RobotGoal
 from custom_interfaces.msg import ObsList
+from custom_interfaces.msg import TransLoc
 
 # ROS TF Transforms
 from tf_transformations import euler_from_quaternion
@@ -18,12 +25,8 @@ from rclpy.executors import ExternalShutdownException
 from rclpy.callback_groups import ReentrantCallbackGroup
 
 # Base stuff
-import rclpy
 from rclpy.node import Node
 from rclpy.qos import qos_profile_sensor_data
-
-import math
-import os
 
 class NavNode(Node):
     def __init__(self):
@@ -65,8 +68,9 @@ class NavNode(Node):
         self.pos_subscriber = self.create_subscription(Odometry, '/robot1/odom', self.callback_pos, 10)
 
         # Subscribe to the obstacle locations
-        
         self.obs_subscriber = self.create_subscription(ObsList, '/robot1/obs', self.callback_obs, 10)
+
+        self.is_red_subscriber = self.create_subscription(Bool, '/robot1/is_red', self.callback_is_red, 10)
 
         # Velocity publisher
         self.velocity_pub = self.create_publisher(Twist, '/robot1/cmd_vel_unfiltered', 10)
@@ -77,8 +81,14 @@ class NavNode(Node):
         # Bounds publisher
         self.loc_pub = self.create_publisher(String, 'loc', 10)
 
-        # ACtion server
+        # Translated location pub
+        self.trans_loc_pub = self.create_publisher(TransLoc, '/robot1/trans_loc', 10)
+
+        # Action server
         self.go_to_goal = ActionServer(self, RobotGoal,"nav_goal",goal_callback=self.goal_callback,execute_callback=self.execute_callback)
+
+    def callback_is_red(self, msg):
+        self.is_red = msg.data
 
     # Callback for pos sub
     def callback_pos(self, msg):
@@ -105,6 +115,11 @@ class NavNode(Node):
         # Transform
         self.x = x*math.cos(self.ang_offset) - y*math.sin(self.ang_offset) + self.x_offset
         self.y = x*math.sin(self.ang_offset) + y*math.cos(self.ang_offset) + self.y_offset       
+
+        trans_loc_data = TransLoc()
+        trans_loc_data.x = self.x
+        trans_loc_data.y = self.y
+        self.trans_loc_pub.publish(trans_loc_data)
 
         # with open("/home/alexandra.bacula/turtlebot4_ws/loc.csv", "w") as f:
         #     f.write(str(round(self.x,3)) + "," + str(round(self.y,3)) + "\n")

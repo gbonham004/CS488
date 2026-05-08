@@ -1,6 +1,0 @@
-action/RobotGoal.action
-action/RobotGoal.idl
-msg/ObsList.idl
-msg/ObsList.msg
-srv/SetCap.idl
-srv/SetCap.srv

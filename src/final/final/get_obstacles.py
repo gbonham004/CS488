@@ -3,7 +3,7 @@ from rclpy.node import Node
 
 from sensor_msgs.msg import LaserScan
 from std_msgs.msg import Bool
-from tb_interfaces.msg import ObsList
+from custom_interfaces.msg import ObsList
 
 from rclpy.qos import qos_profile_sensor_data
 

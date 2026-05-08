@@ -1,5 +1,0 @@
-[console_scripts]
-color_vision = final.color_vision:main
-get_obs = final.get_obstacles:main
-go_to_goal = final.nav:main
-goal_client = final.goal_client:main

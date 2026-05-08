@@ -5,7 +5,7 @@ from std_msgs.msg import String
 from rclpy.action import ActionClient
 from rclpy.action.client import ClientGoalHandle, GoalStatus
 
-from tb_interfaces.action import RobotGoal
+from custom_interfaces.action import RobotGoal
 
 class GoToGoalClient(Node):
 
