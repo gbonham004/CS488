@@ -1,15 +1,9 @@
-import cv2
-import math
-import os
-import rclpy
-
 # Interface imports
 from geometry_msgs.msg import Twist
 from nav_msgs.msg import Odometry
 from std_msgs.msg import String, Bool
 from custom_interfaces.action import RobotGoal
-from custom_interfaces.msg import ObsList
-from custom_interfaces.msg import TransLoc
+from custom_interfaces.msg import ObsList, TransLoc
 
 # ROS TF Transforms
 from tf_transformations import euler_from_quaternion
@@ -24,12 +18,16 @@ from rclpy.executors import ExternalShutdownException
 from rclpy.callback_groups import ReentrantCallbackGroup
 
 # Base stuff
+import rclpy
 from rclpy.node import Node
 from rclpy.qos import qos_profile_sensor_data
 
-class NavNode(Node):
+import math
+import os
+
+class NavPFNode(Node):
     def __init__(self):
-        super().__init__('go_to_goal')
+        super().__init__('nav_pf')
         
         self.PI = 3.14159265358979323846
 
@@ -47,9 +45,12 @@ class NavNode(Node):
         self.robot_radius = 0.3
 
         # Threshold of close enough
-        self.pos_threshold = 0.1
-        self.ang_threshold = 0.1
-       
+        self.pos_threshold = 0.02
+        self.ang_threshold = 0.06
+        self.goal_threshold = 0.1
+
+        # When we care about obs for potential fields
+        self.obs_threshold = 0.8
 
         # How long to try getting to goal before giving up
         self.max_iteration = 1e20
@@ -67,7 +68,7 @@ class NavNode(Node):
         self.pos_subscriber = self.create_subscription(Odometry, '/robot1/odom', self.callback_pos, 10)
 
         # Subscribe to the obstacle locations
-        self.obs_subscriber = self.create_subscription(ObsList, '/robot1/obs', self.callback_obs, 10)
+        self.obs_subscriber = self.create_subscription(ObsList, 'robot1/obs', self.callback_obs, 10)
 
         # Subscribe to see if red is detected
         self.is_red_subscriber = self.create_subscription(Bool, '/robot1/is_red', self.callback_is_red, 10)
@@ -79,10 +80,7 @@ class NavNode(Node):
         self.obstacles_pub = self.create_publisher(String, '/robot1/closest_obs', 10)
 
         # Bounds publisher
-        self.loc_pub = self.create_publisher(String, 'loc', 10)
-
-        # Translated location pub
-        self.trans_loc_pub = self.create_publisher(TransLoc, '/robot1/trans_loc', 10)
+        self.loc_pub = self.create_publisher(String, '/robot1/loc', 10)
 
         # Action server
         self.go_to_goal = ActionServer(self, RobotGoal,"nav_goal",goal_callback=self.goal_callback,execute_callback=self.execute_callback)
@@ -106,6 +104,8 @@ class NavNode(Node):
             self.got_offset = True
 
         ang += self.ang_offset
+        x += self.x_offset
+        y += self.y_offset
         
         if ang < -self.PI:
             self.ang = ang + (2*self.PI)
@@ -113,16 +113,8 @@ class NavNode(Node):
             self.ang = ang
 
         # Transform
-        self.x = x*math.cos(self.ang_offset) - y*math.sin(self.ang_offset) + self.x_offset
-        self.y = x*math.sin(self.ang_offset) + y*math.cos(self.ang_offset) + self.y_offset       
-
-        trans_loc_data = TransLoc()
-        trans_loc_data.x = self.x
-        trans_loc_data.y = self.y
-        self.trans_loc_pub.publish(trans_loc_data)
-
-        # with open("/home/alexandra.bacula/turtlebot4_ws/loc.csv", "w") as f:
-        #     f.write(str(round(self.x,3)) + "," + str(round(self.y,3)) + "\n")
+        self.x = x*math.cos(self.ang_offset) - y*math.sin(self.ang_offset) 
+        self.y = x*math.sin(self.ang_offset) + y*math.cos(self.ang_offset) 
 
         test = String()
         test.data = "Current position x: " + str(round(self.x,2)) + " y: " + str(round(self.y,2)) + " ang: " + str(round(self.ang,4)) + "\n"
@@ -132,7 +124,7 @@ class NavNode(Node):
     def callback_obs(self,msg):
         self.obs_space_rob_frame = []
         self.obs_space_world_frame = []
-        self.obs_dist = msg.d_list
+        self.obs_dist = list(msg.d_list)
         lim  = len(msg.x_list)
         i = 0
         while i < lim:
@@ -143,15 +135,8 @@ class NavNode(Node):
             x_world = x_rob*math.cos(self.ang) - y_rob*math.sin(self.ang) + self.x
             y_world = x_rob*math.sin(self.ang) + y_rob*math.cos(self.ang) + self.y
             self.obs_space_world_frame.append([x_world,y_world])
-
             
             i+=1
-
-        # with open("/home/alexandra.bacula/turtlebot4_ws/obs_loc.csv", "w") as f:
-        #     n = 0
-        #     for obs in self.obs_space_world_frame:
-        #         f.write(str(round(obs[0],3)) + "," + str(round(obs[1],3)) + "," + str(round(self.obs_dist[n],3))+ "\n")
-        #         n += 1
 
     
     # Goal callback
@@ -160,7 +145,7 @@ class NavNode(Node):
         min_distance = 10000
         closest_obs = [0,0]
 
-        for obstacle in self.obs_space_world_frame:
+        for obstacle in self.obs_space_world_frame: # Maybe issue
             distance = math.dist(goal,obstacle)
             if distance < min_distance:
                 min_distance = distance
@@ -176,24 +161,42 @@ class NavNode(Node):
         
         self.get_logger().info("Accepted goal!")
         return GoalResponse.ACCEPT
-    
-    def execute_callback(self, goal_handle):
-        # Make goal relative to robot current pose
-        goal_x = goal_handle.request.goal_x 
-        goal_y = goal_handle.request.goal_y 
-        goal_theta = goal_handle.request.goal_theta
 
-        result = RobotGoal.Result()
-        feedback = RobotGoal.Feedback()
-       
-        # Get initial distance
-        err_pos = math.dist([goal_x,goal_y],[self.x,self.y])
+    def get_att_f(self, d_goal, goal_x, goal_y):
+        k_att = 2.0 # CHANGE LATER? (Def 1.0)
+        att_mag = 0.5 * k_att * d_goal
+        att_ang = math.atan2(goal_y - self.y, goal_x - self.x)
+        f_att_x = att_mag * math.cos(att_ang)
+        f_att_y = att_mag * math.sin(att_ang)
 
+        return f_att_x, f_att_y
+
+    def get_rep_f(self):
+        k_rep = 0.0 # CHANGE LATER (def 0.8 we set to 0.5)
+        numObs = len(self.obs_space_rob_frame)
+        f_rep_x = 0
+        f_rep_y = 0
+        for n in range(numObs):
+            d_obs = self.obs_dist[n]
+            [x_obs, y_obs] = self.obs_space_rob_frame[n]
+           
+
+            if d_obs < self.obs_threshold:
+                rep_mag = 0.5 * k_rep * ((1/d_obs) - (1/self.obs_threshold))**2
+                rep_ang = math.atan2(self.y - y_obs, self.x - x_obs)
+
+                f_rep_x += rep_mag * math.cos(rep_ang)
+                f_rep_y += rep_mag * math.sin(rep_ang)
+
+        return f_rep_x, f_rep_y
+
+    def pid_to_point(self, goal_x, goal_y):
         # For PID
         err_pos_prev = 0
         err_ang_prev = 0
         err_pos_sum = 0
         err_ang_sum = 0
+        vel_ang_prev = 0.1
 
         kpl = 0.4
         kdl = 0.2
@@ -203,20 +206,16 @@ class NavNode(Node):
         kda = 0.02
         kia = 0.0
 
-        iteration = 0
+        # Calc new errs
+        err_pos = math.dist([goal_x,goal_y],[self.x,self.y])
 
-        # While not close enough
-        while err_pos > self.pos_threshold:
+        i = 0
 
-            if iteration > self.max_iteration:
-                # Set result success to true
-                result.success = False
-                self.get_logger().info("Timed out")
-                # Set status to succeed
-                goal_handle.succeed()
-                # Return result
-                return result
-                
+        while abs(err_pos) > self.pos_threshold:
+            self.get_logger().info("goal: " + str(goal_x) + ", " + str(goal_y) + "| err: " + str(err_pos))
+            
+            if i > self.max_iteration:
+                break
 
             # New velocity msg
             vel = Twist()
@@ -230,8 +229,6 @@ class NavNode(Node):
             # Calc ang error
             err_ang =  desired_angle - self.ang
 
-            self.get_logger().info("dAng: " + str(round(desired_angle,2)) + ", err: " + str(round(self.ang,2)))
-
             err_ang_sum += err_ang     
             err_pos_sum += err_pos
 
@@ -244,21 +241,13 @@ class NavNode(Node):
                     vel_ang = kpa*err_ang + kda*(err_ang - err_ang_prev) + kia*err_ang_sum
             else:
                 vel_lin = kpl*err_pos + kdl*(err_pos - err_pos_prev) + kil*err_pos_sum
+                self.get_logger().info(f"vel_lin: {vel_lin}\nerr_pos - err_pos_prev: {err_pos - err_pos_prev}")
 
             vel.linear.x = vel_lin
             vel.angular.z = vel_ang
   
             # Publish velocity
-        # Calc dif between current angle and goal angle
-
             self.velocity_pub.publish(vel)
-
-            # Publish feedback
-            feedback.current_x = float(round(self.x,2))
-            feedback.current_y = float(round(self.y,2))
-            feedback.current_theta = float(round(self.ang,2))
-            feedback.distance_from_goal = float(round(err_pos,2))
-            goal_handle.publish_feedback(feedback)
 
             # Replace prev err
             err_pos_prev = err_pos
@@ -266,6 +255,66 @@ class NavNode(Node):
             vel_ang_prev = vel_ang
 
             # Calc new errs
+            err_pos = math.dist([goal_x,goal_y],[self.x,self.y])
+            i += 1
+
+    
+    def execute_callback(self, goal_handle):
+        # Make goal relative to robot current pose
+        goal_x = goal_handle.request.goal_x 
+        goal_y = goal_handle.request.goal_y 
+        goal_theta = goal_handle.request.goal_theta
+
+        result = RobotGoal.Result()
+        feedback = RobotGoal.Feedback()
+       
+        # Get initial distance
+        err_pos = math.dist([goal_x,goal_y],[self.x,self.y])
+        
+        iteration = 0
+
+        # timestep for pf
+        timestep = 0.3
+
+        # While not close enough
+        while err_pos > self.pos_threshold:
+
+            if iteration > self.max_iteration:
+                # Set result success to true
+                result.success = False
+                self.get_logger().info("Timed out")
+                # Set status to succeed
+                goal_handle.succeed()
+                # Return result
+                return result
+            
+            # Potential fields
+            fax, fay = self.get_att_f(err_pos, goal_x, goal_y)
+            frx, fry = self.get_rep_f()
+
+            fx = fax + frx
+            fy = fay + fry
+
+            mag = math.sqrt(fx**2 + fy**2)
+
+            fx /= mag
+            fy /= mag
+
+            dx = timestep * fx
+            dy = timestep * fy
+
+            gx = self.x + dx
+            gy = self.y + dy
+
+            self.pid_to_point(gx,gy)
+
+            # Publish feedback
+            feedback.current_x = float(round(self.x,2))
+            feedback.current_y = float(round(self.y,2))
+            feedback.current_theta = float(round(self.ang,2))
+            feedback.distance_from_goal = float(round(err_pos,2))
+            goal_handle.publish_feedback(feedback)
+            
             err_pos = math.dist([goal_x,goal_y],[self.x,self.y])
             iteration += 1
 
@@ -277,7 +326,8 @@ class NavNode(Node):
             vel = Twist()
             vel.linear.x = 0.0
             # Rotate
-            vel.angular.z = kpa*err_ang + kda*(err_ang - err_ang_prev) + kia*err_ang_sum
+            vel.angular.z = 0.1*err_ang
+            self.get_logger().info(f"ang: {self.ang}\nang_threshold: {self.ang_threshold}\nabs of err_ang: {abs(err_ang)}")
             # Publish 
             self.velocity_pub.publish(vel)
 
@@ -305,11 +355,12 @@ class NavNode(Node):
         goal_handle.succeed()
         # Return result
         return result
+    
 
 
 def main(args=None): 
     rclpy.init(args=None)
-    node = NavNode()
+    node = NavPFNode()
 
     # Use a MultiThreadedExecutor to enable processing goals concurrently
     executor = MultiThreadedExecutor()

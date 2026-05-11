@@ -20,7 +20,7 @@ class getObs(Node):
 
         self.PI = 3.14159265358979323846
 
-        self.obs_pub = self.create_publisher(ObsList, '/obs', 10)
+        self.obs_pub = self.create_publisher(ObsList, 'robot1/obs', 10)
 
         self.scan_sub = self.create_subscription(LaserScan, '/robot1/scan', self.scan_callback, 10)
 

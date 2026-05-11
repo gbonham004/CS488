@@ -19,7 +19,7 @@ class Lab3Server(Node):
 
         self.velocity_cap = 0.4
         self.obstacle_detected = False
-        self.obstacle_distance = 0.5
+        self.obstacle_distance = 0.001
 
         self.velocity_subscriber = self.create_subscription(Twist, '/robot1/cmd_vel_unfiltered', self.vel_callback, 10)
         self.scan_subscriber = self.create_subscription(LaserScan, 'robot1/scan', self.scan_callback, 10)
@@ -44,7 +44,7 @@ class Lab3Server(Node):
 
             if point < self.obstacle_distance:
                 self.obstacle_detected = True 
-                self.get_logger().info(str(point))
+                # self.get_logger().info(str(point))
                 self.led_publisher.publish(self.set_lightring_colors(128, 128, 0))
 
     def set_cap_callback(self, request, response):
@@ -67,7 +67,7 @@ class Lab3Server(Node):
     def vel_callback(self, msg):
         robot_vel_fwd = msg.linear.x
         robot_vel_ang = msg.angular.z
-        self.get_logger().info(str(robot_vel_fwd))
+        # self.get_logger().info(str(robot_vel_fwd))
 
         if (self.obstacle_detected == True):
             robot_vel_fwd = 0.0

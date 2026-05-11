@@ -1,7 +1,8 @@
 <launch>
  <node pkg="final" exec="color_vision" />
  <node pkg="final" exec="get_obs" />
- <node pkg="final" exec="go_to_goal" />
- <node pkg="final" exec="goal_client" />
+ <!-- <node pkg="final" exec="go_to_goal" /> -->
+ <!-- <node pkg="final" exec="goal_client" /> -->
+ <node pkg="final" exec="nav_pf"/>
  <node pkg="lab3_pkg" exec="SCOD_server" />
 </launch>
