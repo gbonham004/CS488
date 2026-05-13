@@ -45,7 +45,8 @@ class NavPFNode(Node):
         self.robot_radius = 0.3
 
         # Threshold of close enough
-        self.pos_threshold = 0.02
+        self.pid_pos_threshold = 0.02
+        self.pos_threshold = 0.1
         self.ang_threshold = 0.06
         self.goal_threshold = 0.1
 
@@ -63,6 +64,9 @@ class NavPFNode(Node):
 
         # Store distances from obstacles to robot
         self.obs_dist = []
+
+        # Store top 3 closest obstacles to robot
+        self.top_3_obs = []
 
         # Subscribe to the odometry (robot location?)
         self.pos_subscriber = self.create_subscription(Odometry, '/robot1/odom', self.callback_pos, 10)
@@ -132,12 +136,17 @@ class NavPFNode(Node):
             y_rob = msg.y_list[i]
             self.obs_space_rob_frame.append([x_rob,y_rob])
 
+            self.top_3_obs.append([x_rob, y_rob, self.obs_dist[i]])
+
             x_world = x_rob*math.cos(self.ang) - y_rob*math.sin(self.ang) + self.x
             y_world = x_rob*math.sin(self.ang) + y_rob*math.cos(self.ang) + self.y
             self.obs_space_world_frame.append([x_world,y_world])
             
             i+=1
-
+        
+        self.top_3_obs.sort()
+        self.top_3_obs = self.top_3_obs[:3]
+        # self.get_logger().info(self.top_3_obs)
     
     # Goal callback
     def goal_callback(self, goal_request):
@@ -164,7 +173,7 @@ class NavPFNode(Node):
 
     def get_att_f(self, d_goal, goal_x, goal_y):
         k_att = 2.0 # CHANGE LATER? (Def 1.0)
-        att_mag = 0.5 * k_att * d_goal
+        att_mag = 0.5 * k_att * d_goal**2
         att_ang = math.atan2(goal_y - self.y, goal_x - self.x)
         f_att_x = att_mag * math.cos(att_ang)
         f_att_y = att_mag * math.sin(att_ang)
@@ -172,15 +181,13 @@ class NavPFNode(Node):
         return f_att_x, f_att_y
 
     def get_rep_f(self):
-        k_rep = 0.0 # CHANGE LATER (def 0.8 we set to 0.5)
-        numObs = len(self.obs_space_rob_frame)
+        k_rep = 0.5 # CHANGE LATER (def 0.8 we set to 0.5)
+        # numObs = len(self.top_3_obs) # len(self.obs_space_rob_frame)
         f_rep_x = 0
         f_rep_y = 0
-        for n in range(numObs):
-            d_obs = self.obs_dist[n]
-            [x_obs, y_obs] = self.obs_space_rob_frame[n]
-           
 
+        for x_obs, y_obs, d_obs in self.top_3_obs:
+           
             if d_obs < self.obs_threshold:
                 rep_mag = 0.5 * k_rep * ((1/d_obs) - (1/self.obs_threshold))**2
                 rep_ang = math.atan2(self.y - y_obs, self.x - x_obs)
@@ -194,15 +201,14 @@ class NavPFNode(Node):
         # For PID
         err_pos_prev = 0
         err_ang_prev = 0
-        err_pos_sum = 0
-        err_ang_sum = 0
+     
         vel_ang_prev = 0.1
 
-        kpl = 0.4
+        kpl = 0.9
         kdl = 0.2
         kil = 0
 
-        kpa = 0.1
+        kpa = 0.5
         kda = 0.02
         kia = 0.0
 
@@ -211,9 +217,13 @@ class NavPFNode(Node):
 
         i = 0
 
-        while abs(err_pos) > self.pos_threshold:
+        while abs(err_pos) > self.pid_pos_threshold:
             self.get_logger().info("goal: " + str(goal_x) + ", " + str(goal_y) + "| err: " + str(err_pos))
             
+            # while (self.is_red):
+            #     self.get_logger().info("I'm SEEING RED")
+            #     pass
+
             if i > self.max_iteration:
                 break
 
@@ -229,8 +239,8 @@ class NavPFNode(Node):
             # Calc ang error
             err_ang =  desired_angle - self.ang
 
-            err_ang_sum += err_ang     
-            err_pos_sum += err_pos
+            # err_ang_sum += err_ang     
+            # err_pos_sum += err_pos
 
             # If not close enough to desired angle
             if abs(err_ang) > self.ang_threshold:
@@ -238,10 +248,10 @@ class NavPFNode(Node):
                 if abs(err_ang) > self.PI:
                     vel_ang = vel_ang_prev
                 else:
-                    vel_ang = kpa*err_ang + kda*(err_ang - err_ang_prev) + kia*err_ang_sum
+                    vel_ang = kpa*err_ang + kda*(err_ang - err_ang_prev) # + kia*err_ang_sum
             else:
-                vel_lin = kpl*err_pos + kdl*(err_pos - err_pos_prev) + kil*err_pos_sum
-                self.get_logger().info(f"vel_lin: {vel_lin}\nerr_pos - err_pos_prev: {err_pos - err_pos_prev}")
+                vel_lin = kpl*err_pos + kdl*(err_pos - err_pos_prev) # + kil*err_pos_sum
+                # self.get_logger().info(f"vel_lin: {vel_lin}\nerr_pos - err_pos_prev: {err_pos - err_pos_prev}")
 
             vel.linear.x = vel_lin
             vel.angular.z = vel_ang
@@ -274,7 +284,7 @@ class NavPFNode(Node):
         iteration = 0
 
         # timestep for pf
-        timestep = 0.3
+        timestep = 0.2
 
         # While not close enough
         while err_pos > self.pos_threshold:
@@ -305,6 +315,13 @@ class NavPFNode(Node):
 
             gx = self.x + dx
             gy = self.y + dy
+
+            if (gx - goal_x < self.pos_threshold):
+                gx = goal_x
+
+            if (gy - goal_y < self.pos_threshold):
+                gy = goal_y
+
 
             self.pid_to_point(gx,gy)
 
