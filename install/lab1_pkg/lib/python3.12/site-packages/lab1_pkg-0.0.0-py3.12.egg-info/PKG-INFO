@@ -1,0 +1,8 @@
+Metadata-Version: 2.1
+Name: lab1-pkg
+Version: 0.0.0
+Summary: TODO: Package description
+Maintainer: nhu.nguyen
+Maintainer-email: nhu.nguyen@todo.todo
+License: TODO: License declaration
+Provides-Extra: test

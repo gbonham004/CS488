@@ -1,0 +1,8 @@
+action/RobotGoal.action
+action/RobotGoal.idl
+msg/ObsList.idl
+msg/ObsList.msg
+msg/TransLoc.idl
+msg/TransLoc.msg
+srv/SetCap.idl
+srv/SetCap.srv

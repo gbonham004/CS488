@@ -1,0 +1,5 @@
+<launch>
+  <include file="$(find-pkg-share turtlebot4_navigation)/robot1/slam.launch.py" />
+  <include file="$(find-pkg-share turtlebot4_viz)/robot1/view_robot.launch.py" />
+  <include file="$(find-pkg-share lab_bringup)/launch/lab3.launch.xml" />
+</launch>

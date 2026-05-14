@@ -1,0 +1,167 @@
+#[cfg(feature = "serde")]
+use serde::{Deserialize, Serialize};
+
+
+#[link(name = "custom_interfaces__rosidl_typesupport_c")]
+extern "C" {
+    fn rosidl_typesupport_c__get_message_type_support_handle__custom_interfaces__msg__TransLoc() -> *const std::ffi::c_void;
+}
+
+#[link(name = "custom_interfaces__rosidl_generator_c")]
+extern "C" {
+    fn custom_interfaces__msg__TransLoc__init(msg: *mut TransLoc) -> bool;
+    fn custom_interfaces__msg__TransLoc__Sequence__init(seq: *mut rosidl_runtime_rs::Sequence<TransLoc>, size: usize) -> bool;
+    fn custom_interfaces__msg__TransLoc__Sequence__fini(seq: *mut rosidl_runtime_rs::Sequence<TransLoc>);
+    fn custom_interfaces__msg__TransLoc__Sequence__copy(in_seq: &rosidl_runtime_rs::Sequence<TransLoc>, out_seq: *mut rosidl_runtime_rs::Sequence<TransLoc>) -> bool;
+}
+
+// Corresponds to custom_interfaces__msg__TransLoc
+#[cfg_attr(feature = "serde", derive(Deserialize, Serialize))]
+
+
+// This struct is not documented.
+#[allow(missing_docs)]
+
+#[repr(C)]
+#[derive(Clone, Debug, PartialEq, PartialOrd)]
+pub struct TransLoc {
+
+    // This member is not documented.
+    #[allow(missing_docs)]
+    pub x: f64,
+
+
+    // This member is not documented.
+    #[allow(missing_docs)]
+    pub y: f64,
+
+}
+
+
+
+impl Default for TransLoc {
+  fn default() -> Self {
+    unsafe {
+      let mut msg = std::mem::zeroed();
+      if !custom_interfaces__msg__TransLoc__init(&mut msg as *mut _) {
+        panic!("Call to custom_interfaces__msg__TransLoc__init() failed");
+      }
+      msg
+    }
+  }
+}
+
+impl rosidl_runtime_rs::SequenceAlloc for TransLoc {
+  fn sequence_init(seq: &mut rosidl_runtime_rs::Sequence<Self>, size: usize) -> bool {
+    // SAFETY: This is safe since the pointer is guaranteed to be valid/initialized.
+    unsafe { custom_interfaces__msg__TransLoc__Sequence__init(seq as *mut _, size) }
+  }
+  fn sequence_fini(seq: &mut rosidl_runtime_rs::Sequence<Self>) {
+    // SAFETY: This is safe since the pointer is guaranteed to be valid/initialized.
+    unsafe { custom_interfaces__msg__TransLoc__Sequence__fini(seq as *mut _) }
+  }
+  fn sequence_copy(in_seq: &rosidl_runtime_rs::Sequence<Self>, out_seq: &mut rosidl_runtime_rs::Sequence<Self>) -> bool {
+    // SAFETY: This is safe since the pointer is guaranteed to be valid/initialized.
+    unsafe { custom_interfaces__msg__TransLoc__Sequence__copy(in_seq, out_seq as *mut _) }
+  }
+}
+
+impl rosidl_runtime_rs::Message for TransLoc {
+  type RmwMsg = Self;
+  fn into_rmw_message(msg_cow: std::borrow::Cow<'_, Self>) -> std::borrow::Cow<'_, Self::RmwMsg> { msg_cow }
+  fn from_rmw_message(msg: Self::RmwMsg) -> Self { msg }
+}
+
+impl rosidl_runtime_rs::RmwMessage for TransLoc where Self: Sized {
+  const TYPE_NAME: &'static str = "custom_interfaces/msg/TransLoc";
+  fn get_type_support() -> *const std::ffi::c_void {
+    // SAFETY: No preconditions for this function.
+    unsafe { rosidl_typesupport_c__get_message_type_support_handle__custom_interfaces__msg__TransLoc() }
+  }
+}
+
+
+#[link(name = "custom_interfaces__rosidl_typesupport_c")]
+extern "C" {
+    fn rosidl_typesupport_c__get_message_type_support_handle__custom_interfaces__msg__ObsList() -> *const std::ffi::c_void;
+}
+
+#[link(name = "custom_interfaces__rosidl_generator_c")]
+extern "C" {
+    fn custom_interfaces__msg__ObsList__init(msg: *mut ObsList) -> bool;
+    fn custom_interfaces__msg__ObsList__Sequence__init(seq: *mut rosidl_runtime_rs::Sequence<ObsList>, size: usize) -> bool;
+    fn custom_interfaces__msg__ObsList__Sequence__fini(seq: *mut rosidl_runtime_rs::Sequence<ObsList>);
+    fn custom_interfaces__msg__ObsList__Sequence__copy(in_seq: &rosidl_runtime_rs::Sequence<ObsList>, out_seq: *mut rosidl_runtime_rs::Sequence<ObsList>) -> bool;
+}
+
+// Corresponds to custom_interfaces__msg__ObsList
+#[cfg_attr(feature = "serde", derive(Deserialize, Serialize))]
+
+
+// This struct is not documented.
+#[allow(missing_docs)]
+
+#[repr(C)]
+#[derive(Clone, Debug, PartialEq, PartialOrd)]
+pub struct ObsList {
+
+    // This member is not documented.
+    #[allow(missing_docs)]
+    pub x_list: rosidl_runtime_rs::Sequence<f64>,
+
+
+    // This member is not documented.
+    #[allow(missing_docs)]
+    pub y_list: rosidl_runtime_rs::Sequence<f64>,
+
+
+    // This member is not documented.
+    #[allow(missing_docs)]
+    pub d_list: rosidl_runtime_rs::Sequence<f64>,
+
+}
+
+
+
+impl Default for ObsList {
+  fn default() -> Self {
+    unsafe {
+      let mut msg = std::mem::zeroed();
+      if !custom_interfaces__msg__ObsList__init(&mut msg as *mut _) {
+        panic!("Call to custom_interfaces__msg__ObsList__init() failed");
+      }
+      msg
+    }
+  }
+}
+
+impl rosidl_runtime_rs::SequenceAlloc for ObsList {
+  fn sequence_init(seq: &mut rosidl_runtime_rs::Sequence<Self>, size: usize) -> bool {
+    // SAFETY: This is safe since the pointer is guaranteed to be valid/initialized.
+    unsafe { custom_interfaces__msg__ObsList__Sequence__init(seq as *mut _, size) }
+  }
+  fn sequence_fini(seq: &mut rosidl_runtime_rs::Sequence<Self>) {
+    // SAFETY: This is safe since the pointer is guaranteed to be valid/initialized.
+    unsafe { custom_interfaces__msg__ObsList__Sequence__fini(seq as *mut _) }
+  }
+  fn sequence_copy(in_seq: &rosidl_runtime_rs::Sequence<Self>, out_seq: &mut rosidl_runtime_rs::Sequence<Self>) -> bool {
+    // SAFETY: This is safe since the pointer is guaranteed to be valid/initialized.
+    unsafe { custom_interfaces__msg__ObsList__Sequence__copy(in_seq, out_seq as *mut _) }
+  }
+}
+
+impl rosidl_runtime_rs::Message for ObsList {
+  type RmwMsg = Self;
+  fn into_rmw_message(msg_cow: std::borrow::Cow<'_, Self>) -> std::borrow::Cow<'_, Self::RmwMsg> { msg_cow }
+  fn from_rmw_message(msg: Self::RmwMsg) -> Self { msg }
+}
+
+impl rosidl_runtime_rs::RmwMessage for ObsList where Self: Sized {
+  const TYPE_NAME: &'static str = "custom_interfaces/msg/ObsList";
+  fn get_type_support() -> *const std::ffi::c_void {
+    // SAFETY: No preconditions for this function.
+    unsafe { rosidl_typesupport_c__get_message_type_support_handle__custom_interfaces__msg__ObsList() }
+  }
+}
+
+
