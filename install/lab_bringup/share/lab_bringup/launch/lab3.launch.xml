@@ -1,3 +1,0 @@
-<launch>
- <node pkg="lab3_pkg" exec="SCOD_server" />
-</launch>

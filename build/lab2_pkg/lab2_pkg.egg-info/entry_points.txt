@@ -1,2 +1,0 @@
-[console_scripts]
-SCOD = lab2_pkg.speed_cap_obstacle_detect:main

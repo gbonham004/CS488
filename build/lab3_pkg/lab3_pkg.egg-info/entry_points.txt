@@ -1,3 +1,0 @@
-[console_scripts]
-SCOD_server = lab3_pkg.lab3_server:main
-set_cap_client_node = lab3_pkg.set_cap_client:main
