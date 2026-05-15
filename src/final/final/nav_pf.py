@@ -50,8 +50,14 @@ class NavPFNode(Node):
         self.ang_threshold = 0.06
         self.goal_threshold = 0.1
 
+        # Hardcoded bounds values
+        self.x_bound_min = 0
+        self.x_bound_max = 4.5
+        self.y_bound_min = -1.3
+        self.y_bound_max = 1.3
+
         # When we care about obs for potential fields
-        self.obs_threshold = 0.8
+        self.obs_threshold = 2.0
 
         # How long to try getting to goal before giving up
         self.max_iteration = 1e20
@@ -126,6 +132,7 @@ class NavPFNode(Node):
 
     # Callback for obstacle locations
     def callback_obs(self,msg):
+        self.top_3_obs = []
         self.obs_space_rob_frame = []
         self.obs_space_world_frame = []
         self.obs_dist = list(msg.d_list)
@@ -145,8 +152,7 @@ class NavPFNode(Node):
             i+=1
         
         self.top_3_obs.sort(key=lambda x: x[2])
-        # self.top_3_obs = self.top_3_obs[:3]
-        self.get_logger().info(f"Top 3 Obs: {self.top_3_obs[0]}, {self.top_3_obs[1]}, {self.top_3_obs[2]}")
+        self.top_3_obs = self.top_3_obs[:3]
     
     # Goal callback
     def goal_callback(self, goal_request):
@@ -173,10 +179,12 @@ class NavPFNode(Node):
 
     def get_att_f(self, d_goal, goal_x, goal_y):
         k_att = 1.0 # CHANGE LATER? (Def 1.0)
-        att_mag = 0.5 * k_att * d_goal**2
+        att_mag = 0.5 * k_att * (d_goal ** 2)
         att_ang = math.atan2(goal_y - self.y, goal_x - self.x)
         f_att_x = att_mag * math.cos(att_ang)
         f_att_y = att_mag * math.sin(att_ang)
+
+        self.get_logger().info(f"Att vector: <{f_att_x}, {f_att_y}>")
 
         return f_att_x, f_att_y
 
@@ -186,6 +194,8 @@ class NavPFNode(Node):
         f_rep_x = 0
         f_rep_y = 0
 
+        self.get_logger().info(f"Top 3 Obs: {self.top_3_obs[0]}, {self.top_3_obs[1]}, {self.top_3_obs[2]}")
+
         for x_obs, y_obs, d_obs in self.top_3_obs:
            
             if d_obs < self.obs_threshold:
@@ -194,6 +204,8 @@ class NavPFNode(Node):
 
                 f_rep_x += rep_mag * math.cos(rep_ang)
                 f_rep_y += rep_mag * math.sin(rep_ang)
+
+            self.get_logger().info(f"Rep vector: <{f_rep_x}, {f_rep_y}>")
 
         return f_rep_x, f_rep_y
 
@@ -217,13 +229,12 @@ class NavPFNode(Node):
 
         i = 0
 
+        # Calc desired angle
+        desired_angle = math.atan2(goal_y - self.y, goal_x - self.x)
+        self.get_logger().info(f"Desired ang: {desired_angle}")
+
         while abs(err_pos) > self.pid_pos_threshold:
-            self.get_logger().info("goal: " + str(goal_x) + ", " + str(goal_y) + "| err: " + str(err_pos))
-            
-            # # Possibly chopped
-            # while (self.is_red):
-            #     self.get_logger().info("I'm SEEING RED")
-            #     pass
+            # self.get_logger().info("goal: " + str(goal_x) + ", " + str(goal_y) + "| err: " + str(err_pos))
 
             if i > self.max_iteration:
                 break
@@ -233,9 +244,6 @@ class NavPFNode(Node):
             
             vel_lin = 0.0
             vel_ang = 0.0
-            
-            # Calc desired angle
-            desired_angle = math.atan2(goal_y - self.y, goal_x - self.x)
         
             # Calc ang error
             err_ang =  desired_angle - self.ang
@@ -246,12 +254,14 @@ class NavPFNode(Node):
             # If not close enough to desired angle
             if abs(err_ang) > self.ang_threshold:
                 # If at the -pi to pi boundary just keep prior vel until past that point
+
                 if abs(err_ang) > self.PI:
                     vel_ang = vel_ang_prev
                 else:
                     vel_ang = kpa*err_ang + kda*(err_ang - err_ang_prev) # + kia*err_ang_sum
             else:
                 vel_lin = kpl*err_pos + kdl*(err_pos - err_pos_prev) # + kil*err_pos_sum
+
                 # self.get_logger().info(f"vel_lin: {vel_lin}\nerr_pos - err_pos_prev: {err_pos - err_pos_prev}")
 
 
@@ -293,6 +303,12 @@ class NavPFNode(Node):
         
         iteration = 0
 
+        self.get_logger().info(f"=[Iteration {iteration}]======================================")
+        self.get_logger().info(f"Goal x: {goal_x}")
+        self.get_logger().info(f"Goal y: {goal_y}")
+        self.get_logger().info(f"Goal rad: {goal_theta}")
+        self.get_logger().info(f"Err pos: {err_pos}")
+
         # timestep for pf
         timestep = 0.2
 
@@ -312,10 +328,18 @@ class NavPFNode(Node):
             fax, fay = self.get_att_f(err_pos, goal_x, goal_y)
             frx, fry = self.get_rep_f()
 
+            self.get_logger().info(f"---")
+
+            self.get_logger().info(f"fax, fay: <{fax}, {fay}>")
+            self.get_logger().info(f"frx, fry: <{frx}, {fry}>")
+
             fx = fax + frx
             fy = fay + fry
 
             mag = math.sqrt(fx**2 + fy**2)
+
+            self.get_logger().info(f"fx, fy: <{fx}, {fy}>")
+            self.get_logger().info(f"mag: {mag}")
 
             fx /= mag
             fy /= mag
@@ -326,12 +350,30 @@ class NavPFNode(Node):
             gx = self.x + dx
             gy = self.y + dy
 
-            if (gx - goal_x < self.pos_threshold):
+            self.get_logger().info(f"f/mag: <{fx}, {fy}>")
+            self.get_logger().info(f"dx, dy: {dx}, {dy}")
+            self.get_logger().info(f"gx, gy: {gx}, {gy}")
+
+            # Bounds/oal checking rounding logic
+            # if (gx < self.x_bound_min):
+            #     gx = self.x_bound_min
+
+            # if (gx > self.x_bound_max):
+            #     gx = self.x_bound_max
+
+            # if (gy < self.y_bound_min):
+            #     gy = self.y_bound_min
+
+            # if (gy < self.y_bound_max):
+            #     gy = self.y_bound_max
+
+            if (abs(gx - goal_x) < self.pos_threshold):
                 gx = goal_x
 
-            if (gy - goal_y < self.pos_threshold):
+            if (abs(gy - goal_y) < self.pos_threshold):
                 gy = goal_y
-
+                
+            self.get_logger().info(f"Intermediate goal: ({gx}, {gy})")
 
             self.pid_to_point(gx,gy)
 
