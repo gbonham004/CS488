@@ -92,6 +92,9 @@ class NavPFNode(Node):
         # Bounds publisher
         self.loc_pub = self.create_publisher(String, '/robot1/loc', 10)
 
+        # Translated location pub
+        self.trans_loc_pub = self.create_publisher(TransLoc, '/robot1/trans_loc', 10)
+
         # Action server
         self.go_to_goal = ActionServer(self, RobotGoal,"nav_goal",goal_callback=self.goal_callback,execute_callback=self.execute_callback)
 
@@ -124,7 +127,12 @@ class NavPFNode(Node):
 
         # Transform
         self.x = x*math.cos(self.ang_offset) - y*math.sin(self.ang_offset) 
-        self.y = x*math.sin(self.ang_offset) + y*math.cos(self.ang_offset) 
+        self.y = x*math.sin(self.ang_offset) + y*math.cos(self.ang_offset)
+
+        trans_loc_data = TransLoc()
+        trans_loc_data.x = self.x
+        trans_loc_data.y = self.y
+        self.trans_loc_pub.publish(trans_loc_data)
 
         test = String()
         test.data = "Current position x: " + str(round(self.x,2)) + " y: " + str(round(self.y,2)) + " ang: " + str(round(self.ang,4)) + "\n"
@@ -220,7 +228,7 @@ class NavPFNode(Node):
         kdl = 0.2
         kil = 0
 
-        kpa = 0.5
+        kpa = 0.25
         kda = 0.02
         kia = 0.0
 
@@ -228,28 +236,29 @@ class NavPFNode(Node):
         err_pos = math.dist([goal_x,goal_y],[self.x,self.y])
 
         i = 0
+        red_count = 0
 
         # Calc desired angle
         desired_angle = math.atan2(goal_y - self.y, goal_x - self.x)
-        self.get_logger().info(f"Desired ang: {desired_angle}")
+        #self.get_logger().info(f"Desired ang: {desired_angle}")
 
         while abs(err_pos) > self.pid_pos_threshold:
             # self.get_logger().info("goal: " + str(goal_x) + ", " + str(goal_y) + "| err: " + str(err_pos))
 
             if i > self.max_iteration:
                 break
+            
 
             # New velocity msg
             vel = Twist()
-            
             vel_lin = 0.0
             vel_ang = 0.0
         
             # Calc ang error
             err_ang =  desired_angle - self.ang
 
-            # err_ang_sum += err_ang     
-            # err_pos_sum += err_pos
+            # self.get_logger().info(f"Curr ang: {self.ang}")
+            # self.get_logger().info(f"Err ang: {err_ang}")
 
             # If not close enough to desired angle
             if abs(err_ang) > self.ang_threshold:
@@ -258,23 +267,22 @@ class NavPFNode(Node):
                 if abs(err_ang) > self.PI:
                     vel_ang = vel_ang_prev
                 else:
-                    vel_ang = kpa*err_ang + kda*(err_ang - err_ang_prev) # + kia*err_ang_sum
+                    vel_ang = kpa*err_ang + kda*(err_ang - err_ang_prev)
             else:
-                vel_lin = kpl*err_pos + kdl*(err_pos - err_pos_prev) # + kil*err_pos_sum
+                vel_lin = kpl*err_pos + kdl*(err_pos - err_pos_prev)
 
                 # self.get_logger().info(f"vel_lin: {vel_lin}\nerr_pos - err_pos_prev: {err_pos - err_pos_prev}")
-
 
             if not(self.is_red):
                 vel.linear.x = vel_lin
                 vel.angular.z = vel_ang
+                red_count = 0
             else:
-                self.get_logger().info("I'm SEEING RED")
+                if (red_count == 0):
+                    self.get_logger().info("I'm SEEING RED")
                 vel.linear.x = 0.0
                 vel.angular.z = 0.0
-
-            # vel.linear.x = vel_lin
-            # vel.angular.z = vel_ang
+                red_count += 1
                 
             # Publish velocity
             self.velocity_pub.publish(vel)
@@ -303,17 +311,18 @@ class NavPFNode(Node):
         
         iteration = 0
 
-        self.get_logger().info(f"=[Iteration {iteration}]======================================")
         self.get_logger().info(f"Goal x: {goal_x}")
         self.get_logger().info(f"Goal y: {goal_y}")
         self.get_logger().info(f"Goal rad: {goal_theta}")
-        self.get_logger().info(f"Err pos: {err_pos}")
 
         # timestep for pf
         timestep = 0.2
 
         # While not close enough
         while err_pos > self.pos_threshold:
+
+            self.get_logger().info(f"=[Iteration {iteration}]======================================")
+            self.get_logger().info(f"Err pos: {err_pos}")
 
             if iteration > self.max_iteration:
                 # Set result success to true

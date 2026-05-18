@@ -58,7 +58,7 @@ class ColorVision(Node):
                         self.barcode_list[data] = (self.x, self.y)
             
 
-            upper_range_1 = (15, 255, 255)
+            upper_range_1 = (10, 255, 255)
             lower_range_1 = (0, 100, 150)
             upper_range_2 = (180, 255, 255)
             lower_range_2 = (165, 100, 150)

@@ -72,7 +72,7 @@ class Lab3Server(Node):
         if (self.obstacle_detected == True):
             robot_vel_fwd = 0.0
         elif (robot_vel_fwd >= self.velocity_cap):    
-            light_msg = self.set_lightring_colors(255, 0, 0)
+            light_msg = self.set_lightring_colors(0, 255, 0)
             robot_vel_fwd = self.velocity_cap
             robot_vel_ang = 0.4
             self.led_publisher.publish(light_msg)
